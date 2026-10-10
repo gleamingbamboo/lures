@@ -1,0 +1,47 @@
+# Список магазинів і категорій для агрегатора.
+#
+# Категорії дзеркалять таксономію відповідного сайту; `code` використовується
+# як ідентифікатор категорії в базі даних, а `url`/`filters` — як джерело
+# для клієнт-бібліотеки:
+#   * flagman  — `url` = id категорії в /site/catalog/, `filters` = частина
+#                фільтра "11250=6433;producer=..." (Тип воблера + виробники);
+#   * ibisgear — `url` = код таксона (products-filtered/{code});
+#   * bereg    — `url` = URL сторінки категорії (listing).
+stores:
+  - code: flagman
+    name: Flagman
+    base_url: https://r.flagman.ua
+    client: flagman
+    categories:
+      - code: voblery
+        name: Воблери
+        url: "168794"
+        # 11250=6433 — фільтр «Тоблер типа = Всі»; producer=... — виробники
+        filters: "11250=6433;producer=4653,4649,4647,4641,4640,4635,4630,4598,4519,4507,4431,4404,4402,4401,4400,4399,4379,4354,4352,4287,4277,4265,4262,4261,4260,4252,4249,4248,4228,4207,4196,4193,4189,4170,4159"
+        max_pages: null
+
+  - code: ibisgear
+    name: Ibis Gear
+    base_url: https://shop.ibis.net.ua
+    client: ibisgear
+    categories:
+      # Код таксона у Sylius (products-filtered/{code}). Уточнити можна через
+      # `uv run python -c "from ibisgear import IbisGearClient; c=IbisGearClient(); print([(t.code,t.name) for t in c.get_taxons()])"`
+      - code: "01030100"
+        name: Воблери
+        url: "01030100"
+        max_pages: null
+
+  - code: bereg
+    name: Bereg
+    base_url: https://bereg.ua
+    client: bereg
+    categories:
+      # URL сторінки категорії (listing). Можна вказати будь-яку:
+      #   https://bereg.ua/uk/spinning/primanki/voblery.html         (всі воблери)
+      #   https://bereg.ua/uk/spinning/primanki/voblery/minnou.html  (мінноу)
+      #   https://bereg.ua/uk/sale.html                              (акції)
+      - code: voblery
+        name: Воблери
+        url: https://bereg.ua/uk/spinning/primanki/voblery.html
+        max_pages: null
