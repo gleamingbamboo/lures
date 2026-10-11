@@ -1,0 +1,530 @@
+{
+  "clients/bereg-client/pyproject.toml": {
+    "mtime": 1791612497.9563377,
+    "seen": 1791626407.8806446,
+    "ast_hash": "e95d5c67bc8fb07606090425d235a389",
+    "semantic_hash": "e95d5c67bc8fb07606090425d235a389"
+  },
+  "clients/bereg-client/src/bereg/__init__.py": {
+    "mtime": 1791612257.0242856,
+    "seen": 1791626407.8806446,
+    "ast_hash": "d625cb7cd4fe84f64c449f939093bec8",
+    "semantic_hash": "d625cb7cd4fe84f64c449f939093bec8"
+  },
+  "clients/bereg-client/src/bereg/_base.py": {
+    "mtime": 1791612257.0252852,
+    "seen": 1791626407.8806446,
+    "ast_hash": "67cc9594d651ef8fd9acc0d622b7f09e",
+    "semantic_hash": "67cc9594d651ef8fd9acc0d622b7f09e"
+  },
+  "clients/bereg-client/src/bereg/_version.py": {
+    "mtime": 1791612257.0232854,
+    "seen": 1791626407.8806446,
+    "ast_hash": "57d2cd52c66856108fd8a536f1cee899",
+    "semantic_hash": "57d2cd52c66856108fd8a536f1cee899"
+  },
+  "clients/bereg-client/src/bereg/cli.py": {
+    "mtime": 1791612257.1162753,
+    "seen": 1791626407.8806446,
+    "ast_hash": "544609fb7a02185cddca8e2c550c1158",
+    "semantic_hash": "544609fb7a02185cddca8e2c550c1158"
+  },
+  "clients/bereg-client/src/bereg/client.py": {
+    "mtime": 1791612257.1162753,
+    "seen": 1791626407.8806446,
+    "ast_hash": "62ffad6b9cac1b6f120074c8e1a35933",
+    "semantic_hash": "62ffad6b9cac1b6f120074c8e1a35933"
+  },
+  "clients/bereg-client/src/bereg/exceptions.py": {
+    "mtime": 1791612257.0242856,
+    "seen": 1791626407.8806446,
+    "ast_hash": "fa7bab6e74dc17e1efcef02b9e9db168",
+    "semantic_hash": "fa7bab6e74dc17e1efcef02b9e9db168"
+  },
+  "clients/bereg-client/src/bereg/models.py": {
+    "mtime": 1791612257.0242856,
+    "seen": 1791626407.8806446,
+    "ast_hash": "9ad88181351a27b46e8c85f8b84b26c9",
+    "semantic_hash": "9ad88181351a27b46e8c85f8b84b26c9"
+  },
+  "clients/bereg-client/src/bereg/parsing.py": {
+    "mtime": 1791612489.4175687,
+    "seen": 1791626407.8806446,
+    "ast_hash": "45cbb8c034e2b93afdafef49e5dc20d3",
+    "semantic_hash": "45cbb8c034e2b93afdafef49e5dc20d3"
+  },
+  "clients/bereg-client/tests/__init__.py": {
+    "mtime": 1791611531.2170875,
+    "seen": 1791626407.8806446,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "clients/bereg-client/tests/conftest.py": {
+    "mtime": 1791612257.0242856,
+    "seen": 1791626407.8806446,
+    "ast_hash": "f1d3d3d1b382e0117d41fb1b51ce3df3",
+    "semantic_hash": "f1d3d3d1b382e0117d41fb1b51ce3df3"
+  },
+  "clients/bereg-client/tests/test_client.py": {
+    "mtime": 1791612277.7445478,
+    "seen": 1791626407.8806446,
+    "ast_hash": "2d7a6a00b124d14382de75a14aa7afb0",
+    "semantic_hash": "2d7a6a00b124d14382de75a14aa7afb0"
+  },
+  "clients/bereg-client/tests/test_models.py": {
+    "mtime": 1791612257.0242856,
+    "seen": 1791626407.8806446,
+    "ast_hash": "be7528a2a8219531598eb27410fbe1ee",
+    "semantic_hash": "be7528a2a8219531598eb27410fbe1ee"
+  },
+  "clients/bereg-client/tests/test_parsing.py": {
+    "mtime": 1791612257.0252852,
+    "seen": 1791626407.8806446,
+    "ast_hash": "ca38977dd60456584cbb0456bd8d88e0",
+    "semantic_hash": "ca38977dd60456584cbb0456bd8d88e0"
+  },
+  "clients/flagman-client/pyproject.toml": {
+    "mtime": 1791608051.527951,
+    "seen": 1791626407.8806446,
+    "ast_hash": "902a6ed0371f6472670f42f682cc7574",
+    "semantic_hash": "902a6ed0371f6472670f42f682cc7574"
+  },
+  "clients/flagman-client/src/flagman/__init__.py": {
+    "mtime": 1791625315.3012226,
+    "seen": 1791626407.8806446,
+    "ast_hash": "cfff60e13fad062350f54414dc7f63ce",
+    "semantic_hash": "cfff60e13fad062350f54414dc7f63ce"
+  },
+  "clients/flagman-client/src/flagman/_base.py": {
+    "mtime": 1791608077.0100315,
+    "seen": 1791626407.8806446,
+    "ast_hash": "67cc9594d651ef8fd9acc0d622b7f09e",
+    "semantic_hash": "67cc9594d651ef8fd9acc0d622b7f09e"
+  },
+  "clients/flagman-client/src/flagman/_version.py": {
+    "mtime": 1791607779.1605463,
+    "seen": 1791626407.8806446,
+    "ast_hash": "57d2cd52c66856108fd8a536f1cee899",
+    "semantic_hash": "57d2cd52c66856108fd8a536f1cee899"
+  },
+  "clients/flagman-client/src/flagman/cli.py": {
+    "mtime": 1791607779.1655474,
+    "seen": 1791626407.8806446,
+    "ast_hash": "db30d2a3c34ad8bb88b10722ebbcc79f",
+    "semantic_hash": "db30d2a3c34ad8bb88b10722ebbcc79f"
+  },
+  "clients/flagman-client/src/flagman/client.py": {
+    "mtime": 1791608077.0130322,
+    "seen": 1791626407.8806446,
+    "ast_hash": "efcdc8c7a04af9bf4ac593adfd60fbfa",
+    "semantic_hash": "efcdc8c7a04af9bf4ac593adfd60fbfa"
+  },
+  "clients/flagman-client/src/flagman/exceptions.py": {
+    "mtime": 1791608077.0110343,
+    "seen": 1791626407.8806446,
+    "ast_hash": "3c7ea698480430f95c652606abba9d79",
+    "semantic_hash": "3c7ea698480430f95c652606abba9d79"
+  },
+  "clients/flagman-client/src/flagman/models.py": {
+    "mtime": 1791625289.591662,
+    "seen": 1791626407.8806446,
+    "ast_hash": "304b1c4a1bb57407eed9159bc238ca88",
+    "semantic_hash": "304b1c4a1bb57407eed9159bc238ca88"
+  },
+  "clients/flagman-client/tests/__init__.py": {
+    "mtime": 1791607807.49979,
+    "seen": 1791626407.8806446,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "clients/flagman-client/tests/conftest.py": {
+    "mtime": 1791607807.496759,
+    "seen": 1791626407.8806446,
+    "ast_hash": "0c3c418a3248a6954164ac8e658b0714",
+    "semantic_hash": "0c3c418a3248a6954164ac8e658b0714"
+  },
+  "clients/flagman-client/tests/fixtures/catalog.json": {
+    "mtime": 1791607866.7631445,
+    "seen": 1791626407.8806446,
+    "ast_hash": "55c73ddc276943094be4639707f0bfe5",
+    "semantic_hash": "55c73ddc276943094be4639707f0bfe5"
+  },
+  "clients/flagman-client/tests/fixtures/goods_multi.json": {
+    "mtime": 1791607866.7611423,
+    "seen": 1791626407.8806446,
+    "ast_hash": "cd04bdfce0ad9f0607f79d7891fd113d",
+    "semantic_hash": "cd04bdfce0ad9f0607f79d7891fd113d"
+  },
+  "clients/flagman-client/tests/fixtures/goods_single.json": {
+    "mtime": 1791607866.7621436,
+    "seen": 1791626407.8806446,
+    "ast_hash": "e083bd3a37de19412478dbc8bcfc83ae",
+    "semantic_hash": "e083bd3a37de19412478dbc8bcfc83ae"
+  },
+  "clients/flagman-client/tests/test_client.py": {
+    "mtime": 1791607936.2066815,
+    "seen": 1791626407.8806446,
+    "ast_hash": "d47b10f334ba0097a62517c704926809",
+    "semantic_hash": "d47b10f334ba0097a62517c704926809"
+  },
+  "clients/flagman-client/tests/test_models.py": {
+    "mtime": 1791625322.95074,
+    "seen": 1791626407.8806446,
+    "ast_hash": "6158fb8c12ede325348190ff8077e5a6",
+    "semantic_hash": "6158fb8c12ede325348190ff8077e5a6"
+  },
+  "clients/ibisgear-client/pyproject.toml": {
+    "mtime": 1791608463.061583,
+    "seen": 1791626407.8806446,
+    "ast_hash": "a021be354094f7dddd1f5b25f2dcfcd6",
+    "semantic_hash": "a021be354094f7dddd1f5b25f2dcfcd6"
+  },
+  "clients/ibisgear-client/src/ibisgear/__init__.py": {
+    "mtime": 1791609130.251547,
+    "seen": 1791626407.8806446,
+    "ast_hash": "50b287bc0b1e32d09e8d623500f6d758",
+    "semantic_hash": "50b287bc0b1e32d09e8d623500f6d758"
+  },
+  "clients/ibisgear-client/src/ibisgear/_base.py": {
+    "mtime": 1791609130.2580628,
+    "seen": 1791626407.8806446,
+    "ast_hash": "67cc9594d651ef8fd9acc0d622b7f09e",
+    "semantic_hash": "67cc9594d651ef8fd9acc0d622b7f09e"
+  },
+  "clients/ibisgear-client/src/ibisgear/_version.py": {
+    "mtime": 1791609130.251547,
+    "seen": 1791626407.8806446,
+    "ast_hash": "57d2cd52c66856108fd8a536f1cee899",
+    "semantic_hash": "57d2cd52c66856108fd8a536f1cee899"
+  },
+  "clients/ibisgear-client/src/ibisgear/cli.py": {
+    "mtime": 1791609130.256064,
+    "seen": 1791626407.8806446,
+    "ast_hash": "fd81c0bd97986616e4a090d675ec1219",
+    "semantic_hash": "fd81c0bd97986616e4a090d675ec1219"
+  },
+  "clients/ibisgear-client/src/ibisgear/client.py": {
+    "mtime": 1791609206.3926406,
+    "seen": 1791626407.8806446,
+    "ast_hash": "c58cab12e503aa8122b4fb2b2c88b65a",
+    "semantic_hash": "c58cab12e503aa8122b4fb2b2c88b65a"
+  },
+  "clients/ibisgear-client/src/ibisgear/exceptions.py": {
+    "mtime": 1791609130.2530508,
+    "seen": 1791626407.8806446,
+    "ast_hash": "97d900cbb8431bbb9a3a3212a5306b32",
+    "semantic_hash": "97d900cbb8431bbb9a3a3212a5306b32"
+  },
+  "clients/ibisgear-client/src/ibisgear/models.py": {
+    "mtime": 1791609192.4695542,
+    "seen": 1791626407.8806446,
+    "ast_hash": "ca76290a0fb5b666dda643b44cf8cf33",
+    "semantic_hash": "ca76290a0fb5b666dda643b44cf8cf33"
+  },
+  "clients/ibisgear-client/tests/__init__.py": {
+    "mtime": 1791608666.218758,
+    "seen": 1791626407.8806446,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "clients/ibisgear-client/tests/conftest.py": {
+    "mtime": 1791609130.2525468,
+    "seen": 1791626407.8806446,
+    "ast_hash": "d03a34de03304d3d6923b41a59d37448",
+    "semantic_hash": "d03a34de03304d3d6923b41a59d37448"
+  },
+  "clients/ibisgear-client/tests/fixtures/product.json": {
+    "mtime": 1791609091.8030026,
+    "seen": 1791626407.8806446,
+    "ast_hash": "7c7bc9a031712a103a9441eb08ae37e5",
+    "semantic_hash": "7c7bc9a031712a103a9441eb08ae37e5"
+  },
+  "clients/ibisgear-client/tests/fixtures/products_page1.json": {
+    "mtime": 1791609089.389428,
+    "seen": 1791626407.8806446,
+    "ast_hash": "53f25e0385d799a2adb86e8db7d8b74c",
+    "semantic_hash": "53f25e0385d799a2adb86e8db7d8b74c"
+  },
+  "clients/ibisgear-client/tests/fixtures/products_page2.json": {
+    "mtime": 1791609089.7571478,
+    "seen": 1791626407.8806446,
+    "ast_hash": "c1ed41cd67cdd780550e61c2eb69b7bf",
+    "semantic_hash": "c1ed41cd67cdd780550e61c2eb69b7bf"
+  },
+  "clients/ibisgear-client/tests/fixtures/taxon.json": {
+    "mtime": 1791609088.9966862,
+    "seen": 1791626407.8806446,
+    "ast_hash": "6942ad491f2719f095e392d039c5b242",
+    "semantic_hash": "6942ad491f2719f095e392d039c5b242"
+  },
+  "clients/ibisgear-client/tests/fixtures/variants.json": {
+    "mtime": 1791609090.868965,
+    "seen": 1791626407.8806446,
+    "ast_hash": "535fda3c1bddc36106d3a1a9d29cf79c",
+    "semantic_hash": "535fda3c1bddc36106d3a1a9d29cf79c"
+  },
+  "clients/ibisgear-client/tests/test_client.py": {
+    "mtime": 1791609130.4324644,
+    "seen": 1791626407.8806446,
+    "ast_hash": "130c7db7fd05be9ef9c036377be001ad",
+    "semantic_hash": "130c7db7fd05be9ef9c036377be001ad"
+  },
+  "clients/ibisgear-client/tests/test_models.py": {
+    "mtime": 1791609130.4324644,
+    "seen": 1791626407.8806446,
+    "ast_hash": "386f119a5fd6c2ea26f6bbde81a7a2cc",
+    "semantic_hash": "386f119a5fd6c2ea26f6bbde81a7a2cc"
+  },
+  "flagman_raw.json": {
+    "mtime": 1791603261.6054919,
+    "seen": 1791626407.8806446,
+    "ast_hash": "74ece9460d67c71066da48064f3f75d3",
+    "semantic_hash": "74ece9460d67c71066da48064f3f75d3"
+  },
+  "legacy/build_xlsx.py": {
+    "mtime": 1791614481.7353418,
+    "seen": 1791626407.8806446,
+    "ast_hash": "c18d71a0f2d78913f2ed1afcb8d17646",
+    "semantic_hash": "c18d71a0f2d78913f2ed1afcb8d17646"
+  },
+  "legacy/fetch_flagman.py": {
+    "mtime": 1791614481.7353418,
+    "seen": 1791626407.8806446,
+    "ast_hash": "aa13040c7dd95c9f8b0b5b54050c752f",
+    "semantic_hash": "aa13040c7dd95c9f8b0b5b54050c752f"
+  },
+  "pyproject.toml": {
+    "mtime": 1791625757.524114,
+    "seen": 1791626407.8806446,
+    "ast_hash": "4d19f7bc46a112ddefb72a86f9eeb08b",
+    "semantic_hash": "4d19f7bc46a112ddefb72a86f9eeb08b"
+  },
+  "src/lures/__init__.py": {
+    "mtime": 1791614481.5677454,
+    "seen": 1791626407.8806446,
+    "ast_hash": "ef05232586927cb45bc58e3eb20bda38",
+    "semantic_hash": "ef05232586927cb45bc58e3eb20bda38"
+  },
+  "src/lures/_version.py": {
+    "mtime": 1791614481.5677454,
+    "seen": 1791626407.8806446,
+    "ast_hash": "295110890e38bd1e66c36bac06d29e51",
+    "semantic_hash": "295110890e38bd1e66c36bac06d29e51"
+  },
+  "src/lures/canonical.py": {
+    "mtime": 1791614540.2360857,
+    "seen": 1791626407.8806446,
+    "ast_hash": "318d2051bb1b9c71faa56c024242ca36",
+    "semantic_hash": "318d2051bb1b9c71faa56c024242ca36"
+  },
+  "src/lures/cli.py": {
+    "mtime": 1791625859.7785592,
+    "seen": 1791626407.8806446,
+    "ast_hash": "3fa7cc67637266261012abf8004de193",
+    "semantic_hash": "3fa7cc67637266261012abf8004de193"
+  },
+  "src/lures/config.py": {
+    "mtime": 1791614481.734342,
+    "seen": 1791626407.8806446,
+    "ast_hash": "492d3e102eeb395e83e0d47b50359e92",
+    "semantic_hash": "492d3e102eeb395e83e0d47b50359e92"
+  },
+  "src/lures/db/__init__.py": {
+    "mtime": 1791624494.522894,
+    "seen": 1791626407.8806446,
+    "ast_hash": "c3970cdc95dadda004680bb03c0988d1",
+    "semantic_hash": "c3970cdc95dadda004680bb03c0988d1"
+  },
+  "src/lures/db/crud.py": {
+    "mtime": 1791624481.8739986,
+    "seen": 1791626407.8806446,
+    "ast_hash": "5fa88f5538d555b50ce896260a7ddb62",
+    "semantic_hash": "5fa88f5538d555b50ce896260a7ddb62"
+  },
+  "src/lures/db/fts.py": {
+    "mtime": 1791624608.9455729,
+    "seen": 1791626407.8806446,
+    "ast_hash": "a482e011733bca8a84b818a4cb1a04ba",
+    "semantic_hash": "a482e011733bca8a84b818a4cb1a04ba"
+  },
+  "src/lures/db/models.py": {
+    "mtime": 1791624456.6859531,
+    "seen": 1791626407.8806446,
+    "ast_hash": "3a2b9c35abace23ca1e4148978464d52",
+    "semantic_hash": "3a2b9c35abace23ca1e4148978464d52"
+  },
+  "src/lures/db/queries.py": {
+    "mtime": 1791624489.7018054,
+    "seen": 1791626407.8806446,
+    "ast_hash": "f7e929646655079ab99c4e52badb29e6",
+    "semantic_hash": "f7e929646655079ab99c4e52badb29e6"
+  },
+  "src/lures/db/schema.py": {
+    "mtime": 1791624606.0308423,
+    "seen": 1791626407.8806446,
+    "ast_hash": "efe8ec41e0a9b5d960973e612ce0c870",
+    "semantic_hash": "efe8ec41e0a9b5d960973e612ce0c870"
+  },
+  "src/lures/db/session.py": {
+    "mtime": 1791624463.2919557,
+    "seen": 1791626407.8806446,
+    "ast_hash": "82b10fb79ba518efc620dbf3af1e3be9",
+    "semantic_hash": "82b10fb79ba518efc620dbf3af1e3be9"
+  },
+  "src/lures/export.py": {
+    "mtime": 1791614481.5732646,
+    "seen": 1791626407.8806446,
+    "ast_hash": "dfebfed53ff9b8ba59198a85edc59925",
+    "semantic_hash": "dfebfed53ff9b8ba59198a85edc59925"
+  },
+  "src/lures/extractors/__init__.py": {
+    "mtime": 1791614481.5692513,
+    "seen": 1791626407.8806446,
+    "ast_hash": "2802c26dd82e6851e6c2299aca9f2675",
+    "semantic_hash": "2802c26dd82e6851e6c2299aca9f2675"
+  },
+  "src/lures/extractors/bereg.py": {
+    "mtime": 1791614481.734342,
+    "seen": 1791626407.8806446,
+    "ast_hash": "e85d972717e503b7066596e8e0f9b91e",
+    "semantic_hash": "e85d972717e503b7066596e8e0f9b91e"
+  },
+  "src/lures/extractors/common.py": {
+    "mtime": 1791614540.2360857,
+    "seen": 1791626407.8806446,
+    "ast_hash": "c2d3b640edb3d1250b35c0f29e5f3239",
+    "semantic_hash": "c2d3b640edb3d1250b35c0f29e5f3239"
+  },
+  "src/lures/extractors/flagman.py": {
+    "mtime": 1791614481.734342,
+    "seen": 1791626407.8806446,
+    "ast_hash": "c721d09f3a197b80a0bc090750cbe5df",
+    "semantic_hash": "c721d09f3a197b80a0bc090750cbe5df"
+  },
+  "src/lures/extractors/ibisgear.py": {
+    "mtime": 1791614481.734342,
+    "seen": 1791626407.8806446,
+    "ast_hash": "1f65e513c84d7a6283c536aecca211e3",
+    "semantic_hash": "1f65e513c84d7a6283c536aecca211e3"
+  },
+  "src/lures/fetch.py": {
+    "mtime": 1791624526.2889845,
+    "seen": 1791626407.8806446,
+    "ast_hash": "712dcf5261cdcb18bb01ab9e03e95634",
+    "semantic_hash": "712dcf5261cdcb18bb01ab9e03e95634"
+  },
+  "src/lures/ui.py": {
+    "mtime": 1791625791.2576985,
+    "seen": 1791626407.8806446,
+    "ast_hash": "cffb246445aad62d7067d3ebe6ece80d",
+    "semantic_hash": "cffb246445aad62d7067d3ebe6ece80d"
+  },
+  "tests/__init__.py": {
+    "mtime": 1791614481.5667443,
+    "seen": 1791626407.8806446,
+    "ast_hash": "c72877de6186f21347deda1209524fee",
+    "semantic_hash": "c72877de6186f21347deda1209524fee"
+  },
+  "tests/test_db.py": {
+    "mtime": 1791624551.4625134,
+    "seen": 1791626407.8806446,
+    "ast_hash": "b60f5d34b082f3a86c71d6e28c4cd31f",
+    "semantic_hash": "b60f5d34b082f3a86c71d6e28c4cd31f"
+  },
+  "tests/test_extractors.py": {
+    "mtime": 1791614481.5742643,
+    "seen": 1791626407.8806446,
+    "ast_hash": "3ecbfe5e3b1bfddcaa69dbfc730fed47",
+    "semantic_hash": "3ecbfe5e3b1bfddcaa69dbfc730fed47"
+  },
+  "README.md": {
+    "mtime": 1791624645.8463845,
+    "seen": 1791626407.8806446,
+    "ast_hash": "66b15067247a180cca863b0d08a1c96c",
+    "semantic_hash": "66b15067247a180cca863b0d08a1c96c"
+  },
+  "clients/bereg-client/.github/workflows/ci.yml": {
+    "mtime": 1791610689.920265,
+    "seen": 1791626407.8806446,
+    "ast_hash": "837f1deb386fb2aa9a0f31e33f2e93dc",
+    "semantic_hash": "837f1deb386fb2aa9a0f31e33f2e93dc"
+  },
+  "clients/bereg-client/.pre-commit-config.yaml": {
+    "mtime": 1791610689.920265,
+    "seen": 1791626407.8806446,
+    "ast_hash": "aefbb90c8ddf1c027af3547b7e7ba812",
+    "semantic_hash": "aefbb90c8ddf1c027af3547b7e7ba812"
+  },
+  "clients/bereg-client/CHANGELOG.md": {
+    "mtime": 1791610689.9222643,
+    "seen": 1791626407.8806446,
+    "ast_hash": "3ddc643b282123eacf3cba61eb0122af",
+    "semantic_hash": "3ddc643b282123eacf3cba61eb0122af"
+  },
+  "clients/bereg-client/README.md": {
+    "mtime": 1791612257.1172736,
+    "seen": 1791626407.8806446,
+    "ast_hash": "e9a0b7048617a8da45b14aaa0f3944d6",
+    "semantic_hash": "e9a0b7048617a8da45b14aaa0f3944d6"
+  },
+  "clients/bereg-client/tests/fixtures/listing.html": {
+    "mtime": 1791611285.4190755,
+    "seen": 1791626407.8806446,
+    "ast_hash": "945793892eede38ef50bcd73a5efbc72",
+    "semantic_hash": "945793892eede38ef50bcd73a5efbc72"
+  },
+  "clients/bereg-client/tests/fixtures/product.html": {
+    "mtime": 1791611285.478876,
+    "seen": 1791626407.8806446,
+    "ast_hash": "513f92e351c960adf2ea3d772675faaf",
+    "semantic_hash": "513f92e351c960adf2ea3d772675faaf"
+  },
+  "clients/bereg-client/tests/fixtures/search.html": {
+    "mtime": 1791611288.497981,
+    "seen": 1791626407.8806446,
+    "ast_hash": "eed5144b486df2a8eb25dc4b91af1aa4",
+    "semantic_hash": "eed5144b486df2a8eb25dc4b91af1aa4"
+  },
+  "clients/flagman-client/CHANGELOG.md": {
+    "mtime": 1791607709.4222512,
+    "seen": 1791626407.8806446,
+    "ast_hash": "89fed379ff4ff480dd62ff812feb9109",
+    "semantic_hash": "89fed379ff4ff480dd62ff812feb9109"
+  },
+  "clients/flagman-client/README.md": {
+    "mtime": 1791608056.1284165,
+    "seen": 1791626407.8806446,
+    "ast_hash": "d46e92ad827ab6e525bb4e61f3a22916",
+    "semantic_hash": "d46e92ad827ab6e525bb4e61f3a22916"
+  },
+  "clients/ibisgear-client/CHANGELOG.md": {
+    "mtime": 1791608463.0560646,
+    "seen": 1791626407.8806446,
+    "ast_hash": "f7070d10c998c9ad83a09f929448036d",
+    "semantic_hash": "f7070d10c998c9ad83a09f929448036d"
+  },
+  "clients/ibisgear-client/README.md": {
+    "mtime": 1791609130.4324644,
+    "seen": 1791626407.8806446,
+    "ast_hash": "bb6663aa675551b993ea78e5f0920e3d",
+    "semantic_hash": "bb6663aa675551b993ea78e5f0920e3d"
+  },
+  "config/stores.yaml": {
+    "mtime": 1791613501.9332647,
+    "seen": 1791626407.8806446,
+    "ast_hash": "e6531b6c09a60d284120a05425addfe1",
+    "semantic_hash": "e6531b6c09a60d284120a05425addfe1"
+  },
+  "docs/architecture.md": {
+    "mtime": 1791624555.7902877,
+    "seen": 1791626407.8806446,
+    "ast_hash": "0424adeae762cba530a9a4bad8d38657",
+    "semantic_hash": "0424adeae762cba530a9a4bad8d38657"
+  },
+  "skill/ibisgear-workflow.md": {
+    "mtime": 1791614203.6388545,
+    "seen": 1791626407.8806446,
+    "ast_hash": "d0b150665396a2483158798fa476630d",
+    "semantic_hash": "d0b150665396a2483158798fa476630d"
+  }
+}

@@ -5,7 +5,6 @@
 
 from __future__ import annotations
 
-import logging
 from pathlib import Path
 from typing import Any
 
@@ -20,8 +19,7 @@ from lures.config import Config, default_db_path, load_config
 from lures.db import get_session, init_db, product_bounds, query_products
 from lures.export import build_workbook_bytes
 from lures.fetch import sync_store
-
-logger = logging.getLogger(__name__)
+from lures.logging import logger
 
 _DISPLAY_FIELDS: list[tuple[str, str]] = [
     ("store", "Магазин"),

@@ -30,10 +30,10 @@ def _variant_pairs(variant: ProductVariant | None) -> list[tuple[str, str]]:
 
 
 def extract_ibisgear(
-    product: IbisProduct, *, store: str = STORE_CODE, category: str = ""
+    product: IbisProduct, *, store: str = STORE_CODE, category: str = "", variant: ProductVariant | None = None
 ) -> LureRecord:
     """Відобразити :class:`~ibisgear.models.Product` на канонічні колонки."""
-    variant = product.default_variant
+    variant = variant or product.default_variant
     pairs = _variant_pairs(variant)
     hint = " ".join(
         filter(

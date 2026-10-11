@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import json
-import logging
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -24,10 +23,9 @@ from .extractors import (
     extract_flagman,
     extract_ibisgear,
 )
+from .logging import logger
 
 __all__ = ["SyncStats", "sync_all", "sync_store"]
-
-logger = logging.getLogger(__name__)
 
 
 @dataclass
@@ -47,7 +45,8 @@ def sync_store(
     db_path: str | Path,
     *,
     max_pages: int | None = None,
-    fetch_details: bool = False,
+    fetch_details: bool = True,
+    fetch_variants: bool = True,
 ) -> SyncStats:
     """Синхронізувати один магазин у ``db_path``."""
     stats = SyncStats(store=store_cfg.code)
@@ -56,7 +55,7 @@ def sync_store(
         if store_cfg.client == FLAGMAN_CODE:
             _sync_flagman(session, store_cfg, stats, max_pages)
         elif store_cfg.client == IBISGEAR_CODE:
-            _sync_ibisgear(session, store_cfg, stats, max_pages)
+            _sync_ibisgear(session, store_cfg, stats, max_pages, fetch_variants)
         else:
             _sync_bereg(session, store_cfg, stats, max_pages, fetch_details)
     return stats
@@ -68,7 +67,8 @@ def sync_all(
     *,
     stores: tuple[str, ...] = (),
     max_pages: int | None = None,
-    fetch_details: bool = False,
+    fetch_details: bool = True,
+    fetch_variants: bool = True,
 ) -> list[SyncStats]:
     """Синхронізувати (підмножину) магазинів конфігурації."""
     results: list[SyncStats] = []
@@ -76,7 +76,13 @@ def sync_all(
         if stores and store_cfg.code not in stores:
             continue
         results.append(
-            sync_store(store_cfg, db_path, max_pages=max_pages, fetch_details=fetch_details)
+            sync_store(
+                store_cfg,
+                db_path,
+                max_pages=max_pages,
+                fetch_details=fetch_details,
+                fetch_variants=fetch_variants,
+            )
         )
     return results
 
@@ -148,7 +154,11 @@ def _flagman_specs(product: FlagmanProduct) -> dict[str, str]:
 
 
 def _sync_ibisgear(
-    session: Session, store_cfg: StoreConfig, stats: SyncStats, max_pages: int | None
+    session: Session,
+    store_cfg: StoreConfig,
+    stats: SyncStats,
+    max_pages: int | None,
+    fetch_variants: bool = True,
 ) -> None:
     client = IbisGearClient()
     for category in store_cfg.categories:
@@ -159,13 +169,31 @@ def _sync_ibisgear(
         stats.categories += 1
         try:
             for product in client.iter_products(taxon, max_pages=max_pages):
-                record = extract_ibisgear(product, store=store_cfg.code, category=category.code)
+                # Fetch full variants with attributes if enabled
+                variant = product.default_variant
+                if fetch_variants and variant and product.iri:
+                    try:
+                        # Get all variants with full attributes from product-variants endpoint
+                        # Use product.iri (the product IRI), not variant.iri (the variant IRI)
+                        full_variants = list(client.iter_product_variants(product.iri, max_pages=1))
+                        if full_variants:
+                            # Find matching variant by IRI or use first
+                            for v in full_variants:
+                                if v.iri == variant.iri or str(v.id) in str(variant.iri):
+                                    variant = v
+                                    break
+                            else:
+                                variant = full_variants[0]
+                    except Exception:
+                        logger.warning("ibisgear: не вдалося завантажити варіанти для %s", product.code, exc_info=True)
+                
+                record = extract_ibisgear(product, store=store_cfg.code, category=category.code, variant=variant)
                 _persist(
                     session,
                     record,
                     stats,
                     raw=product.model_dump_json(),
-                    specs=_ibis_specs(product.default_variant),
+                    specs=_ibis_specs(variant),
                     store_cfg=store_cfg,
                     category_name=category.name,
                     category_url=category.url,

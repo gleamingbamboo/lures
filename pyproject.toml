@@ -25,6 +25,7 @@ dependencies = [
   "bereg-client>=0.1.0",
   "flagman-client>=0.1.0",
   "ibisgear-client>=0.1.0",
+  "loguru>=0.7.2",
   "openpyxl>=3.1",
   "pandas>=2.2",
   "pyyaml>=6.0.1",
