@@ -5,6 +5,7 @@
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 from typing import Any
 
@@ -71,8 +72,9 @@ def _run_sync(config: Config, max_pages: int, fetch_details: bool) -> None:
 
 
 def _collect_rows(session: Session, config: Config) -> list[dict[str, Any]]:
-    display = st.session_state.get("display_stores") or [store.code for store in config.stores]
-    store_code: str | None = display[0] if len(display) == 1 else None
+    all_codes = [store.code for store in config.stores]
+    display = st.session_state.get("display_stores")
+    stores = tuple(display) if display else tuple(all_codes)
 
     bounds = product_bounds(session)
     w_max = float(bounds["max_w"] or 60.0)
@@ -94,7 +96,7 @@ def _collect_rows(session: Session, config: Config) -> list[dict[str, Any]]:
 
     return query_products(
         session,
-        store=store_code,
+        stores=stores,
         min_weight=min_weight,
         max_weight=max_weight,
         min_length=min_length,
@@ -103,6 +105,12 @@ def _collect_rows(session: Session, config: Config) -> list[dict[str, Any]]:
         on_sale=on_sale,
         search=search,
     )
+
+
+@st.cache_data(show_spinner=False, max_entries=4)
+def _workbook_bytes(rows_json: str) -> bytes:
+    """Кешований Excel: не перебудовуємо книгу на кожній взаємодії з фільтрами."""
+    return build_workbook_bytes(json.loads(rows_json))
 
 
 def _render_body(rows: list[dict[str, Any]]) -> None:
@@ -118,12 +126,13 @@ def _render_body(rows: list[dict[str, Any]]) -> None:
     c3.metric("Поверхневі (SURF)", surf)
     c4.metric("Середня ціна, грн", f"{average:.0f}" if prices else "—")
 
-    st.dataframe(_to_frame(rows), use_container_width=True, hide_index=True)
+    st.dataframe(_to_frame(rows), width="stretch", hide_index=True)
 
     if rows:
+        rows_json = json.dumps(rows, ensure_ascii=False, default=str)
         st.download_button(
             "Скачати в Excel",
-            data=build_workbook_bytes(rows),
+            data=_workbook_bytes(rows_json),
             file_name="lures.xlsx",
             mime=("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"),
         )

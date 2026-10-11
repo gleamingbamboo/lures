@@ -18,6 +18,7 @@ def query_products(
     session: Session,
     *,
     store: str | None = None,
+    stores: tuple[str, ...] = (),
     min_weight: float | None = None,
     max_weight: float | None = None,
     min_length: float | None = None,
@@ -41,6 +42,8 @@ def query_products(
 
     if store:
         stmt = stmt.where(Store.code == store)
+    if stores:
+        stmt = stmt.where(Store.code.in_(stores))
     if min_weight is not None:
         stmt = stmt.where(Product.weight_g >= min_weight)
     if max_weight is not None:

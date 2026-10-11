@@ -83,6 +83,10 @@ def test_filters_and_bounds(tmp_path: Path) -> None:
         )
 
         assert len(query_products(session, store="flagman")) == 1
+        assert len(query_products(session, stores=("flagman",))) == 1
+        assert len(query_products(session, stores=("bereg",))) == 1
+        assert len(query_products(session, stores=("flagman", "bereg"))) == 2
+        assert len(query_products(session, stores=())) == 2
         assert len(query_products(session, buoys=("SURF",))) == 1
         assert len(query_products(session, min_weight=6.0)) == 1
         assert len(query_products(session, min_weight=6.0, max_weight=20.0)) == 1
