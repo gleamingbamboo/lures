@@ -1,0 +1,134 @@
+{
+  "@context": "/api/v2/contexts/Taxon",
+  "@id": "/api/v2/shop/taxons/01030000",
+  "@type": "Taxon",
+  "totalProducts": 4893,
+  "images": [
+    {
+      "@type": "TaxonImage",
+      "type": null,
+      "path": "https://shop-admin.ibis.net.ua/media/image/aa/f0/4d11dd4526633790709aa9968baf.svg"
+    }
+  ],
+  "id": 1102,
+  "code": "01030000",
+  "parent": "/api/v2/shop/taxons/01000000",
+  "children": [
+    {
+      "@id": "/api/v2/shop/taxons/01030100",
+      "@type": "Taxon",
+      "totalProducts": 2129,
+      "images": [
+        {
+          "@type": "TaxonImage",
+          "type": null,
+          "path": "https://shop-admin.ibis.net.ua/media/image/81/94/4d2df60f729b068ecce5aa063d77.svg"
+        }
+      ],
+      "id": 1103,
+      "code": "01030100",
+      "parent": "/api/v2/shop/taxons/01030000",
+      "children": [],
+      "position": 0,
+      "enabled": true,
+      "isWeapon": false,
+      "name": "Воблери",
+      "slug": "vobler",
+      "description": null
+    },
+    {
+      "@id": "/api/v2/shop/taxons/01030200",
+      "@type": "Taxon",
+      "totalProducts": 1781,
+      "images": [
+        {
+          "@type": "TaxonImage",
+          "type": null,
+          "path": "https://shop-admin.ibis.net.ua/media/image/51/20/0aa0d1e6495595a1955be682c0f0.svg"
+        }
+      ],
+      "id": 1104,
+      "code": "01030200",
+      "parent": "/api/v2/shop/taxons/01030000",
+      "children": [],
+      "position": 1,
+      "enabled": true,
+      "isWeapon": false,
+      "name": "Силікон",
+      "slug": "sylikon",
+      "description": null
+    },
+    {
+      "@id": "/api/v2/shop/taxons/01030300",
+      "@type": "Taxon",
+      "totalProducts": 835,
+      "images": [
+        {
+          "@type": "TaxonImage",
+          "type": null,
+          "path": "https://shop-admin.ibis.net.ua/media/image/3c/6a/a8027dba776c8cdbf8ec5b59d593.svg"
+        }
+      ],
+      "id": 1105,
+      "code": "01030300",
+      "parent": "/api/v2/shop/taxons/01030000",
+      "children": [],
+      "position": 2,
+      "enabled": true,
+      "isWeapon": false,
+      "name": "Блешні",
+      "slug": "bleshni",
+      "description": null
+    },
+    {
+      "@id": "/api/v2/shop/taxons/01030400",
+      "@type": "Taxon",
+      "totalProducts": 68,
+      "images": [
+        {
+          "@type": "TaxonImage",
+          "type": null,
+          "path": "https://shop-admin.ibis.net.ua/media/image/a0/b8/d60a4928aae330b4106e2b043f44.svg"
+        }
+      ],
+      "id": 1106,
+      "code": "01030400",
+      "parent": "/api/v2/shop/taxons/01030000",
+      "children": [],
+      "position": 3,
+      "enabled": true,
+      "isWeapon": false,
+      "name": "Балансири",
+      "slug": "balansyry",
+      "description": null
+    },
+    {
+      "@id": "/api/v2/shop/taxons/01030500",
+      "@type": "Taxon",
+      "totalProducts": 80,
+      "images": [
+        {
+          "@type": "TaxonImage",
+          "type": null,
+          "path": "https://shop-admin.ibis.net.ua/media/image/1a/64/b2e878e589320294699c8caa089a.svg"
+        }
+      ],
+      "id": 1107,
+      "code": "01030500",
+      "parent": "/api/v2/shop/taxons/01030000",
+      "children": [],
+      "position": 4,
+      "enabled": true,
+      "isWeapon": false,
+      "name": "Мормишки",
+      "slug": "mormyshki",
+      "description": null
+    }
+  ],
+  "position": 2,
+  "enabled": true,
+  "isWeapon": false,
+  "name": "Приманки",
+  "slug": "prymanky",
+  "description": null
+}

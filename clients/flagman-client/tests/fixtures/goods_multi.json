@@ -1,0 +1,553 @@
+{
+  "status": "success",
+  "data": [
+    {
+      "id": "292051",
+      "parent_id": "168794",
+      "mpath": ".168793.168794.",
+      "title": "Воблер Smith Jib 90SP 90mm 7.2г #696",
+      "title_ua": "Воблер Smith Jib 90SP 90mm 7.2г #696",
+      "name": "vobler-smith-jib-90sp-90mm-7.2g-696",
+      "name_ua": "vobler-smith-jib-90sp-90mm-72h-696",
+      "status": "1",
+      "tags": null,
+      "ext_id": "1665.15.02",
+      "series_id": "0",
+      "group_id": "301321",
+      "producer_id": "4598",
+      "warranty": "",
+      "price": 733.1,
+      "skuID": "134669",
+      "old_price": 733.1,
+      "min_b2b_order": "1",
+      "min_site_order": "1",
+      "fish_type": [
+        {
+          "id": "1",
+          "title": "Щука",
+          "title_ua": "Щука",
+          "name": "shchuka",
+          "image": "https://assets.flagman.ua/type_fish/1bbae-schuka.webp",
+          "image_mobile": "https://assets.flagman.ua/type_fish/604a8-schuka.webp",
+          "link": null,
+          "link_ua": null,
+          "order": "10"
+        }
+      ],
+      "cargo_compartment": "0",
+      "images": [
+        "https://i.flagman.ua/goods/1951/1951645.jpg"
+      ],
+      "videos": [],
+      "group": {
+        "mark": {
+          "unit": "",
+          "title": "Цвет",
+          "title_ua": "Колір",
+          "keyChar": "11034"
+        },
+        "goods": [
+          {
+            "value": "#696",
+            "value_ua": "#696",
+            "goods_id": "292051",
+            "name": "vobler-smith-jib-90sp-90mm-7.2g-696",
+            "name_ua": "vobler-smith-jib-90sp-90mm-72h-696",
+            "sell_status": "0"
+          },
+          {
+            "value": "#10",
+            "value_ua": "#10",
+            "goods_id": "292065",
+            "name": "vobler-smith-jib-90sp-90mm-7.2g-10",
+            "name_ua": "vobler-smith-jib-90sp-90mm-72h-10",
+            "sell_status": "4"
+          },
+          {
+            "value": "#09",
+            "value_ua": "#09",
+            "goods_id": "292066",
+            "name": "vobler-smith-jib-90sp-90mm-7.2g-09",
+            "name_ua": "vobler-smith-jib-90sp-90mm-72h-09",
+            "sell_status": "0"
+          },
+          {
+            "value": "#SLB",
+            "value_ua": "#SLB",
+            "goods_id": "292071",
+            "name": "vobler-smith-jib-90sp-90mm-7.2g-slb",
+            "name_ua": "vobler-smith-jib-90sp-90mm-72h-slb",
+            "sell_status": "0"
+          },
+          {
+            "value": "#02",
+            "value_ua": "#02",
+            "goods_id": "292072",
+            "name": "vobler-smith-jib-90sp-90mm-7.2g-02",
+            "name_ua": "vobler-smith-jib-90sp-90mm-72h-02",
+            "sell_status": "4"
+          },
+          {
+            "value": "#PER",
+            "value_ua": "#PER",
+            "goods_id": "292076",
+            "name": "vobler-smith-jib-90sp-90mm-7.2g-per",
+            "name_ua": "vobler-smith-jib-90sp-90mm-72h-per",
+            "sell_status": "4"
+          },
+          {
+            "value": "#01",
+            "value_ua": "#01",
+            "goods_id": "292077",
+            "name": "vobler-smith-jib-90sp-90mm-7.2g-01",
+            "name_ua": "vobler-smith-jib-90sp-90mm-72h-01",
+            "sell_status": "4"
+          },
+          {
+            "value": "#04",
+            "value_ua": "#04",
+            "goods_id": "292080",
+            "name": "vobler-smith-jib-90sp-90mm-7.2g-04",
+            "name_ua": "vobler-smith-jib-90sp-90mm-72h-04",
+            "sell_status": "4"
+          },
+          {
+            "value": "#12",
+            "value_ua": "#12",
+            "goods_id": "292081",
+            "name": "vobler-smith-jib-90sp-90mm-7.2g-12",
+            "name_ua": "vobler-smith-jib-90sp-90mm-72h-12",
+            "sell_status": "0"
+          }
+        ]
+      },
+      "characteristics": {
+        "2": {
+          "id": "10954",
+          "title": "Длина",
+          "title_ua": "Довжина",
+          "unit": "мм",
+          "type": "ComboBox",
+          "value": "90",
+          "value_ua": "90"
+        },
+        "3": {
+          "id": "10955",
+          "title": "Вес",
+          "title_ua": "Вага",
+          "unit": "г",
+          "type": "TextInput",
+          "value": "7.2 г",
+          "value_ua": "7.2 г"
+        },
+        "4": {
+          "id": "10956",
+          "title": "Заглубление",
+          "title_ua": "Заглиблення",
+          "unit": "м",
+          "type": "TextInput",
+          "value": "1-1.5 м",
+          "value_ua": "1-1.5 м"
+        },
+        "5": {
+          "id": "10957",
+          "title": "Плавучесть",
+          "title_ua": "Плавучість",
+          "unit": "",
+          "type": "ComboBox",
+          "value": "Суспендр",
+          "value_ua": "Суспендр"
+        },
+        "6": {
+          "id": "11034",
+          "title": "Цвет",
+          "title_ua": "Колір",
+          "unit": "",
+          "type": "TextInput",
+          "value": "#696",
+          "value_ua": "#696"
+        },
+        "7": {
+          "id": "11250",
+          "title": "Вес (диапазон)",
+          "title_ua": "Вага (діапазон)",
+          "unit": "г",
+          "type": "ComboBox",
+          "value": "5-12",
+          "value_ua": "5-12"
+        },
+        "8": {
+          "id": "11251",
+          "title": "Размер (диапазон)",
+          "title_ua": "Розмір (діапазон)",
+          "unit": "мм",
+          "type": "ComboBox",
+          "value": "80-110",
+          "value_ua": "80-110"
+        },
+        "10": {
+          "id": "11758",
+          "title": "Тип воблера",
+          "title_ua": "Тип воблера",
+          "unit": "",
+          "type": "ComboBox",
+          "value": "Minnow",
+          "value_ua": "Minnow"
+        }
+      },
+      "description": "<p>Даный воблер может применяться как для ловли агресивным твичингом, так и относительно нерезкими рывками. Игра воблера не прекращается после того как движение удилищем остановлено. Покачивание со стороны в сторону некоторое время сохраняется.</p><p>Вольфрамовый шарик используется в качестве главного грузика. Имеет анимацию вращения. При подергивании и рывках вольфрамовый грузик передвигается назад, что мгновенно нарушает баланс и провоцирует не симметричную анимацию.</p>",
+      "description_ua": "<p>Даний воблер може застосовуватися як для лову агресивних твичингом, так і щодо нерізкими ривками. Гра воблера не припиняється після того як рух вудилищем зупинено. Погойдування з боку в бік деякий час зберігається.<br/>Вольфрамовиа кулька використовується в якості головного вантажу. Має ефект обертання. Під час ривка після паузи вольфрамовий вантаж пересувається та миттєво змінює баланс і створює не симетричну анімацію</p>",
+      "producer": {
+        "id": "4598",
+        "title": "Smith",
+        "title_ua": "Smith",
+        "name": "smith",
+        "status": "1"
+      },
+      "comments": [],
+      "rating": 0,
+      "breadcrumbs": [
+        {
+          "id": "168793",
+          "title": "Приманки",
+          "title_ua": "Приманки",
+          "name": "primanky",
+          "name_ua": "prymanky",
+          "status": "1",
+          "image": "https://i.flagman.ua/goods/1598/1598007.png",
+          "type": "catalog",
+          "children": []
+        },
+        {
+          "id": "168794",
+          "title": "Воблеры",
+          "title_ua": "Воблери",
+          "name": "vobleri",
+          "name_ua": "voblery",
+          "status": "1",
+          "image": "https://i.flagman.ua/goods/1248/1248334.png",
+          "type": "catalog",
+          "children": []
+        },
+        {
+          "id": "4598",
+          "title": "Smith",
+          "title_ua": "Smith",
+          "name": "voblery/c168794/producer=4598",
+          "name_ua": "voblery/c168794/producer=4598",
+          "status": 1,
+          "image": "",
+          "type": "page",
+          "children": []
+        }
+      ],
+      "count_comments": 0,
+      "metadata": {
+        "title": "Воблер Smith Jib 90SP 90mm 7.2г #696 купить в Киеве и Украине – цена, отзывы, характеристики | FLAGMAN",
+        "h1": "",
+        "description": "FLAGMAN ⏩ Купить Воблер Smith Jib 90SP 90mm 7.2г #696 ⭐️ Выгодная цена ✈️ Доставка по Киеву и Украине ❤️ Все для рыбалки ☎️ 0800-303-355",
+        "keywords": "",
+        "og_title": "Воблер Smith Jib 90SP 90mm 7.2г #696 купить в Киеве и Украине – цена, отзывы, характеристики | FLAGMAN",
+        "title_ua": "Воблер Smith Jib 90SP 90mm 7.2г #696 купити в Києві та Україні – ціна, відгуки, характеристики | FLAGMAN",
+        "h1_ua": "",
+        "description_ua": "FLAGMAN ⏩ Купити Воблер Smith Jib 90SP 90mm 7.2г #696 ⭐️ Вигідна ціна ✈️ Доставка по Києву та Україні ❤️ Все для риболовлі ☎️ 0800-303-355",
+        "keywords_ua": "",
+        "og_title_ua": "Воблер Smith Jib 90SP 90mm 7.2г #696 купити в Києві та Україні – ціна, відгуки, характеристики | FLAGMAN",
+        "og_description_ua": "FLAGMAN ⏩ Купити Воблер Smith Jib 90SP 90mm 7.2г #696 ⭐️ Вигідна ціна ✈️ Доставка по Києву та Україні ❤️ Все для риболовлі ☎️ 0800-303-355",
+        "og_image": "https://i.flagman.ua/goods/1951/1951645.jpg",
+        "og_description": "FLAGMAN ⏩ Купить Воблер Smith Jib 90SP 90mm 7.2г #696 ⭐️ Выгодная цена ✈️ Доставка по Киеву и Украине ❤️ Все для рыбалки ☎️ 0800-303-355",
+        "robots": "index,follow",
+        "robots_ua": "index,follow",
+        "canonical": "/ru/vobler-smith-jib-90sp-90mm-72h-696/p292051",
+        "canonical_ua": "/vobler-smith-jib-90sp-90mm-72h-696/p292051",
+        "apple_touch_icon": "",
+        "footer_text": "",
+        "footer_text_ua": "",
+        "alternate": [
+          "uk",
+          "ru"
+        ],
+        "moveurl": "",
+        "moveurl_ua": "",
+        "moveurl_type": ""
+      },
+      "sell_status": "0",
+      "showPrice": false,
+      "cache": 1
+    },
+    {
+      "id": "292076",
+      "parent_id": "168794",
+      "mpath": ".168793.168794.",
+      "title": "Воблер Smith Jib 90SP 90mm 7.2г #PER",
+      "title_ua": "Воблер Smith Jib 90SP 90mm 7.2г #PER",
+      "name": "vobler-smith-jib-90sp-90mm-7.2g-per",
+      "name_ua": "vobler-smith-jib-90sp-90mm-72h-per",
+      "status": "1",
+      "tags": null,
+      "ext_id": "1665.09.76",
+      "series_id": "0",
+      "group_id": "301321",
+      "producer_id": "4598",
+      "warranty": "",
+      "price": 587.25,
+      "skuID": "134694",
+      "old_price": 783,
+      "min_b2b_order": "1",
+      "min_site_order": "1",
+      "fish_type": [
+        {
+          "id": "1",
+          "title": "Щука",
+          "title_ua": "Щука",
+          "name": "shchuka",
+          "image": "https://assets.flagman.ua/type_fish/1bbae-schuka.webp",
+          "image_mobile": "https://assets.flagman.ua/type_fish/604a8-schuka.webp",
+          "link": null,
+          "link_ua": null,
+          "order": "10"
+        }
+      ],
+      "cargo_compartment": "0",
+      "images": [
+        "https://i.flagman.ua/goods/1951/1951650.jpg"
+      ],
+      "videos": [],
+      "group": {
+        "mark": {
+          "unit": "",
+          "title": "Цвет",
+          "title_ua": "Колір",
+          "keyChar": "11034"
+        },
+        "goods": [
+          {
+            "value": "#696",
+            "value_ua": "#696",
+            "goods_id": "292051",
+            "name": "vobler-smith-jib-90sp-90mm-7.2g-696",
+            "name_ua": "vobler-smith-jib-90sp-90mm-72h-696",
+            "sell_status": "0"
+          },
+          {
+            "value": "#10",
+            "value_ua": "#10",
+            "goods_id": "292065",
+            "name": "vobler-smith-jib-90sp-90mm-7.2g-10",
+            "name_ua": "vobler-smith-jib-90sp-90mm-72h-10",
+            "sell_status": "4"
+          },
+          {
+            "value": "#09",
+            "value_ua": "#09",
+            "goods_id": "292066",
+            "name": "vobler-smith-jib-90sp-90mm-7.2g-09",
+            "name_ua": "vobler-smith-jib-90sp-90mm-72h-09",
+            "sell_status": "0"
+          },
+          {
+            "value": "#SLB",
+            "value_ua": "#SLB",
+            "goods_id": "292071",
+            "name": "vobler-smith-jib-90sp-90mm-7.2g-slb",
+            "name_ua": "vobler-smith-jib-90sp-90mm-72h-slb",
+            "sell_status": "0"
+          },
+          {
+            "value": "#02",
+            "value_ua": "#02",
+            "goods_id": "292072",
+            "name": "vobler-smith-jib-90sp-90mm-7.2g-02",
+            "name_ua": "vobler-smith-jib-90sp-90mm-72h-02",
+            "sell_status": "4"
+          },
+          {
+            "value": "#PER",
+            "value_ua": "#PER",
+            "goods_id": "292076",
+            "name": "vobler-smith-jib-90sp-90mm-7.2g-per",
+            "name_ua": "vobler-smith-jib-90sp-90mm-72h-per",
+            "sell_status": "4"
+          },
+          {
+            "value": "#01",
+            "value_ua": "#01",
+            "goods_id": "292077",
+            "name": "vobler-smith-jib-90sp-90mm-7.2g-01",
+            "name_ua": "vobler-smith-jib-90sp-90mm-72h-01",
+            "sell_status": "4"
+          },
+          {
+            "value": "#04",
+            "value_ua": "#04",
+            "goods_id": "292080",
+            "name": "vobler-smith-jib-90sp-90mm-7.2g-04",
+            "name_ua": "vobler-smith-jib-90sp-90mm-72h-04",
+            "sell_status": "4"
+          },
+          {
+            "value": "#12",
+            "value_ua": "#12",
+            "goods_id": "292081",
+            "name": "vobler-smith-jib-90sp-90mm-7.2g-12",
+            "name_ua": "vobler-smith-jib-90sp-90mm-72h-12",
+            "sell_status": "0"
+          }
+        ]
+      },
+      "characteristics": {
+        "2": {
+          "id": "10954",
+          "title": "Длина",
+          "title_ua": "Довжина",
+          "unit": "мм",
+          "type": "ComboBox",
+          "value": "90",
+          "value_ua": "90"
+        },
+        "3": {
+          "id": "10955",
+          "title": "Вес",
+          "title_ua": "Вага",
+          "unit": "г",
+          "type": "TextInput",
+          "value": "7.2 г",
+          "value_ua": "7.2 г"
+        },
+        "4": {
+          "id": "10956",
+          "title": "Заглубление",
+          "title_ua": "Заглиблення",
+          "unit": "м",
+          "type": "TextInput",
+          "value": "1-1.5 м",
+          "value_ua": "1-1.5 м"
+        },
+        "5": {
+          "id": "10957",
+          "title": "Плавучесть",
+          "title_ua": "Плавучість",
+          "unit": "",
+          "type": "ComboBox",
+          "value": "Суспендр",
+          "value_ua": "Суспендр"
+        },
+        "6": {
+          "id": "11034",
+          "title": "Цвет",
+          "title_ua": "Колір",
+          "unit": "",
+          "type": "TextInput",
+          "value": "#PER",
+          "value_ua": "#PER"
+        },
+        "7": {
+          "id": "11250",
+          "title": "Вес (диапазон)",
+          "title_ua": "Вага (діапазон)",
+          "unit": "г",
+          "type": "ComboBox",
+          "value": "5-12",
+          "value_ua": "5-12"
+        },
+        "8": {
+          "id": "11251",
+          "title": "Размер (диапазон)",
+          "title_ua": "Розмір (діапазон)",
+          "unit": "мм",
+          "type": "ComboBox",
+          "value": "80-110",
+          "value_ua": "80-110"
+        },
+        "10": {
+          "id": "11758",
+          "title": "Тип воблера",
+          "title_ua": "Тип воблера",
+          "unit": "",
+          "type": "ComboBox",
+          "value": "Minnow",
+          "value_ua": "Minnow"
+        }
+      },
+      "description": "<p>Даный воблер может применяться как для ловли агресивным твичингом, так и относительно нерезкими рывками. Игра воблера не прекращается после того как движение удилищем остановлено. Покачивание со стороны в сторону некоторое время сохраняется.</p><p>Вольфрамовый шарик используется в качестве главного грузика. Имеет анимацию вращения. При подергивании и рывках вольфрамовый грузик передвигается назад, что мгновенно нарушает баланс и провоцирует не симметричную анимацию.</p>",
+      "description_ua": "<p>Даний воблер може застосовуватися як для лову агресивних твичингом, так і щодо нерізкими ривками. Гра воблера не припиняється після того як рух вудилищем зупинено. Погойдування з боку в бік деякий час зберігається.<br/>Вольфрамовиа кулька використовується в якості головного вантажу. Має ефект обертання. Під час ривка після паузи вольфрамовий вантаж пересувається та миттєво змінює баланс і створює не симетричну анімацію</p>",
+      "producer": {
+        "id": "4598",
+        "title": "Smith",
+        "title_ua": "Smith",
+        "name": "smith",
+        "status": "1"
+      },
+      "comments": [],
+      "rating": 0,
+      "breadcrumbs": [
+        {
+          "id": "168793",
+          "title": "Приманки",
+          "title_ua": "Приманки",
+          "name": "primanky",
+          "name_ua": "prymanky",
+          "status": "1",
+          "image": "https://i.flagman.ua/goods/1598/1598007.png",
+          "type": "catalog",
+          "children": []
+        },
+        {
+          "id": "168794",
+          "title": "Воблеры",
+          "title_ua": "Воблери",
+          "name": "vobleri",
+          "name_ua": "voblery",
+          "status": "1",
+          "image": "https://i.flagman.ua/goods/1248/1248334.png",
+          "type": "catalog",
+          "children": []
+        },
+        {
+          "id": "4598",
+          "title": "Smith",
+          "title_ua": "Smith",
+          "name": "voblery/c168794/producer=4598",
+          "name_ua": "voblery/c168794/producer=4598",
+          "status": 1,
+          "image": "",
+          "type": "page",
+          "children": []
+        }
+      ],
+      "count_comments": 0,
+      "metadata": {
+        "title": "Воблер Smith Jib 90SP 90mm 7.2г #PER купить в Киеве и Украине – цена, отзывы, характеристики | FLAGMAN",
+        "h1": "",
+        "description": "FLAGMAN ⏩ Купить Воблер Smith Jib 90SP 90mm 7.2г #PER ⭐️ Выгодная цена ✈️ Доставка по Киеву и Украине ❤️ Все для рыбалки ☎️ 0800-303-355",
+        "keywords": "",
+        "og_title": "Воблер Smith Jib 90SP 90mm 7.2г #PER купить в Киеве и Украине – цена, отзывы, характеристики | FLAGMAN",
+        "title_ua": "Воблер Smith Jib 90SP 90mm 7.2г #PER купити в Києві та Україні – ціна, відгуки, характеристики | FLAGMAN",
+        "h1_ua": "",
+        "description_ua": "FLAGMAN ⏩ Купити Воблер Smith Jib 90SP 90mm 7.2г #PER ⭐️ Вигідна ціна ✈️ Доставка по Києву та Україні ❤️ Все для риболовлі ☎️ 0800-303-355",
+        "keywords_ua": "",
+        "og_title_ua": "Воблер Smith Jib 90SP 90mm 7.2г #PER купити в Києві та Україні – ціна, відгуки, характеристики | FLAGMAN",
+        "og_description_ua": "FLAGMAN ⏩ Купити Воблер Smith Jib 90SP 90mm 7.2г #PER ⭐️ Вигідна ціна ✈️ Доставка по Києву та Україні ❤️ Все для риболовлі ☎️ 0800-303-355",
+        "og_image": "https://i.flagman.ua/goods/1951/1951650.jpg",
+        "og_description": "FLAGMAN ⏩ Купить Воблер Smith Jib 90SP 90mm 7.2г #PER ⭐️ Выгодная цена ✈️ Доставка по Киеву и Украине ❤️ Все для рыбалки ☎️ 0800-303-355",
+        "robots": "index,follow",
+        "robots_ua": "index,follow",
+        "canonical": "/ru/vobler-smith-jib-90sp-90mm-72h-per/p292076",
+        "canonical_ua": "/vobler-smith-jib-90sp-90mm-72h-per/p292076",
+        "apple_touch_icon": "",
+        "footer_text": "",
+        "footer_text_ua": "",
+        "alternate": [
+          "uk",
+          "ru"
+        ],
+        "moveurl": "",
+        "moveurl_ua": "",
+        "moveurl_type": ""
+      },
+      "sell_status": "4",
+      "showPrice": true,
+      "cache": 1
+    }
+  ]
+}

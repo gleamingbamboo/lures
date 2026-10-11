@@ -1,0 +1,502 @@
+{
+  "@context": "/api/v2/contexts/ProductVariant",
+  "@id": "/api/v2/shop/product-variants",
+  "@type": "hydra:Collection",
+  "hydra:member": [
+    {
+      "@id": "/api/v2/shop/product-variants/15950079",
+      "@type": "ProductVariant",
+      "productInventories": [],
+      "id": 27691,
+      "code": "15950079",
+      "product": {
+        "@id": "/api/v2/shop/products/15950111",
+        "@type": "Product",
+        "minPrice": 32400,
+        "slug": "vobler-zipbaits-rigge-90-sp-90mm-9-8g-050",
+        "defaultVariant": null,
+        "channelHostname": "ibis-gear.com"
+      },
+      "optionValues": [
+        {
+          "@id": "/api/v2/shop/product-option-values/model-rigge",
+          "@type": "ProductOptionValue",
+          "displayValue": null,
+          "media": null,
+          "id": 3846,
+          "code": "model-rigge",
+          "value": "Rigge",
+          "optionCode": "model"
+        },
+        {
+          "@id": "/api/v2/shop/product-option-values/dlina-obshchaia-mm-70",
+          "@type": "ProductOptionValue",
+          "displayValue": null,
+          "media": null,
+          "id": 10105,
+          "code": "dlina-obshchaia-mm-70",
+          "value": "70",
+          "optionCode": "dlina-obshchaia-mm"
+        },
+        {
+          "@id": "/api/v2/shop/product-option-values/tsvet-tovara-210",
+          "@type": "ProductOptionValue",
+          "displayValue": null,
+          "media": "/api/v2/shop/cms-plugin/media/8303",
+          "id": 56101,
+          "code": "tsvet-tovara-210",
+          "value": "210",
+          "optionCode": "tsvet-tovara"
+        },
+        {
+          "@id": "/api/v2/shop/product-option-values/massa-g-4-7",
+          "@type": "ProductOptionValue",
+          "displayValue": null,
+          "media": null,
+          "id": 96170,
+          "code": "massa-g-4-7",
+          "value": "4,7",
+          "optionCode": "massa-g"
+        }
+      ],
+      "attributes": [
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 288550,
+          "valueCode": "model-rigge",
+          "slug": "rigge",
+          "siteDisplay": true,
+          "value": "Rigge",
+          "name": "Модель",
+          "code": "model"
+        },
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 675162,
+          "valueCode": "tsvet-tovara-210",
+          "slug": "210-20",
+          "siteDisplay": true,
+          "value": "210",
+          "name": "Колір товару",
+          "code": "tsvet-tovara"
+        },
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 598125,
+          "valueCode": "zaglublenie-m-0-6-1",
+          "slug": "06-1-1",
+          "siteDisplay": true,
+          "value": "0,6-1",
+          "name": "Заглиблення, м",
+          "code": "zaglublenie-m"
+        },
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 592845,
+          "valueCode": "massa-g-4-7",
+          "slug": "47-14",
+          "siteDisplay": true,
+          "value": "4,7",
+          "name": "Маса, г",
+          "code": "massa-g"
+        },
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 592123,
+          "valueCode": "plavuchest-plavaiushchii",
+          "slug": "plavayuchiy-1",
+          "siteDisplay": true,
+          "value": "Плаваючий",
+          "name": "Плавучість",
+          "code": "plavuchest"
+        },
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 591402,
+          "valueCode": "gear-category-rybalka-spinningovaia-lovlia",
+          "slug": "gear-category-rybalka-spinningovaia-lovlia-1",
+          "siteDisplay": false,
+          "value": "Спінінгова ловля",
+          "name": "За призначенням",
+          "code": "po-naznacheniiu"
+        },
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 591401,
+          "valueCode": "strana-proiskhozhdeniia-iaponiia",
+          "slug": "yaponiya-2",
+          "siteDisplay": true,
+          "value": "Японія",
+          "name": "Країна походження",
+          "code": "strana-proiskhozhdeniia"
+        },
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 591400,
+          "valueCode": "strana-proizvoditel-iaponiia",
+          "slug": "yaponiya-1",
+          "siteDisplay": false,
+          "value": "Японія",
+          "name": "Країна виробник",
+          "code": "strana-proizvoditel"
+        },
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 591397,
+          "valueCode": "kalibr",
+          "slug": "-11",
+          "siteDisplay": true,
+          "value": "",
+          "name": "Калібр",
+          "code": "kalibr"
+        },
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 524145,
+          "valueCode": "pro-cat-id-137",
+          "slug": "137-12",
+          "siteDisplay": false,
+          "value": "137",
+          "name": "pro-cat-id",
+          "code": "pro-cat-id"
+        },
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 523749,
+          "valueCode": "proizvoditel-zipbaits",
+          "slug": "zipbaits",
+          "siteDisplay": true,
+          "value": "ZipBaits",
+          "name": "Виробник",
+          "code": "proizvoditel"
+        },
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 485661,
+          "valueCode": "dlina-obshchaia-mm-70",
+          "slug": "70",
+          "siteDisplay": true,
+          "value": "70",
+          "name": "Довжина загальна, мм",
+          "code": "dlina-obshchaia-mm"
+        },
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 485009,
+          "valueCode": "tip-voblera-minnou",
+          "slug": "minnou",
+          "siteDisplay": true,
+          "value": "Міноу",
+          "name": "Тип воблера",
+          "code": "tip-voblera"
+        },
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 1240506,
+          "valueCode": "expert_review-1",
+          "slug": "1-75",
+          "siteDisplay": false,
+          "value": "1",
+          "name": "expert_review",
+          "code": "product_tag_expert_review"
+        }
+      ],
+      "slug": "vobler-zipbaits-ridge-70f-70mm-4-7-gr-col-210",
+      "name": "Воблер ZipBaits RIDGE 70F 70mm 4.7 gr col.#210",
+      "inStock": false,
+      "price": 113000,
+      "originalPrice": 113000,
+      "productTags": [],
+      "channelHostname": "ibis-gear.com",
+      "images": [
+        {
+          "@context": "/api/v2/contexts/ProductImage",
+          "@id": "/api/v2/shop/product-images/953054",
+          "@type": "ProductImage",
+          "id": 953054,
+          "type": "main",
+          "path": "https://scdn.ibis-gear.com/media/cache/original/f5/e6/bd4af7dd4a58d8a0f56b411a1248.jpg"
+        }
+      ]
+    },
+    {
+      "@id": "/api/v2/shop/product-variants/15950081",
+      "@type": "ProductVariant",
+      "productInventories": [],
+      "id": 27693,
+      "code": "15950081",
+      "product": {
+        "@id": "/api/v2/shop/products/15950111",
+        "@type": "Product",
+        "minPrice": 32400,
+        "slug": "vobler-zipbaits-rigge-90-sp-90mm-9-8g-050",
+        "defaultVariant": null,
+        "channelHostname": "ibis-gear.com"
+      },
+      "optionValues": [
+        {
+          "@id": "/api/v2/shop/product-option-values/model-rigge",
+          "@type": "ProductOptionValue",
+          "displayValue": null,
+          "media": null,
+          "id": 3846,
+          "code": "model-rigge",
+          "value": "Rigge",
+          "optionCode": "model"
+        },
+        {
+          "@id": "/api/v2/shop/product-option-values/dlina-obshchaia-mm-70",
+          "@type": "ProductOptionValue",
+          "displayValue": null,
+          "media": null,
+          "id": 10105,
+          "code": "dlina-obshchaia-mm-70",
+          "value": "70",
+          "optionCode": "dlina-obshchaia-mm"
+        },
+        {
+          "@id": "/api/v2/shop/product-option-values/tsvet-tovara-205r",
+          "@type": "ProductOptionValue",
+          "displayValue": null,
+          "media": "/api/v2/shop/cms-plugin/media/10905",
+          "id": 59641,
+          "code": "tsvet-tovara-205r",
+          "value": "205R",
+          "optionCode": "tsvet-tovara"
+        },
+        {
+          "@id": "/api/v2/shop/product-option-values/massa-g-5-5",
+          "@type": "ProductOptionValue",
+          "displayValue": null,
+          "media": null,
+          "id": 96174,
+          "code": "massa-g-5-5",
+          "value": "5,5",
+          "optionCode": "massa-g"
+        }
+      ],
+      "attributes": [
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 288550,
+          "valueCode": "model-rigge",
+          "slug": "rigge",
+          "siteDisplay": true,
+          "value": "Rigge",
+          "name": "Модель",
+          "code": "model"
+        },
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 679281,
+          "valueCode": "tsvet-tovara-205r",
+          "slug": "205r-1",
+          "siteDisplay": true,
+          "value": "205R",
+          "name": "Колір товару",
+          "code": "tsvet-tovara"
+        },
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 592851,
+          "valueCode": "massa-g-5-5",
+          "slug": "55-35",
+          "siteDisplay": true,
+          "value": "5,5",
+          "name": "Маса, г",
+          "code": "massa-g"
+        },
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 592813,
+          "valueCode": "zaglublenie-m-0-8-1-2",
+          "slug": "08-12-2",
+          "siteDisplay": true,
+          "value": "0.8-1.2",
+          "name": "Заглиблення, м",
+          "code": "zaglublenie-m"
+        },
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 592131,
+          "valueCode": "plavuchest-tonushchii",
+          "slug": "tonuchiy",
+          "siteDisplay": true,
+          "value": "Тонучий",
+          "name": "Плавучість",
+          "code": "plavuchest"
+        },
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 591402,
+          "valueCode": "gear-category-rybalka-spinningovaia-lovlia",
+          "slug": "gear-category-rybalka-spinningovaia-lovlia-1",
+          "siteDisplay": false,
+          "value": "Спінінгова ловля",
+          "name": "За призначенням",
+          "code": "po-naznacheniiu"
+        },
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 591401,
+          "valueCode": "strana-proiskhozhdeniia-iaponiia",
+          "slug": "yaponiya-2",
+          "siteDisplay": true,
+          "value": "Японія",
+          "name": "Країна походження",
+          "code": "strana-proiskhozhdeniia"
+        },
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 591400,
+          "valueCode": "strana-proizvoditel-iaponiia",
+          "slug": "yaponiya-1",
+          "siteDisplay": false,
+          "value": "Японія",
+          "name": "Країна виробник",
+          "code": "strana-proizvoditel"
+        },
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 591397,
+          "valueCode": "kalibr",
+          "slug": "-11",
+          "siteDisplay": true,
+          "value": "",
+          "name": "Калібр",
+          "code": "kalibr"
+        },
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 524145,
+          "valueCode": "pro-cat-id-137",
+          "slug": "137-12",
+          "siteDisplay": false,
+          "value": "137",
+          "name": "pro-cat-id",
+          "code": "pro-cat-id"
+        },
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 523749,
+          "valueCode": "proizvoditel-zipbaits",
+          "slug": "zipbaits",
+          "siteDisplay": true,
+          "value": "ZipBaits",
+          "name": "Виробник",
+          "code": "proizvoditel"
+        },
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 485661,
+          "valueCode": "dlina-obshchaia-mm-70",
+          "slug": "70",
+          "siteDisplay": true,
+          "value": "70",
+          "name": "Довжина загальна, мм",
+          "code": "dlina-obshchaia-mm"
+        },
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 485009,
+          "valueCode": "tip-voblera-minnou",
+          "slug": "minnou",
+          "siteDisplay": true,
+          "value": "Міноу",
+          "name": "Тип воблера",
+          "code": "tip-voblera"
+        },
+        {
+          "@type": "ProductVariantAttributeValue",
+          "id": 1240506,
+          "valueCode": "expert_review-1",
+          "slug": "1-75",
+          "siteDisplay": false,
+          "value": "1",
+          "name": "expert_review",
+          "code": "product_tag_expert_review"
+        }
+      ],
+      "slug": "vobler-zipbaits-ridge-70s-70mm-5-5-gr-col-205",
+      "name": "Воблер ZipBaits RIDGE 70S 70mm 5.5 gr col.#205",
+      "inStock": false,
+      "price": 113000,
+      "originalPrice": 113000,
+      "productTags": [],
+      "channelHostname": "ibis-gear.com",
+      "images": [
+        {
+          "@context": "/api/v2/contexts/ProductImage",
+          "@id": "/api/v2/shop/product-images/953056",
+          "@type": "ProductImage",
+          "id": 953056,
+          "type": "main",
+          "path": "https://scdn.ibis-gear.com/media/cache/original/d1/1f/dfee5070270d67335e07de5090d9.jpg"
+        }
+      ]
+    }
+  ],
+  "hydra:totalItems": 128,
+  "hydra:view": {
+    "@id": "/api/v2/shop/product-variants?product=%2Fapi%2Fv2%2Fshop%2Fproducts%2F15950111&page=1",
+    "@type": "hydra:PartialCollectionView",
+    "hydra:first": "/api/v2/shop/product-variants?product=%2Fapi%2Fv2%2Fshop%2Fproducts%2F15950111&page=1",
+    "hydra:last": "/api/v2/shop/product-variants?product=%2Fapi%2Fv2%2Fshop%2Fproducts%2F15950111&page=5",
+    "hydra:next": "/api/v2/shop/product-variants?product=%2Fapi%2Fv2%2Fshop%2Fproducts%2F15950111&page=2"
+  },
+  "hydra:search": {
+    "@type": "hydra:IriTemplate",
+    "hydra:template": "/api/v2/shop/product-variants{?code,code[],product.mainTaxon.code,product.mainTaxon.code[],product,product[],optionValues,optionValues[]}",
+    "hydra:variableRepresentation": "BasicRepresentation",
+    "hydra:mapping": [
+      {
+        "@type": "IriTemplateMapping",
+        "variable": "code",
+        "property": "code",
+        "required": false
+      },
+      {
+        "@type": "IriTemplateMapping",
+        "variable": "code[]",
+        "property": "code",
+        "required": false
+      },
+      {
+        "@type": "IriTemplateMapping",
+        "variable": "product.mainTaxon.code",
+        "property": "product.mainTaxon.code",
+        "required": false
+      },
+      {
+        "@type": "IriTemplateMapping",
+        "variable": "product.mainTaxon.code[]",
+        "property": "product.mainTaxon.code",
+        "required": false
+      },
+      {
+        "@type": "IriTemplateMapping",
+        "variable": "product",
+        "property": "product",
+        "required": false
+      },
+      {
+        "@type": "IriTemplateMapping",
+        "variable": "product[]",
+        "property": "product",
+        "required": false
+      },
+      {
+        "@type": "IriTemplateMapping",
+        "variable": "optionValues",
+        "property": "optionValues",
+        "required": false
+      },
+      {
+        "@type": "IriTemplateMapping",
+        "variable": "optionValues[]",
+        "property": "optionValues",
+        "required": false
+      }
+    ]
+  }
+}

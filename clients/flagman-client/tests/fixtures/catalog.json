@@ -1,0 +1,809 @@
+{
+  "status": "success",
+  "isValid": true,
+  "data": {
+    "goods": [
+      "292051",
+      "292076"
+    ],
+    "filters": [
+      {
+        "title": "Производители",
+        "title_ua": "Виробник",
+        "type": "ComboBox",
+        "order": "2",
+        "id": "producer",
+        "description": "Производитель",
+        "description_ua": "Виробник",
+        "unit": "",
+        "name": "producer",
+        "values": [
+          {
+            "id": "4168",
+            "title": "Azura",
+            "name": "azura",
+            "icon": "https://i.flagman.ua/producers/0/16.png",
+            "title_ua": "Azura",
+            "count": 141,
+            "selected": 0,
+            "link": "producer=4168",
+            "showLink": true
+          },
+          {
+            "id": "4157",
+            "title": "Flagman",
+            "name": "flagman",
+            "icon": "https://i.flagman.ua/producers/0/54.png",
+            "title_ua": "Flagman",
+            "count": 1428,
+            "selected": 0,
+            "link": "producer=4157",
+            "showLink": true
+          },
+          {
+            "id": "4632",
+            "title": "Megabite",
+            "name": "4632",
+            "icon": null,
+            "title_ua": "Megabite",
+            "count": 70,
+            "selected": 0,
+            "link": "producer=4632",
+            "showLink": true
+          },
+          {
+            "id": "4649",
+            "title": "Timon",
+            "name": "4649",
+            "icon": null,
+            "title_ua": "Timon",
+            "count": 18,
+            "selected": 0,
+            "link": "producer=4649",
+            "showLink": false
+          },
+          {
+            "id": "4653",
+            "title": "Daysprout",
+            "name": "4653",
+            "icon": null,
+            "title_ua": "Daysprout",
+            "count": 10,
+            "selected": 0,
+            "link": "producer=4653",
+            "showLink": false
+          },
+          {
+            "id": "4169",
+            "title": "Abu Garcia",
+            "name": "abu-garcia",
+            "icon": "https://i.flagman.ua/producers/0/12.png",
+            "title_ua": "Abu Garcia",
+            "count": 0,
+            "selected": 0,
+            "link": "producer=4169",
+            "showLink": false
+          },
+          {
+            "id": "4487",
+            "title": "Angry Baits",
+            "name": "angry-baits",
+            "icon": "https://i.flagman.ua/producers/0/275.png",
+            "title_ua": "Angry Baits",
+            "count": 1,
+            "selected": 0,
+            "link": "producer=4487",
+            "showLink": false
+          },
+          {
+            "id": "4277",
+            "title": "Bandit",
+            "name": "bandit",
+            "icon": "https://i.flagman.ua/producers/0/20.png",
+            "title_ua": "Bandit",
+            "count": 40,
+            "selected": 0,
+            "link": "producer=4277",
+            "showLink": true
+          },
+          {
+            "id": "4379",
+            "title": "Bassday",
+            "name": "bassday",
+            "icon": "https://i.flagman.ua/producers/0/192.png",
+            "title_ua": "Bassday",
+            "count": 144,
+            "selected": 0,
+            "link": "producer=4379",
+            "showLink": true
+          },
+          {
+            "id": "4657",
+            "title": "Bearking",
+            "name": "bearking",
+            "icon": null,
+            "title_ua": "Bearking",
+            "count": 168,
+            "selected": 0,
+            "link": "producer=4657",
+            "showLink": false
+          },
+          {
+            "id": "4249",
+            "title": "Bomber",
+            "name": "bomber",
+            "icon": "https://i.flagman.ua/producers/0/25.png",
+            "title_ua": "Bomber",
+            "count": 434,
+            "selected": 0,
+            "link": "producer=4249",
+            "showLink": true
+          },
+          {
+            "id": "4159",
+            "title": "Daiwa",
+            "name": "daiwa",
+            "icon": "https://i.flagman.ua/producers/0/38.png",
+            "title_ua": "Daiwa",
+            "count": 133,
+            "selected": 0,
+            "link": "producer=4159",
+            "showLink": true
+          },
+          {
+            "id": "4402",
+            "title": "Deps",
+            "name": "deps",
+            "icon": "https://i.flagman.ua/producers/0/195.png",
+            "title_ua": "Deps",
+            "count": 14,
+            "selected": 0,
+            "link": "producer=4402",
+            "showLink": true
+          },
+          {
+            "id": "4647",
+            "title": "Duel",
+            "name": "duel",
+            "icon": null,
+            "title_ua": "Duel",
+            "count": 61,
+            "selected": 0,
+            "link": "producer=4647",
+            "showLink": false
+          },
+          {
+            "id": "4352",
+            "title": "Duo",
+            "name": "duo",
+            "icon": null,
+            "title_ua": "Duo",
+            "count": 135,
+            "selected": 0,
+            "link": "producer=4352",
+            "showLink": true
+          },
+          {
+            "id": "4399",
+            "title": "Ever Green",
+            "name": "ever-green",
+            "icon": "https://i.flagman.ua/producers/0/184.png",
+            "title_ua": "Ever Green",
+            "count": 11,
+            "selected": 0,
+            "link": "producer=4399",
+            "showLink": true
+          },
+          {
+            "id": "4401",
+            "title": "Gan Craft",
+            "name": "gan-craft",
+            "icon": "https://i.flagman.ua/producers/0/224.png",
+            "title_ua": "Gan Craft",
+            "count": 20,
+            "selected": 0,
+            "link": "producer=4401",
+            "showLink": true
+          },
+          {
+            "id": "4170",
+            "title": "Golden Mean",
+            "name": "golden-mean",
+            "icon": "https://i.flagman.ua/producers/0/65.png",
+            "title_ua": "Golden Mean",
+            "count": 8,
+            "selected": 0,
+            "link": "producer=4170",
+            "showLink": true
+          },
+          {
+            "id": "4261",
+            "title": "Heddon",
+            "name": "heddon",
+            "icon": "https://i.flagman.ua/producers/0/70.png",
+            "title_ua": "Heddon",
+            "count": 38,
+            "selected": 0,
+            "link": "producer=4261",
+            "showLink": true
+          },
+          {
+            "id": "4400",
+            "title": "Imakatsu",
+            "name": "imakatsu",
+            "icon": "https://i.flagman.ua/producers/0/196.png",
+            "title_ua": "Imakatsu",
+            "count": 67,
+            "selected": 0,
+            "link": "producer=4400",
+            "showLink": true
+          },
+          {
+            "id": "4431",
+            "title": "Issei",
+            "name": "issei",
+            "icon": "https://i.flagman.ua/producers/0/212.png",
+            "title_ua": "Issei",
+            "count": 31,
+            "selected": 0,
+            "link": "producer=4431",
+            "showLink": true
+          },
+          {
+            "id": "4260",
+            "title": "Jackall",
+            "name": "jackall",
+            "icon": "https://i.flagman.ua/producers/0/74.png",
+            "title_ua": "Jackall",
+            "count": 311,
+            "selected": 0,
+            "link": "producer=4260",
+            "showLink": true
+          },
+          {
+            "id": "4252",
+            "title": "Jaxon",
+            "name": "jaxon",
+            "icon": null,
+            "title_ua": "Jaxon",
+            "count": 142,
+            "selected": 0,
+            "link": "producer=4252",
+            "showLink": true
+          },
+          {
+            "id": "4248",
+            "title": "Lucky Craft",
+            "name": "lucky-craft",
+            "icon": "https://i.flagman.ua/producers/0/89.png",
+            "title_ua": "Lucky Craft",
+            "count": 78,
+            "selected": 0,
+            "link": "producer=4248",
+            "showLink": false
+          },
+          {
+            "id": "4207",
+            "title": "Lucky John",
+            "name": "lucky-john",
+            "icon": "https://i.flagman.ua/producers/0/90.png",
+            "title_ua": "Lucky John",
+            "count": 9,
+            "selected": 0,
+            "link": "producer=4207",
+            "showLink": true
+          },
+          {
+            "id": "4519",
+            "title": "Madness",
+            "name": "madness",
+            "icon": "https://i.flagman.ua/producers/0/310.png",
+            "title_ua": "Madness",
+            "count": 3,
+            "selected": 0,
+            "link": "producer=4519",
+            "showLink": true
+          },
+          {
+            "id": "4404",
+            "title": "Megabass",
+            "name": "megabass",
+            "icon": "https://i.flagman.ua/producers/0/189.png",
+            "title_ua": "Megabass",
+            "count": 122,
+            "selected": 0,
+            "link": "producer=4404",
+            "showLink": true
+          },
+          {
+            "id": "4640",
+            "title": "Mukai",
+            "name": "mukai ",
+            "icon": null,
+            "title_ua": "Mukai",
+            "count": 163,
+            "selected": 0,
+            "link": "producer=4640",
+            "showLink": false
+          },
+          {
+            "id": "4507",
+            "title": "Nories",
+            "name": "nories",
+            "icon": "https://i.flagman.ua/producers/0/295.png",
+            "title_ua": "Nories",
+            "count": 66,
+            "selected": 0,
+            "link": "producer=4507",
+            "showLink": false
+          },
+          {
+            "id": "4354",
+            "title": "O.S.P.",
+            "name": "osp",
+            "icon": null,
+            "title_ua": "O.S.P.",
+            "count": 174,
+            "selected": 0,
+            "link": "producer=4354",
+            "showLink": true
+          },
+          {
+            "id": "4196",
+            "title": "Owner",
+            "name": "owner",
+            "icon": "https://i.flagman.ua/producers/0/111.png",
+            "title_ua": "Owner",
+            "count": 120,
+            "selected": 0,
+            "link": "producer=4196",
+            "showLink": true
+          },
+          {
+            "id": "4287",
+            "title": "Panacea",
+            "name": "panacea",
+            "icon": "https://i.flagman.ua/producers/0/112.png",
+            "title_ua": "Panacea",
+            "count": 13,
+            "selected": 0,
+            "link": "producer=4287",
+            "showLink": true
+          },
+          {
+            "id": "4262",
+            "title": "Pontoon 21",
+            "name": "Pontoon-21",
+            "icon": "https://i.flagman.ua/producers/0/10.gif",
+            "title_ua": "Pontoon 21",
+            "count": 521,
+            "selected": 0,
+            "link": "producer=4262",
+            "showLink": true
+          },
+          {
+            "id": "4630",
+            "title": "Raid",
+            "name": "raid",
+            "icon": null,
+            "title_ua": "Raid",
+            "count": 50,
+            "selected": 0,
+            "link": "producer=4630",
+            "showLink": true
+          },
+          {
+            "id": "4228",
+            "title": "Rapala",
+            "name": "rapala",
+            "icon": "https://i.flagman.ua/producers/0/121.png",
+            "title_ua": "Rapala",
+            "count": 142,
+            "selected": 0,
+            "link": "producer=4228",
+            "showLink": true
+          },
+          {
+            "id": "4189",
+            "title": "Salmo",
+            "name": "salmo",
+            "icon": "https://i.flagman.ua/producers/0/129.png",
+            "title_ua": "Salmo",
+            "count": 123,
+            "selected": 0,
+            "link": "producer=4189",
+            "showLink": true
+          },
+          {
+            "id": "4598",
+            "title": "Smith",
+            "name": "smith",
+            "icon": null,
+            "title_ua": "Smith",
+            "count": 108,
+            "selected": 0,
+            "link": "producer=4598",
+            "showLink": true
+          },
+          {
+            "id": "4211",
+            "title": "Spro",
+            "name": "spro",
+            "icon": "https://i.flagman.ua/producers/0/140.png",
+            "title_ua": "Spro",
+            "count": 0,
+            "selected": 0,
+            "link": "producer=4211",
+            "showLink": false
+          },
+          {
+            "id": "4641",
+            "title": "Valkein",
+            "name": "valkein",
+            "icon": null,
+            "title_ua": "Valkein",
+            "count": 91,
+            "selected": 0,
+            "link": "producer=4641",
+            "showLink": false
+          },
+          {
+            "id": "4635",
+            "title": "Yarie",
+            "name": "yarie",
+            "icon": null,
+            "title_ua": "Yarie",
+            "count": 99,
+            "selected": 0,
+            "link": "producer=4635",
+            "showLink": false
+          },
+          {
+            "id": "4193",
+            "title": "Yo-Zuri",
+            "name": "yo-zuri",
+            "icon": "https://i.flagman.ua/producers/0/152.png",
+            "title_ua": "Yo-Zuri",
+            "count": 83,
+            "selected": 0,
+            "link": "producer=4193",
+            "showLink": true
+          },
+          {
+            "id": "4265",
+            "title": "ZipBaits",
+            "name": "zipbaits",
+            "icon": "https://i.flagman.ua/producers/0/154.png",
+            "title_ua": "ZipBaits",
+            "count": 388,
+            "selected": 0,
+            "link": "producer=4265",
+            "showLink": true
+          }
+        ]
+      },
+      {
+        "title": "Тип воблера",
+        "title_ua": "Тип воблера",
+        "type": "ComboBox",
+        "order": "4",
+        "id": "11758",
+        "description": "",
+        "unit": "",
+        "name": "detail_11758",
+        "description_ua": "",
+        "values": [
+          {
+            "title": "Cicada",
+            "title_ua": "Cicada",
+            "name": "8931",
+            "id": "8931",
+            "count": 9,
+            "selected": 0,
+            "link": "11758=8931",
+            "showLink": false
+          },
+          {
+            "title": "Crank",
+            "title_ua": "Crank",
+            "name": "8932",
+            "id": "8932",
+            "count": 1135,
+            "selected": 0,
+            "link": "11758=8932",
+            "showLink": true
+          },
+          {
+            "title": "Fat",
+            "title_ua": "Fat",
+            "name": "8933",
+            "id": "8933",
+            "count": 147,
+            "selected": 0,
+            "link": "11758=8933",
+            "showLink": true
+          },
+          {
+            "title": "Jerkbait",
+            "title_ua": "Jerkbait",
+            "name": "8934",
+            "id": "8934",
+            "count": 44,
+            "selected": 0,
+            "link": "11758=8934",
+            "showLink": true
+          },
+          {
+            "title": "Jointed Jerkbait",
+            "title_ua": "Jointed Jerkbait",
+            "name": "8935",
+            "id": "8935",
+            "count": 6,
+            "selected": 0,
+            "link": "11758=8935",
+            "showLink": false
+          },
+          {
+            "title": "Jointed Minnow",
+            "title_ua": "Jointed Minnow",
+            "name": "8936",
+            "id": "8936",
+            "count": 14,
+            "selected": 0,
+            "link": "11758=8936",
+            "showLink": false
+          },
+          {
+            "title": "Minnow",
+            "title_ua": "Minnow",
+            "name": "8937",
+            "id": "8937",
+            "count": 2403,
+            "selected": 0,
+            "link": "11758=8937",
+            "showLink": true
+          },
+          {
+            "title": "Pellet",
+            "title_ua": "Pellet",
+            "name": "8938",
+            "id": "8938",
+            "count": 12,
+            "selected": 0,
+            "link": "11758=8938",
+            "showLink": true
+          },
+          {
+            "title": "Poko Popper",
+            "title_ua": "Poko Popper",
+            "name": "8939",
+            "id": "8939",
+            "count": 18,
+            "selected": 0,
+            "link": "11758=8939",
+            "showLink": false
+          },
+          {
+            "title": "Popper",
+            "title_ua": "Popper",
+            "name": "8940",
+            "id": "8940",
+            "count": 136,
+            "selected": 0,
+            "link": "11758=8940",
+            "showLink": true
+          },
+          {
+            "title": "Popper/Walker",
+            "title_ua": "Popper/Walker",
+            "name": "8941",
+            "id": "8941",
+            "count": 10,
+            "selected": 0,
+            "link": "11758=8941",
+            "showLink": false
+          },
+          {
+            "title": "Shad",
+            "title_ua": "Shad",
+            "name": "8942",
+            "id": "8942",
+            "count": 787,
+            "selected": 0,
+            "link": "11758=8942",
+            "showLink": true
+          },
+          {
+            "title": "Stickbait",
+            "title_ua": "Stickbait",
+            "name": "8943",
+            "id": "8943",
+            "count": 10,
+            "selected": 0,
+            "link": "11758=8943",
+            "showLink": false
+          },
+          {
+            "title": "Swimbait",
+            "title_ua": "Swimbait",
+            "name": "8944",
+            "id": "8944",
+            "count": 81,
+            "selected": 0,
+            "link": "11758=8944",
+            "showLink": true
+          },
+          {
+            "title": "Vib/Rattlin",
+            "title_ua": "Vib/Rattlin",
+            "name": "8945",
+            "id": "8945",
+            "count": 403,
+            "selected": 0,
+            "link": "11758=8945",
+            "showLink": false
+          },
+          {
+            "title": "Walker",
+            "title_ua": "Walker",
+            "name": "8946",
+            "id": "8946",
+            "count": 105,
+            "selected": 0,
+            "link": "11758=8946",
+            "showLink": true
+          }
+        ]
+      },
+      {
+        "title": "Плавучесть",
+        "title_ua": "Плавучість",
+        "type": "ComboBox",
+        "order": "40",
+        "id": "10957",
+        "description": "",
+        "unit": "",
+        "name": "detail_10957",
+        "description_ua": "",
+        "values": [
+          {
+            "title": "Глубоко ныряющий",
+            "title_ua": "Глибоко пірнаючий",
+            "name": "7276",
+            "id": "7276",
+            "count": 20,
+            "selected": 0,
+            "link": "10957=7276",
+            "showLink": true
+          },
+          {
+            "title": "Плавающий",
+            "title_ua": "Плаваючий",
+            "name": "5353",
+            "id": "5353",
+            "count": 2363,
+            "selected": 0,
+            "link": "10957=5353",
+            "showLink": true
+          },
+          {
+            "title": "Поверхностный",
+            "title_ua": "Поверхневий",
+            "name": "5352",
+            "id": "5352",
+            "count": 171,
+            "selected": 0,
+            "link": "10957=5352",
+            "showLink": true
+          },
+          {
+            "title": "Медленно всплывающий",
+            "title_ua": "Повільно cпливає",
+            "name": "7627",
+            "id": "7627",
+            "count": 150,
+            "selected": 0,
+            "link": "10957=7627",
+            "showLink": true
+          },
+          {
+            "title": "Медленно тонущий",
+            "title_ua": "Повільно тоне",
+            "name": "5356",
+            "id": "5356",
+            "count": 164,
+            "selected": 0,
+            "link": "10957=5356",
+            "showLink": true
+          },
+          {
+            "title": "Суспендр",
+            "title_ua": "Суспендр",
+            "name": "5354",
+            "id": "5354",
+            "count": 1945,
+            "selected": 0,
+            "link": "10957=5354",
+            "showLink": true
+          },
+          {
+            "title": "Тонущий",
+            "title_ua": "Тонучий",
+            "name": "5355",
+            "id": "5355",
+            "count": 774,
+            "selected": 0,
+            "link": "10957=5355",
+            "showLink": true
+          },
+          {
+            "title": "Быстро тонущий",
+            "title_ua": "Швидко тоне",
+            "name": "7218",
+            "id": "7218",
+            "count": 77,
+            "selected": 0,
+            "link": "10957=7218",
+            "showLink": true
+          }
+        ]
+      }
+    ],
+    "children": []
+  },
+  "breadcrumbs": [
+    {
+      "id": "168793",
+      "title": "Приманки",
+      "title_ua": "Приманки",
+      "name": "primanky",
+      "name_ua": "prymanky",
+      "status": "1",
+      "image": "https://i.flagman.ua/goods/1598/1598007.png",
+      "type": "catalog",
+      "children": []
+    },
+    {
+      "id": "168794",
+      "title": "Воблеры",
+      "title_ua": "Воблери",
+      "name": "vobleri",
+      "name_ua": "voblery",
+      "status": "1",
+      "image": "https://i.flagman.ua/goods/1248/1248334.png",
+      "type": "catalog",
+      "children": []
+    }
+  ],
+  "metadata": {
+    "title": "≋ Воблеры — купить в Киеве и Украине, лучшие цены и выбор | FLAGMAN",
+    "h1": "Воблеры",
+    "description": "FLAGMAN ⏩ Воблеры ⚡️ Огромный ассортимент ⭐️ Низкие цены ✈️ Доставка по Києву та Україні ❤️ Все для рыбалки ☎️ 0800-303-355",
+    "keywords": "",
+    "og_title": "≋ Воблеры — купить в Киеве и Украине, лучшие цены и выбор | FLAGMAN",
+    "title_ua": "≋ Воблери — купити в Києві та Україні, найкращі ціни та вибір | FLAGMAN",
+    "h1_ua": "Воблери",
+    "description_ua": "FLAGMAN ⏩ Воблери ⚡️ Величезний асортимент ⭐️ Низькі ціни ✈️ Доставка по Києву та Україні ❤️ Все для риболовлі ☎️ 0800-303-355",
+    "keywords_ua": "",
+    "og_title_ua": "≋ Воблери — купити в Києві та Україні, найкращі ціни та вибір | FLAGMAN",
+    "og_description_ua": "FLAGMAN ⏩ Воблери ⚡️ Величезний асортимент ⭐️ Низькі ціни ✈️ Доставка по Києву та Україні ❤️ Все для риболовлі ☎️ 0800-303-355",
+    "og_image": "",
+    "og_description": "FLAGMAN ⏩ Воблеры ⚡️ Огромный ассортимент ⭐️ Низкие цены ✈️ Доставка по Києву та Україні ❤️ Все для рыбалки ☎️ 0800-303-355",
+    "robots": "index,follow",
+    "robots_ua": "index,follow",
+    "canonical": "/ru/voblery/c168794",
+    "canonical_ua": "/voblery/c168794",
+    "apple_touch_icon": "",
+    "footer_text": "<p>\r\n\tРыбалка &ndash; это один из самых эмоциональных видов увлечений независимо от возраста и пола. Если хочется получить максимум незабываемых моментов и погрузиться в мир адреналина, то вам просто ",
+    "footer_text_ua": "<p>\r\n\tРиболовля &ndash; це одне з найбільш емоційних видів захоплень незалежно від віку та статі. Якщо хочеться отримати максимум незабутніх моментів та поринути у світ адреналіну, то вам просто необх",
+    "alternate": [
+      "uk",
+      "ru"
+    ],
+    "id": "168794",
+    "custom": true,
+    "moveurl": "",
+    "moveurl_ua": "",
+    "moveurl_type": ""
+  }
+}

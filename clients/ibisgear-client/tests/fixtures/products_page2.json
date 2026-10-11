@@ -1,0 +1,2547 @@
+{
+  "@context": "/api/v2/contexts/Product",
+  "@id": "/api/v2/shop/products",
+  "@type": "hydra:Collection",
+  "hydra:member": [
+    {
+      "@id": "/api/v2/shop/products/342408",
+      "@type": "Product",
+      "totalReviews": 0,
+      "maxPrice": 94900,
+      "minPrice": 77100,
+      "mainTaxon": {
+        "@id": "/api/v2/shop/taxons/01030100",
+        "@type": "Taxon",
+        "id": 1103,
+        "code": "01030100",
+        "enabled": true,
+        "name": "Воблери",
+        "slug": "vobler",
+        "children": []
+      },
+      "averageRating": 5,
+      "id": 1280871,
+      "code": "342408",
+      "topTaxon": {
+        "@id": "/api/v2/shop/taxons/01000000",
+        "@type": "Taxon",
+        "id": 1085,
+        "code": "01000000",
+        "enabled": true,
+        "name": "Рибальство",
+        "slug": "rybalstvo",
+        "children": []
+      },
+      "variantsCount": 26,
+      "defaultVariant": "/api/v2/shop/product-variants/15950298",
+      "variants": [
+        {
+          "@id": "/api/v2/shop/product-variants/15950298",
+          "@type": "ProductVariant",
+          "archived": false,
+          "productVideo": null,
+          "id": 192512,
+          "code": "15950298",
+          "slug": "vobler-zipbaits-khamsin-70-sp-sr-70mm-9-5g-995",
+          "name": "Воблер ZipBaits Khamsin 70 SP-SR 70mm 9.5g #995",
+          "inStock": true,
+          "price": 80400,
+          "originalPrice": 80400,
+          "productTags": [],
+          "images": [
+            {
+              "@context": "/api/v2/contexts/ProductImage",
+              "@id": "/api/v2/shop/product-images/2528216",
+              "@type": "ProductImage",
+              "type": "main",
+              "path": "https://scdn.ibis-gear.com/media/cache/original/25/b0/66ff7af8e3e3891a1e3a1138b9ac.jpg"
+            }
+          ],
+          "isSpecorder": false,
+          "isOrdered": false
+        }
+      ],
+      "brandName": "ZipBaits",
+      "useModelOptions": false,
+      "productOptions": {
+        "color": {
+          "count": 10,
+          "values": [
+            {
+              "id": 59441,
+              "code": "tsvet-tovara-510r",
+              "slug": "vobler-zipbaits-khamsin-105-sp-sr-105mm-28-5g-510r",
+              "current": true,
+              "image": "https://scdn.ibis-gear.com/media/cache/original/0d/18/color_59441_1718739154.png"
+            },
+            {
+              "id": 55702,
+              "code": "tsvet-tovara-050",
+              "slug": "vobler-zipbaits-khamsin-70-sp-sr-70mm-9-5g-050",
+              "current": false,
+              "image": "https://scdn.ibis-gear.com/media/cache/original/30/09/color_55702_1717713838.png"
+            },
+            {
+              "id": 55698,
+              "code": "tsvet-tovara-522",
+              "slug": "vobler-zipbaits-khamsin-70-sp-sr-70mm-9-5g-522r",
+              "current": false,
+              "image": "https://scdn.ibis-gear.com/media/cache/original/48/5d/color_55698_1717713887.png"
+            },
+            {
+              "id": 156513,
+              "code": "tsvet-tovara-810h",
+              "slug": "vobler-zipbaits-khamsin-70-sp-sr-70mm-9-5g-810",
+              "current": false,
+              "image": "https://scdn.ibis-gear.com/media/cache/original/2f/c6/color_15950302_1733908959.png"
+            },
+            {
+              "id": 59777,
+              "code": "tsvet-tovara-767",
+              "slug": "vobler-zipbaits-khamsin-105sp-sr-105mm-28-5g-col-820",
+              "current": false,
+              "image": "https://scdn.ibis-gear.com/media/cache/original/11/66/color_59777_1718739196.png"
+            }
+          ]
+        }
+      },
+      "channelHostname": "ibis-gear.com"
+    }
+  ],
+  "hydra:totalItems": 2129,
+  "hydra:view": {
+    "@id": "/?page=2",
+    "@type": "hydra:PartialCollectionView",
+    "hydra:first": "/?page=1",
+    "hydra:previous": "/?page=1"
+  },
+  "filterCollection": {
+    "code": "01030100",
+    "useGenderLogic": false,
+    "totalCount": 8157,
+    "selectedCount": 0,
+    "queryString": "",
+    "rangeQueryString": "",
+    "queryUrl": "rybalstvo/vobler/?page=2",
+    "filters": {
+      "tag": {
+        "type": "tag",
+        "code": "tag",
+        "title": "Відбір по ярликам",
+        "viewType": 0,
+        "viewMode": 1,
+        "position": -200,
+        "min": 0,
+        "max": 0,
+        "hidden": false,
+        "gender": false,
+        "values": {
+          "product_tag_expert_review": {
+            "title": "Експерт рекомендує",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/?filter=expert_review",
+            "queryFullUrl": "rybalstvo/vobler/?filter=expert_review",
+            "count": 312
+          },
+          "product_tag_ordered": {
+            "title": "Очікується",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/?filter=ordered",
+            "queryFullUrl": "rybalstvo/vobler/?filter=ordered",
+            "count": 104
+          },
+          "product_tag_brak": {
+            "title": "Товар з уцінкою",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/?filter=brak",
+            "queryFullUrl": "rybalstvo/vobler/?filter=brak",
+            "count": 50
+          },
+          "product_tag_outlet": {
+            "title": "Розпродаж",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/?filter=outlet",
+            "queryFullUrl": "rybalstvo/vobler/?filter=outlet",
+            "count": 2
+          },
+          "product_tag_promotion": {
+            "title": "Акція",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/?filter=promotion",
+            "queryFullUrl": "rybalstvo/vobler/?filter=promotion",
+            "count": 218
+          },
+          "product_tag_out_of_stock_soon": {
+            "title": "Скоро закінчується",
+            "selected": false,
+            "hidden": true,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/?filter=out_of_stock_soon",
+            "queryFullUrl": "rybalstvo/vobler/?filter=out_of_stock_soon",
+            "count": 1088
+          }
+        },
+        "selectedValues": [],
+        "showAsImage": false,
+        "useLinks": true,
+        "id": "tag"
+      },
+      "attribute_po-naznacheniiu": {
+        "type": "attribute",
+        "code": "po-naznacheniiu",
+        "title": "За призначенням",
+        "viewType": 0,
+        "viewMode": 0,
+        "position": -100,
+        "min": 0,
+        "max": 0,
+        "hidden": true,
+        "gender": false,
+        "values": {
+          "gear-category-rybalka-zimniaia-rybalka": {
+            "title": "Зимова риболовля",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/gear-category-rybalka-zimniaia-rybalka-1/",
+            "queryFullUrl": "rybalstvo/vobler/search/gear-category-rybalka-zimniaia-rybalka-1/",
+            "count": 663
+          },
+          "gear-category-rybalka-kastingovaia-lovlia": {
+            "title": "Кастингова ловля",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/gear-category-rybalka-kastingovaia-lovlia-1/",
+            "queryFullUrl": "rybalstvo/vobler/search/gear-category-rybalka-kastingovaia-lovlia-1/",
+            "count": 5006
+          },
+          "gear-category-rybalka-morskaia-lovlia": {
+            "title": "Морська ловля",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/gear-category-rybalka-morskaia-lovlia-1/",
+            "queryFullUrl": "rybalstvo/vobler/search/gear-category-rybalka-morskaia-lovlia-1/",
+            "count": 648
+          },
+          "gear-category-nozhi-i-instrumenty-rybolovnyi": {
+            "title": "Рибальський",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/gear-category-nozhi-i-instrumenty-rybolovnyi-1/",
+            "queryFullUrl": "rybalstvo/vobler/search/gear-category-nozhi-i-instrumenty-rybolovnyi-1/",
+            "count": 2
+          },
+          "gear-category-pokhodnoe-snariazhenie-rybalka": {
+            "title": "Риболовля",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/gear-category-pokhodnoe-snariazhenie-rybalka-1/",
+            "queryFullUrl": "rybalstvo/vobler/search/gear-category-pokhodnoe-snariazhenie-rybalka-1/",
+            "count": 5
+          },
+          "gear-category-rybalka-spinningovaia-lovlia": {
+            "title": "Спінінгова ловля",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/gear-category-rybalka-spinningovaia-lovlia-1/",
+            "queryFullUrl": "rybalstvo/vobler/search/gear-category-rybalka-spinningovaia-lovlia-1/",
+            "count": 7696
+          },
+          "gear-category-pokhodnoe-snariazhenie-turizm": {
+            "title": "Туризм",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/gear-category-pokhodnoe-snariazhenie-turizm-1/",
+            "queryFullUrl": "rybalstvo/vobler/search/gear-category-pokhodnoe-snariazhenie-turizm-1/",
+            "count": 2
+          }
+        },
+        "selectedValues": [],
+        "showAsImage": false,
+        "useLinks": true,
+        "id": "attribute_po-naznacheniiu"
+      },
+      "brand": {
+        "position": -10,
+        "type": "brand",
+        "code": "brand",
+        "title": "Бренд",
+        "viewType": 0,
+        "viewMode": 1,
+        "min": 0,
+        "max": 0,
+        "hidden": false,
+        "gender": false,
+        "values": {
+          "4443_bassday": {
+            "alfa": true,
+            "title": "Bassday",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/bassday/",
+            "queryFullUrl": "rybalstvo/vobler/search/bassday/",
+            "count": 71
+          },
+          "2648_duo": {
+            "alfa": true,
+            "title": "DUO",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/duo/",
+            "queryFullUrl": "rybalstvo/vobler/search/duo/",
+            "count": 249
+          },
+          "1243_ima": {
+            "alfa": true,
+            "title": "Ima",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/ima/",
+            "queryFullUrl": "rybalstvo/vobler/search/ima/",
+            "count": 70
+          },
+          "1147_jackall": {
+            "alfa": true,
+            "title": "Jackall",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/jackall/",
+            "queryFullUrl": "rybalstvo/vobler/search/jackall/",
+            "count": 500
+          },
+          "3884_madness": {
+            "alfa": true,
+            "title": "Madness",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/madness/",
+            "queryFullUrl": "rybalstvo/vobler/search/madness/",
+            "count": 70
+          },
+          "813_megabass": {
+            "alfa": true,
+            "title": "Megabass",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/megabass/",
+            "queryFullUrl": "rybalstvo/vobler/search/megabass/",
+            "count": 367
+          },
+          "1301_nories": {
+            "alfa": true,
+            "title": "Nories",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/nories/",
+            "queryFullUrl": "rybalstvo/vobler/search/nories/",
+            "count": 320
+          },
+          "1247_osp": {
+            "alfa": true,
+            "title": "OSP",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/osp/",
+            "queryFullUrl": "rybalstvo/vobler/search/osp/",
+            "count": 276
+          },
+          "_rapala": {
+            "alfa": true,
+            "title": "Rapala",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/rapala/",
+            "queryFullUrl": "rybalstvo/vobler/search/rapala/",
+            "count": 2129
+          },
+          "2055_savage-gear": {
+            "alfa": true,
+            "title": "Savage Gear",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/savage-gear/",
+            "queryFullUrl": "rybalstvo/vobler/search/savage-gear/",
+            "count": 272
+          },
+          "2108_select": {
+            "alfa": true,
+            "title": "Select",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/select/",
+            "queryFullUrl": "rybalstvo/vobler/search/select/",
+            "count": 447
+          },
+          "786_smith": {
+            "alfa": true,
+            "title": "Smith",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/smith/",
+            "queryFullUrl": "rybalstvo/vobler/search/smith/",
+            "count": 308
+          },
+          "476_yo-zuri": {
+            "alfa": true,
+            "title": "YO-Zuri",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/yo-zuri/",
+            "queryFullUrl": "rybalstvo/vobler/search/yo-zuri/",
+            "count": 161
+          },
+          "1304_zipbaits": {
+            "alfa": true,
+            "title": "ZipBaits",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/zipbaits/",
+            "queryFullUrl": "rybalstvo/vobler/search/zipbaits/",
+            "count": 233
+          },
+          "2121_anglers-republic": {
+            "alfa": false,
+            "title": "Anglers Republic",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/anglers-republic/",
+            "queryFullUrl": "rybalstvo/vobler/search/anglers-republic/",
+            "count": 6
+          },
+          "2122_apia": {
+            "alfa": false,
+            "title": "Apia",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/apia/",
+            "queryFullUrl": "rybalstvo/vobler/search/apia/",
+            "count": 8
+          },
+          "1058_bomber": {
+            "alfa": false,
+            "title": "Bomber",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/bomber/",
+            "queryFullUrl": "rybalstvo/vobler/search/bomber/",
+            "count": 63
+          },
+          "_daiwa": {
+            "alfa": false,
+            "title": "Daiwa",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/daiwa/",
+            "queryFullUrl": "rybalstvo/vobler/search/daiwa/",
+            "count": 224
+          },
+          "1249_deps": {
+            "alfa": false,
+            "title": "Deps",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/deps/",
+            "queryFullUrl": "rybalstvo/vobler/search/deps/",
+            "count": 32
+          },
+          "477_duel": {
+            "alfa": false,
+            "title": "Duel",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/duel/",
+            "queryFullUrl": "rybalstvo/vobler/search/duel/",
+            "count": 203
+          },
+          "1479_ecogear": {
+            "alfa": false,
+            "title": "Ecogear",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/ecogear/",
+            "queryFullUrl": "rybalstvo/vobler/search/ecogear/",
+            "count": 18
+          },
+          "808_ever-green": {
+            "alfa": false,
+            "title": "Ever Green",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/ever-green/",
+            "queryFullUrl": "rybalstvo/vobler/search/ever-green/",
+            "count": 11
+          },
+          "3767_halco": {
+            "alfa": false,
+            "title": "Halco",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/halco/",
+            "queryFullUrl": "rybalstvo/vobler/search/halco/",
+            "count": 140
+          },
+          "1118_imakatsu": {
+            "alfa": false,
+            "title": "Imakatsu",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/imakatsu/",
+            "queryFullUrl": "rybalstvo/vobler/search/imakatsu/",
+            "count": 307
+          },
+          "1534_jaxon": {
+            "alfa": false,
+            "title": "Jaxon",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/jaxon/",
+            "queryFullUrl": "rybalstvo/vobler/search/jaxon/",
+            "count": 8
+          },
+          "4232_jumprize": {
+            "alfa": false,
+            "title": "Jumprize",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/jumprize/",
+            "queryFullUrl": "rybalstvo/vobler/search/jumprize/",
+            "count": 12
+          },
+          "2125_lucky-craft": {
+            "alfa": false,
+            "title": "Lucky Craft",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/lucky-craft/",
+            "queryFullUrl": "rybalstvo/vobler/search/lucky-craft/",
+            "count": 95
+          },
+          "1145_lucky-john": {
+            "alfa": false,
+            "title": "Lucky John",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/lucky-john/",
+            "queryFullUrl": "rybalstvo/vobler/search/lucky-john/",
+            "count": 268
+          },
+          "4404_maria": {
+            "alfa": false,
+            "title": "Maria",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/maria/",
+            "queryFullUrl": "rybalstvo/vobler/search/maria/",
+            "count": 2
+          },
+          "_pontoon21": {
+            "alfa": false,
+            "title": "Pontoon21",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/pontoon21/",
+            "queryFullUrl": "rybalstvo/vobler/search/pontoon21/",
+            "count": 7
+          },
+          "2651_raid": {
+            "alfa": false,
+            "title": "Raid",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/raid/",
+            "queryFullUrl": "rybalstvo/vobler/search/raid/",
+            "count": 73
+          },
+          "1146_salmo": {
+            "alfa": false,
+            "title": "Salmo",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/salmo/",
+            "queryFullUrl": "rybalstvo/vobler/search/salmo/",
+            "count": 4
+          },
+          "_shimano": {
+            "alfa": false,
+            "title": "Shimano",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/shimano/",
+            "queryFullUrl": "rybalstvo/vobler/search/shimano/",
+            "count": 99
+          },
+          "4015_sumlures": {
+            "alfa": false,
+            "title": "Sumlures",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/sumlures/",
+            "queryFullUrl": "rybalstvo/vobler/search/sumlures/",
+            "count": 2
+          },
+          "2451_t-h-tackle": {
+            "alfa": false,
+            "title": "T.H.tackle",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/t-h-tackle/",
+            "queryFullUrl": "rybalstvo/vobler/search/t-h-tackle/",
+            "count": 4
+          },
+          "2124_tackle-house": {
+            "alfa": false,
+            "title": "Tackle House",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/tackle-house/",
+            "queryFullUrl": "rybalstvo/vobler/search/tackle-house/",
+            "count": 342
+          },
+          "649_tiemco": {
+            "alfa": false,
+            "title": "Tiemco",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/tiemco/",
+            "queryFullUrl": "rybalstvo/vobler/search/tiemco/",
+            "count": 5
+          },
+          "_trabucco": {
+            "alfa": false,
+            "title": "Trabucco",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/trabucco/",
+            "queryFullUrl": "rybalstvo/vobler/search/trabucco/",
+            "count": 12
+          },
+          "_trident-2": {
+            "alfa": false,
+            "title": "Trident",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/trident-2/",
+            "queryFullUrl": "rybalstvo/vobler/search/trident-2/",
+            "count": 290
+          },
+          "2266_valkein": {
+            "alfa": false,
+            "title": "ValkeIn",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/valkein/",
+            "queryFullUrl": "rybalstvo/vobler/search/valkein/",
+            "count": 30
+          },
+          "4197_viking-fishing": {
+            "alfa": false,
+            "title": "Viking Fishing",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/viking-fishing/",
+            "queryFullUrl": "rybalstvo/vobler/search/viking-fishing/",
+            "count": 208
+          },
+          "4364_viva": {
+            "alfa": false,
+            "title": "Viva",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/viva/",
+            "queryFullUrl": "rybalstvo/vobler/search/viva/",
+            "count": 16
+          },
+          "3993_viverra": {
+            "alfa": false,
+            "title": "Viverra",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/viverra/",
+            "queryFullUrl": "rybalstvo/vobler/search/viverra/",
+            "count": 14
+          },
+          "4101_x-fish": {
+            "alfa": false,
+            "title": "X-Fish",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/x-fish/",
+            "queryFullUrl": "rybalstvo/vobler/search/x-fish/",
+            "count": 175
+          },
+          "3829_prof-montazh": {
+            "alfa": false,
+            "title": "Проф Монтаж",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/prof-montazh/",
+            "queryFullUrl": "rybalstvo/vobler/search/prof-montazh/",
+            "count": 6
+          }
+        },
+        "selectedValues": [],
+        "showAsImage": false,
+        "useLinks": true,
+        "id": "brand"
+      },
+      "price_price": {
+        "position": -5,
+        "type": "price",
+        "code": "price",
+        "title": "Ціна",
+        "viewType": 1,
+        "viewMode": 1,
+        "min": 3200,
+        "max": 2491000,
+        "hidden": false,
+        "gender": false,
+        "selectedValues": [],
+        "showAsImage": false,
+        "useLinks": true,
+        "id": "price_price",
+        "values": null
+      },
+      "attribute_tip-voblera": {
+        "type": "attribute",
+        "code": "tip-voblera",
+        "title": "Тип воблера",
+        "viewType": 0,
+        "viewMode": 0,
+        "position": 22,
+        "min": 0,
+        "max": 0,
+        "hidden": false,
+        "gender": false,
+        "values": {
+          "tip-voblera-imitatsiia-nasekomogo": {
+            "title": "Імітація комахи",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/imitaciya-komahi/",
+            "queryFullUrl": "rybalstvo/vobler/search/imitaciya-komahi/",
+            "count": 21
+          },
+          "tip-voblera-imitatsiia-chervia": {
+            "title": "Імітація хробака",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/imitaciya-hrobaka/",
+            "queryFullUrl": "rybalstvo/vobler/search/imitaciya-hrobaka/",
+            "count": 2
+          },
+          "tip-voblera-granula": {
+            "title": "Гранула",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/granula/",
+            "queryFullUrl": "rybalstvo/vobler/search/granula/",
+            "count": 5
+          },
+          "tip-voblera-dzherk": {
+            "title": "Джерк",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/dzherk/",
+            "queryFullUrl": "rybalstvo/vobler/search/dzherk/",
+            "count": 162
+          },
+          "tip-voblera-krenk": {
+            "title": "Кренк",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/krenk/",
+            "queryFullUrl": "rybalstvo/vobler/search/krenk/",
+            "count": 1220
+          },
+          "tip-voblera-krouler": {
+            "title": "Кроулер",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/krouler/",
+            "queryFullUrl": "rybalstvo/vobler/search/krouler/",
+            "count": 10
+          },
+          "tip-voblera-minnou": {
+            "title": "Міноу",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/minnou/",
+            "queryFullUrl": "rybalstvo/vobler/search/minnou/",
+            "count": 3635
+          },
+          "tip-voblera-popper": {
+            "title": "Попер",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/popper/",
+            "queryFullUrl": "rybalstvo/vobler/search/popper/",
+            "count": 234
+          },
+          "tip-voblera-rakoobraznoe": {
+            "title": "Ракоподібне",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/rakoobraznoe/",
+            "queryFullUrl": "rybalstvo/vobler/search/rakoobraznoe/",
+            "count": 16
+          },
+          "tip-voblera-rattlin": {
+            "title": "Ратлін",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/rattlin/",
+            "queryFullUrl": "rybalstvo/vobler/search/rattlin/",
+            "count": 1170
+          },
+          "tip-voblera-svimbeit": {
+            "title": "Свімбейт",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/svimbeyt-1/",
+            "queryFullUrl": "rybalstvo/vobler/search/svimbeyt-1/",
+            "count": 100
+          },
+          "tip-voblera-uoker": {
+            "title": "Уокер",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/uoker/",
+            "queryFullUrl": "rybalstvo/vobler/search/uoker/",
+            "count": 306
+          },
+          "tip-voblera-shed": {
+            "title": "Шед",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/shed/",
+            "queryFullUrl": "rybalstvo/vobler/search/shed/",
+            "count": 1043
+          }
+        },
+        "selectedValues": [],
+        "showAsImage": false,
+        "useLinks": true,
+        "id": "attribute_tip-voblera"
+      },
+      "attribute_plavuchest": {
+        "type": "attribute",
+        "code": "plavuchest",
+        "title": "Плавучість",
+        "viewType": 0,
+        "viewMode": 0,
+        "position": 23,
+        "min": 0,
+        "max": 0,
+        "hidden": false,
+        "gender": false,
+        "values": {
+          "plavuchest-plavaiushchii": {
+            "title": "Плаваючий",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/plavayuchiy-1/",
+            "queryFullUrl": "rybalstvo/vobler/search/plavayuchiy-1/",
+            "count": 3335
+          },
+          "plavuchest-medlenno-vsplyvaiushchii": {
+            "title": "Повільно спливаючий",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/povilno-splivayuchiy/",
+            "queryFullUrl": "rybalstvo/vobler/search/povilno-splivayuchiy/",
+            "count": 298
+          },
+          "plavuchest-medlenno-tonushchii": {
+            "title": "Повільно тонучий",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/povilno-tonuchiy/",
+            "queryFullUrl": "rybalstvo/vobler/search/povilno-tonuchiy/",
+            "count": 274
+          },
+          "plavuchest-suspender": {
+            "title": "Суспендер",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/suspender/",
+            "queryFullUrl": "rybalstvo/vobler/search/suspender/",
+            "count": 1860
+          },
+          "plavuchest-tonushchii": {
+            "title": "Тонучий",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/tonuchiy/",
+            "queryFullUrl": "rybalstvo/vobler/search/tonuchiy/",
+            "count": 1370
+          },
+          "plavuchest-bystro-tonushchii": {
+            "title": "Швидко тонучий",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/shvidko-tonuchiy/",
+            "queryFullUrl": "rybalstvo/vobler/search/shvidko-tonuchiy/",
+            "count": 680
+          }
+        },
+        "selectedValues": [],
+        "showAsImage": false,
+        "useLinks": true,
+        "id": "attribute_plavuchest"
+      },
+      "attribute_dlina-obshchaia-mm": {
+        "type": "attribute",
+        "code": "dlina-obshchaia-mm",
+        "title": "Довжина загальна, мм",
+        "viewType": 0,
+        "viewMode": 0,
+        "position": 34,
+        "min": 0,
+        "max": 0,
+        "hidden": false,
+        "gender": false,
+        "values": {
+          "dlina-obshchaia-mm-110-5": {
+            "title": "110,5",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/1105-7/",
+            "queryFullUrl": "rybalstvo/vobler/search/1105-7/",
+            "count": 32
+          },
+          "dlina-obshchaia-mm-8": {
+            "title": "8",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/8/",
+            "queryFullUrl": "rybalstvo/vobler/search/8/",
+            "count": 25
+          },
+          "dlina-obshchaia-mm-9": {
+            "title": "9",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/9-lrr/",
+            "queryFullUrl": "rybalstvo/vobler/search/9-lrr/",
+            "count": 2
+          },
+          "dlina-obshchaia-mm-10": {
+            "title": "10",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/10/",
+            "queryFullUrl": "rybalstvo/vobler/search/10/",
+            "count": 22
+          },
+          "dlina-obshchaia-mm-12": {
+            "title": "12",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/12-7sd/",
+            "queryFullUrl": "rybalstvo/vobler/search/12-7sd/",
+            "count": 7
+          },
+          "dlina-obshchaia-mm-140-157": {
+            "title": "140/157",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/140157-1/",
+            "queryFullUrl": "rybalstvo/vobler/search/140157-1/",
+            "count": 3
+          },
+          "dlina-obshchaia-mm-20": {
+            "title": "20",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/20-qmp/",
+            "queryFullUrl": "rybalstvo/vobler/search/20-qmp/",
+            "count": 17
+          },
+          "dlina-obshchaia-mm-22": {
+            "title": "22",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/22-gpp/",
+            "queryFullUrl": "rybalstvo/vobler/search/22-gpp/",
+            "count": 35
+          },
+          "dlina-obshchaia-mm-24": {
+            "title": "24",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/24-xj3/",
+            "queryFullUrl": "rybalstvo/vobler/search/24-xj3/",
+            "count": 8
+          },
+          "dlina-obshchaia-mm-25": {
+            "title": "25",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/25/",
+            "queryFullUrl": "rybalstvo/vobler/search/25/",
+            "count": 64
+          },
+          "dlina-obshchaia-mm-26": {
+            "title": "26",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/26-x7x/",
+            "queryFullUrl": "rybalstvo/vobler/search/26-x7x/",
+            "count": 9
+          },
+          "dlina-obshchaia-mm-28": {
+            "title": "28",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/28-325/",
+            "queryFullUrl": "rybalstvo/vobler/search/28-325/",
+            "count": 20
+          },
+          "dlina-obshchaia-mm-29": {
+            "title": "29",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/29-7/",
+            "queryFullUrl": "rybalstvo/vobler/search/29-7/",
+            "count": 30
+          },
+          "dlina-obshchaia-mm-30": {
+            "title": "30",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/30/",
+            "queryFullUrl": "rybalstvo/vobler/search/30/",
+            "count": 155
+          },
+          "dlina-obshchaia-mm-31": {
+            "title": "31",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/31-ulj/",
+            "queryFullUrl": "rybalstvo/vobler/search/31-ulj/",
+            "count": 13
+          },
+          "dlina-obshchaia-mm-32": {
+            "title": "32",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/32-mxe/",
+            "queryFullUrl": "rybalstvo/vobler/search/32-mxe/",
+            "count": 49
+          },
+          "dlina-obshchaia-mm-33": {
+            "title": "33",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/33-iou/",
+            "queryFullUrl": "rybalstvo/vobler/search/33-iou/",
+            "count": 90
+          },
+          "dlina-obshchaia-mm-34": {
+            "title": "34",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/34-7ev/",
+            "queryFullUrl": "rybalstvo/vobler/search/34-7ev/",
+            "count": 45
+          },
+          "dlina-obshchaia-mm-35": {
+            "title": "35",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/35-mt7/",
+            "queryFullUrl": "rybalstvo/vobler/search/35-mt7/",
+            "count": 82
+          },
+          "dlina-obshchaia-mm-36": {
+            "title": "36",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/36-cgw/",
+            "queryFullUrl": "rybalstvo/vobler/search/36-cgw/",
+            "count": 118
+          },
+          "dlina-obshchaia-mm-37": {
+            "title": "37",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/37-zr9/",
+            "queryFullUrl": "rybalstvo/vobler/search/37-zr9/",
+            "count": 21
+          },
+          "dlina-obshchaia-mm-38": {
+            "title": "38",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/38-wpt/",
+            "queryFullUrl": "rybalstvo/vobler/search/38-wpt/",
+            "count": 158
+          },
+          "dlina-obshchaia-mm-39": {
+            "title": "39",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/39-yjt/",
+            "queryFullUrl": "rybalstvo/vobler/search/39-yjt/",
+            "count": 24
+          },
+          "dlina-obshchaia-mm-40": {
+            "title": "40",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/40/",
+            "queryFullUrl": "rybalstvo/vobler/search/40/",
+            "count": 165
+          },
+          "dlina-obshchaia-mm-41": {
+            "title": "41",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/41-cse/",
+            "queryFullUrl": "rybalstvo/vobler/search/41-cse/",
+            "count": 21
+          },
+          "dlina-obshchaia-mm-42": {
+            "title": "42",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/42-n45/",
+            "queryFullUrl": "rybalstvo/vobler/search/42-n45/",
+            "count": 31
+          },
+          "dlina-obshchaia-mm-43": {
+            "title": "43",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/43-ccf/",
+            "queryFullUrl": "rybalstvo/vobler/search/43-ccf/",
+            "count": 57
+          },
+          "dlina-obshchaia-mm-43-5": {
+            "title": "43,5",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/435-8/",
+            "queryFullUrl": "rybalstvo/vobler/search/435-8/",
+            "count": 10
+          },
+          "dlina-obshchaia-mm-44": {
+            "title": "44",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/44-r2c/",
+            "queryFullUrl": "rybalstvo/vobler/search/44-r2c/",
+            "count": 26
+          },
+          "dlina-obshchaia-mm-45": {
+            "title": "45",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/45-cxb/",
+            "queryFullUrl": "rybalstvo/vobler/search/45-cxb/",
+            "count": 95
+          },
+          "dlina-obshchaia-mm-46": {
+            "title": "46",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/46-fpn/",
+            "queryFullUrl": "rybalstvo/vobler/search/46-fpn/",
+            "count": 48
+          },
+          "dlina-obshchaia-mm-47": {
+            "title": "47",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/47/",
+            "queryFullUrl": "rybalstvo/vobler/search/47/",
+            "count": 10
+          },
+          "dlina-obshchaia-mm-48": {
+            "title": "48",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/48-56l/",
+            "queryFullUrl": "rybalstvo/vobler/search/48-56l/",
+            "count": 56
+          },
+          "dlina-obshchaia-mm-49": {
+            "title": "49",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/49-v7l/",
+            "queryFullUrl": "rybalstvo/vobler/search/49-v7l/",
+            "count": 22
+          },
+          "dlina-obshchaia-mm-50": {
+            "title": "50",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/50/",
+            "queryFullUrl": "rybalstvo/vobler/search/50/",
+            "count": 499
+          },
+          "dlina-obshchaia-mm-51": {
+            "title": "51",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/51-v9o/",
+            "queryFullUrl": "rybalstvo/vobler/search/51-v9o/",
+            "count": 18
+          },
+          "dlina-obshchaia-mm-51-1": {
+            "title": "51,1",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/511-6/",
+            "queryFullUrl": "rybalstvo/vobler/search/511-6/",
+            "count": 13
+          },
+          "dlina-obshchaia-mm-52": {
+            "title": "52",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/52/",
+            "queryFullUrl": "rybalstvo/vobler/search/52/",
+            "count": 82
+          },
+          "dlina-obshchaia-mm-53": {
+            "title": "53",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/53-ws7/",
+            "queryFullUrl": "rybalstvo/vobler/search/53-ws7/",
+            "count": 93
+          },
+          "dlina-obshchaia-mm-54": {
+            "title": "54",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/54-7yd/",
+            "queryFullUrl": "rybalstvo/vobler/search/54-7yd/",
+            "count": 20
+          },
+          "dlina-obshchaia-mm-55": {
+            "title": "55",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/55/",
+            "queryFullUrl": "rybalstvo/vobler/search/55/",
+            "count": 160
+          },
+          "dlina-obshchaia-mm-56": {
+            "title": "56",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/56-f2q/",
+            "queryFullUrl": "rybalstvo/vobler/search/56-f2q/",
+            "count": 72
+          },
+          "dlina-obshchaia-mm-57": {
+            "title": "57",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/57-3gw/",
+            "queryFullUrl": "rybalstvo/vobler/search/57-3gw/",
+            "count": 40
+          },
+          "dlina-obshchaia-mm-58": {
+            "title": "58",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/58/",
+            "queryFullUrl": "rybalstvo/vobler/search/58/",
+            "count": 50
+          },
+          "dlina-obshchaia-mm-60": {
+            "title": "60",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/60/",
+            "queryFullUrl": "rybalstvo/vobler/search/60/",
+            "count": 287
+          },
+          "dlina-obshchaia-mm-61": {
+            "title": "61",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/61/",
+            "queryFullUrl": "rybalstvo/vobler/search/61/",
+            "count": 31
+          },
+          "dlina-obshchaia-mm-62": {
+            "title": "62",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/62-kvr/",
+            "queryFullUrl": "rybalstvo/vobler/search/62-kvr/",
+            "count": 23
+          },
+          "dlina-obshchaia-mm-63": {
+            "title": "63",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/63/",
+            "queryFullUrl": "rybalstvo/vobler/search/63/",
+            "count": 42
+          },
+          "dlina-obshchaia-mm-64": {
+            "title": "64",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/64-tfj/",
+            "queryFullUrl": "rybalstvo/vobler/search/64-tfj/",
+            "count": 77
+          },
+          "dlina-obshchaia-mm-64-5": {
+            "title": "64,5",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/645-9/",
+            "queryFullUrl": "rybalstvo/vobler/search/645-9/",
+            "count": 5
+          },
+          "dlina-obshchaia-mm-65": {
+            "title": "65",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/65/",
+            "queryFullUrl": "rybalstvo/vobler/search/65/",
+            "count": 216
+          },
+          "dlina-obshchaia-mm-66": {
+            "title": "66",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/66-mod/",
+            "queryFullUrl": "rybalstvo/vobler/search/66-mod/",
+            "count": 39
+          },
+          "dlina-obshchaia-mm-67": {
+            "title": "67",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/67-ri2/",
+            "queryFullUrl": "rybalstvo/vobler/search/67-ri2/",
+            "count": 5
+          },
+          "dlina-obshchaia-mm-68": {
+            "title": "68",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/68-p2m/",
+            "queryFullUrl": "rybalstvo/vobler/search/68-p2m/",
+            "count": 28
+          },
+          "dlina-obshchaia-mm-69": {
+            "title": "69",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/69-0oa/",
+            "queryFullUrl": "rybalstvo/vobler/search/69-0oa/",
+            "count": 3
+          },
+          "dlina-obshchaia-mm-70": {
+            "title": "70",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/70/",
+            "queryFullUrl": "rybalstvo/vobler/search/70/",
+            "count": 687
+          },
+          "dlina-obshchaia-mm-71": {
+            "title": "71",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/71-onp/",
+            "queryFullUrl": "rybalstvo/vobler/search/71-onp/",
+            "count": 11
+          },
+          "dlina-obshchaia-mm-72": {
+            "title": "72",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/72-5dt/",
+            "queryFullUrl": "rybalstvo/vobler/search/72-5dt/",
+            "count": 24
+          },
+          "dlina-obshchaia-mm-73": {
+            "title": "73",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/73-0f4/",
+            "queryFullUrl": "rybalstvo/vobler/search/73-0f4/",
+            "count": 69
+          },
+          "dlina-obshchaia-mm-74": {
+            "title": "74",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/74-f3c/",
+            "queryFullUrl": "rybalstvo/vobler/search/74-f3c/",
+            "count": 6
+          },
+          "dlina-obshchaia-mm-75": {
+            "title": "75",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/75-s0m/",
+            "queryFullUrl": "rybalstvo/vobler/search/75-s0m/",
+            "count": 180
+          },
+          "dlina-obshchaia-mm-76": {
+            "title": "76",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/76-thl/",
+            "queryFullUrl": "rybalstvo/vobler/search/76-thl/",
+            "count": 44
+          },
+          "dlina-obshchaia-mm-77": {
+            "title": "77",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/77-139/",
+            "queryFullUrl": "rybalstvo/vobler/search/77-139/",
+            "count": 12
+          },
+          "dlina-obshchaia-mm-78": {
+            "title": "78",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/78-g8s/",
+            "queryFullUrl": "rybalstvo/vobler/search/78-g8s/",
+            "count": 24
+          },
+          "dlina-obshchaia-mm-79": {
+            "title": "79",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/79/",
+            "queryFullUrl": "rybalstvo/vobler/search/79/",
+            "count": 4
+          },
+          "dlina-obshchaia-mm-80": {
+            "title": "80",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/80/",
+            "queryFullUrl": "rybalstvo/vobler/search/80/",
+            "count": 367
+          },
+          "dlina-obshchaia-mm-80-5": {
+            "title": "80,5",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/805-6/",
+            "queryFullUrl": "rybalstvo/vobler/search/805-6/",
+            "count": 10
+          },
+          "dlina-obshchaia-mm-81": {
+            "title": "81",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/81/",
+            "queryFullUrl": "rybalstvo/vobler/search/81/",
+            "count": 8
+          },
+          "dlina-obshchaia-mm-82": {
+            "title": "82",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/82-gmi/",
+            "queryFullUrl": "rybalstvo/vobler/search/82-gmi/",
+            "count": 11
+          },
+          "dlina-obshchaia-mm-83": {
+            "title": "83",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/83-0ie/",
+            "queryFullUrl": "rybalstvo/vobler/search/83-0ie/",
+            "count": 30
+          },
+          "dlina-obshchaia-mm-85": {
+            "title": "85",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/85/",
+            "queryFullUrl": "rybalstvo/vobler/search/85/",
+            "count": 62
+          },
+          "dlina-obshchaia-mm-86": {
+            "title": "86",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/86-ebt/",
+            "queryFullUrl": "rybalstvo/vobler/search/86-ebt/",
+            "count": 20
+          },
+          "dlina-obshchaia-mm-87": {
+            "title": "87",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/87/",
+            "queryFullUrl": "rybalstvo/vobler/search/87/",
+            "count": 35
+          },
+          "dlina-obshchaia-mm-88": {
+            "title": "88",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/88-am4/",
+            "queryFullUrl": "rybalstvo/vobler/search/88-am4/",
+            "count": 17
+          },
+          "dlina-obshchaia-mm-89": {
+            "title": "89",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/89-i0d/",
+            "queryFullUrl": "rybalstvo/vobler/search/89-i0d/",
+            "count": 45
+          },
+          "dlina-obshchaia-mm-90": {
+            "title": "90",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/90/",
+            "queryFullUrl": "rybalstvo/vobler/search/90/",
+            "count": 547
+          },
+          "dlina-obshchaia-mm-93": {
+            "title": "93",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/93-pzy/",
+            "queryFullUrl": "rybalstvo/vobler/search/93-pzy/",
+            "count": 21
+          },
+          "dlina-obshchaia-mm-94": {
+            "title": "94",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/94-gbd/",
+            "queryFullUrl": "rybalstvo/vobler/search/94-gbd/",
+            "count": 9
+          },
+          "dlina-obshchaia-mm-95": {
+            "title": "95",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/95/",
+            "queryFullUrl": "rybalstvo/vobler/search/95/",
+            "count": 64
+          },
+          "dlina-obshchaia-mm-96": {
+            "title": "96",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/96/",
+            "queryFullUrl": "rybalstvo/vobler/search/96/",
+            "count": 10
+          },
+          "dlina-obshchaia-mm-97": {
+            "title": "97",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/97/",
+            "queryFullUrl": "rybalstvo/vobler/search/97/",
+            "count": 1
+          },
+          "dlina-obshchaia-mm-98": {
+            "title": "98",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/98-00b/",
+            "queryFullUrl": "rybalstvo/vobler/search/98-00b/",
+            "count": 38
+          },
+          "dlina-obshchaia-mm-99": {
+            "title": "99",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/99-qy3/",
+            "queryFullUrl": "rybalstvo/vobler/search/99-qy3/",
+            "count": 5
+          },
+          "dlina-obshchaia-mm-100": {
+            "title": "100",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/100/",
+            "queryFullUrl": "rybalstvo/vobler/search/100/",
+            "count": 227
+          },
+          "dlina-obshchaia-mm-105": {
+            "title": "105",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/105/",
+            "queryFullUrl": "rybalstvo/vobler/search/105/",
+            "count": 49
+          },
+          "dlina-obshchaia-mm-106": {
+            "title": "106",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/106-hua/",
+            "queryFullUrl": "rybalstvo/vobler/search/106-hua/",
+            "count": 3
+          },
+          "dlina-obshchaia-mm-107": {
+            "title": "107",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/107-2g3/",
+            "queryFullUrl": "rybalstvo/vobler/search/107-2g3/",
+            "count": 17
+          },
+          "dlina-obshchaia-mm-108": {
+            "title": "108",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/108/",
+            "queryFullUrl": "rybalstvo/vobler/search/108/",
+            "count": 4
+          },
+          "dlina-obshchaia-mm-110": {
+            "title": "110",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/110/",
+            "queryFullUrl": "rybalstvo/vobler/search/110/",
+            "count": 400
+          },
+          "dlina-obshchaia-mm-111": {
+            "title": "111",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/111-0z5/",
+            "queryFullUrl": "rybalstvo/vobler/search/111-0z5/",
+            "count": 10
+          },
+          "dlina-obshchaia-mm-112": {
+            "title": "112",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/112-gxg/",
+            "queryFullUrl": "rybalstvo/vobler/search/112-gxg/",
+            "count": 48
+          },
+          "dlina-obshchaia-mm-113": {
+            "title": "113",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/113-cem/",
+            "queryFullUrl": "rybalstvo/vobler/search/113-cem/",
+            "count": 49
+          },
+          "dlina-obshchaia-mm-114": {
+            "title": "114",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/114-n6f/",
+            "queryFullUrl": "rybalstvo/vobler/search/114-n6f/",
+            "count": 9
+          },
+          "dlina-obshchaia-mm-115": {
+            "title": "115",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/115/",
+            "queryFullUrl": "rybalstvo/vobler/search/115/",
+            "count": 142
+          },
+          "dlina-obshchaia-mm-118": {
+            "title": "118",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/118-div/",
+            "queryFullUrl": "rybalstvo/vobler/search/118-div/",
+            "count": 7
+          },
+          "dlina-obshchaia-mm-120": {
+            "title": "120",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/120/",
+            "queryFullUrl": "rybalstvo/vobler/search/120/",
+            "count": 175
+          },
+          "dlina-obshchaia-mm-121": {
+            "title": "121",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/121/",
+            "queryFullUrl": "rybalstvo/vobler/search/121/",
+            "count": 7
+          },
+          "dlina-obshchaia-mm-122": {
+            "title": "122",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/122-iiu/",
+            "queryFullUrl": "rybalstvo/vobler/search/122-iiu/",
+            "count": 12
+          },
+          "dlina-obshchaia-mm-125": {
+            "title": "125",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/125/",
+            "queryFullUrl": "rybalstvo/vobler/search/125/",
+            "count": 68
+          },
+          "dlina-obshchaia-mm-126": {
+            "title": "126",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/126-05c/",
+            "queryFullUrl": "rybalstvo/vobler/search/126-05c/",
+            "count": 4
+          },
+          "dlina-obshchaia-mm-127": {
+            "title": "127",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/127-7qf/",
+            "queryFullUrl": "rybalstvo/vobler/search/127-7qf/",
+            "count": 17
+          },
+          "dlina-obshchaia-mm-128": {
+            "title": "128",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/128-1cg/",
+            "queryFullUrl": "rybalstvo/vobler/search/128-1cg/",
+            "count": 34
+          },
+          "dlina-obshchaia-mm-129": {
+            "title": "129",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/129-1hr/",
+            "queryFullUrl": "rybalstvo/vobler/search/129-1hr/",
+            "count": 7
+          },
+          "dlina-obshchaia-mm-130": {
+            "title": "130",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/130/",
+            "queryFullUrl": "rybalstvo/vobler/search/130/",
+            "count": 290
+          },
+          "dlina-obshchaia-mm-132": {
+            "title": "132",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/132-j6c/",
+            "queryFullUrl": "rybalstvo/vobler/search/132-j6c/",
+            "count": 9
+          },
+          "dlina-obshchaia-mm-133": {
+            "title": "133",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/133-3wi/",
+            "queryFullUrl": "rybalstvo/vobler/search/133-3wi/",
+            "count": 18
+          },
+          "dlina-obshchaia-mm-135": {
+            "title": "135",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/135/",
+            "queryFullUrl": "rybalstvo/vobler/search/135/",
+            "count": 27
+          },
+          "dlina-obshchaia-mm-140": {
+            "title": "140",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/140/",
+            "queryFullUrl": "rybalstvo/vobler/search/140/",
+            "count": 206
+          },
+          "dlina-obshchaia-mm-142": {
+            "title": "142",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/142-8/",
+            "queryFullUrl": "rybalstvo/vobler/search/142-8/",
+            "count": 10
+          },
+          "dlina-obshchaia-mm-145": {
+            "title": "145",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/145-cuq/",
+            "queryFullUrl": "rybalstvo/vobler/search/145-cuq/",
+            "count": 27
+          },
+          "dlina-obshchaia-mm-150": {
+            "title": "150",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/150/",
+            "queryFullUrl": "rybalstvo/vobler/search/150/",
+            "count": 54
+          },
+          "dlina-obshchaia-mm-155": {
+            "title": "155",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/155-6/",
+            "queryFullUrl": "rybalstvo/vobler/search/155-6/",
+            "count": 3
+          },
+          "dlina-obshchaia-mm-160": {
+            "title": "160",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/160/",
+            "queryFullUrl": "rybalstvo/vobler/search/160/",
+            "count": 65
+          },
+          "dlina-obshchaia-mm-162": {
+            "title": "162",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/162-4/",
+            "queryFullUrl": "rybalstvo/vobler/search/162-4/",
+            "count": 1
+          },
+          "dlina-obshchaia-mm-165": {
+            "title": "165",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/165-1ha/",
+            "queryFullUrl": "rybalstvo/vobler/search/165-1ha/",
+            "count": 9
+          },
+          "dlina-obshchaia-mm-168": {
+            "title": "168",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/168-4/",
+            "queryFullUrl": "rybalstvo/vobler/search/168-4/",
+            "count": 2
+          },
+          "dlina-obshchaia-mm-170": {
+            "title": "170",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/170-2va/",
+            "queryFullUrl": "rybalstvo/vobler/search/170-2va/",
+            "count": 33
+          },
+          "dlina-obshchaia-mm-175": {
+            "title": "175",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/175-5hy/",
+            "queryFullUrl": "rybalstvo/vobler/search/175-5hy/",
+            "count": 26
+          },
+          "dlina-obshchaia-mm-180": {
+            "title": "180",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/180-dmt/",
+            "queryFullUrl": "rybalstvo/vobler/search/180-dmt/",
+            "count": 30
+          },
+          "dlina-obshchaia-mm-195": {
+            "title": "195",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/195-vns/",
+            "queryFullUrl": "rybalstvo/vobler/search/195-vns/",
+            "count": 18
+          },
+          "dlina-obshchaia-mm-200": {
+            "title": "200",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/200-wep/",
+            "queryFullUrl": "rybalstvo/vobler/search/200-wep/",
+            "count": 9
+          },
+          "dlina-obshchaia-mm-220": {
+            "title": "220",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/220-rw5/",
+            "queryFullUrl": "rybalstvo/vobler/search/220-rw5/",
+            "count": 24
+          },
+          "dlina-obshchaia-mm-250": {
+            "title": "250",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/250-d34/",
+            "queryFullUrl": "rybalstvo/vobler/search/250-d34/",
+            "count": 12
+          },
+          "dlina-obshchaia-mm-260": {
+            "title": "260",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/260-yco/",
+            "queryFullUrl": "rybalstvo/vobler/search/260-yco/",
+            "count": 3
+          },
+          "dlina-obshchaia-mm-9-5": {
+            "title": "9,5",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/95-50/",
+            "queryFullUrl": "rybalstvo/vobler/search/95-50/",
+            "count": 3
+          },
+          "dlina-obshchaia-mm-92-5": {
+            "title": "92,5",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/925-4/",
+            "queryFullUrl": "rybalstvo/vobler/search/925-4/",
+            "count": 20
+          }
+        },
+        "selectedValues": [],
+        "showAsImage": false,
+        "useLinks": true,
+        "id": "attribute_dlina-obshchaia-mm"
+      },
+      "attribute_massa-g": {
+        "type": "attribute",
+        "code": "massa-g",
+        "title": "Маса, г",
+        "viewType": 1,
+        "viewMode": 0,
+        "position": 35,
+        "min": 1,
+        "max": 281,
+        "hidden": false,
+        "gender": false,
+        "selectedValues": [],
+        "showAsImage": false,
+        "useLinks": true,
+        "id": "attribute_massa-g",
+        "values": null
+      },
+      "attribute_zaglublenie-m": {
+        "type": "attribute",
+        "code": "zaglublenie-m",
+        "title": "Заглиблення, м",
+        "viewType": 1,
+        "viewMode": 0,
+        "position": 36,
+        "min": 0.01,
+        "max": 12,
+        "hidden": false,
+        "gender": false,
+        "selectedValues": [],
+        "showAsImage": false,
+        "useLinks": true,
+        "id": "attribute_zaglublenie-m",
+        "values": null
+      },
+      "attribute_spetsializatsiia": {
+        "type": "attribute",
+        "code": "spetsializatsiia",
+        "title": "Спеціалізація",
+        "viewType": 0,
+        "viewMode": 0,
+        "position": 38,
+        "min": 0,
+        "max": 0,
+        "hidden": false,
+        "gender": false,
+        "values": {
+          "spetsializatsiia-gt": {
+            "title": "GT",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/gt-2/",
+            "queryFullUrl": "rybalstvo/vobler/search/gt-2/",
+            "count": 5
+          },
+          "spetsializatsiia-bass": {
+            "title": "Бас",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/bas/",
+            "queryFullUrl": "rybalstvo/vobler/search/bas/",
+            "count": 38
+          },
+          "spetsializatsiia-iaz": {
+            "title": "В'язь",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/yaz/",
+            "queryFullUrl": "rybalstvo/vobler/search/yaz/",
+            "count": 726
+          },
+          "spetsializatsiia-golavl": {
+            "title": "Головень",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/goloven/",
+            "queryFullUrl": "rybalstvo/vobler/search/goloven/",
+            "count": 1662
+          },
+          "spetsializatsiia-zherekh": {
+            "title": "Жерех",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/zhereh/",
+            "queryFullUrl": "rybalstvo/vobler/search/zhereh/",
+            "count": 2026
+          },
+          "spetsializatsiia-karas": {
+            "title": "Карась",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/karas/",
+            "queryFullUrl": "rybalstvo/vobler/search/karas/",
+            "count": 6
+          },
+          "spetsializatsiia-karp": {
+            "title": "Короп",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/karp/",
+            "queryFullUrl": "rybalstvo/vobler/search/karp/",
+            "count": 10
+          },
+          "spetsializatsiia-krasnoperka": {
+            "title": "Краснопірка",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/krasnopirka/",
+            "queryFullUrl": "rybalstvo/vobler/search/krasnopirka/",
+            "count": 65
+          },
+          "spetsializatsiia-lufar": {
+            "title": "Луфар",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/lufar/",
+            "queryFullUrl": "rybalstvo/vobler/search/lufar/",
+            "count": 20
+          },
+          "spetsializatsiia-leshch": {
+            "title": "Лящ",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/lyasch/",
+            "queryFullUrl": "rybalstvo/vobler/search/lyasch/",
+            "count": 10
+          },
+          "spetsializatsiia-okun": {
+            "title": "Окунь",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/okun/",
+            "queryFullUrl": "rybalstvo/vobler/search/okun/",
+            "count": 5154
+          },
+          "spetsializatsiia-plotva": {
+            "title": "Плотва",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/plotva/",
+            "queryFullUrl": "rybalstvo/vobler/search/plotva/",
+            "count": 16
+          },
+          "spetsializatsiia-podust": {
+            "title": "Підуст",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/podust/",
+            "queryFullUrl": "rybalstvo/vobler/search/podust/",
+            "count": 5
+          },
+          "spetsializatsiia-som": {
+            "title": "Сом",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/som-kw6/",
+            "queryFullUrl": "rybalstvo/vobler/search/som-kw6/",
+            "count": 810
+          },
+          "spetsializatsiia-stavrida": {
+            "title": "Ставрида",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/stavrida/",
+            "queryFullUrl": "rybalstvo/vobler/search/stavrida/",
+            "count": 1
+          },
+          "spetsializatsiia-sudak": {
+            "title": "Судак",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/sudak/",
+            "queryFullUrl": "rybalstvo/vobler/search/sudak/",
+            "count": 3872
+          },
+          "spetsializatsiia-sibass": {
+            "title": "Сібас",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/sibas/",
+            "queryFullUrl": "rybalstvo/vobler/search/sibas/",
+            "count": 42
+          },
+          "spetsializatsiia-treska": {
+            "title": "Тріска",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/triska-1/",
+            "queryFullUrl": "rybalstvo/vobler/search/triska-1/",
+            "count": 1
+          },
+          "spetsializatsiia-tunets": {
+            "title": "Тунець",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/tunec-2/",
+            "queryFullUrl": "rybalstvo/vobler/search/tunec-2/",
+            "count": 5
+          },
+          "spetsializatsiia-forel": {
+            "title": "Форель",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/forel/",
+            "queryFullUrl": "rybalstvo/vobler/search/forel/",
+            "count": 1334
+          },
+          "spetsializatsiia-kharius": {
+            "title": "Харіус",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/harius/",
+            "queryFullUrl": "rybalstvo/vobler/search/harius/",
+            "count": 2
+          },
+          "spetsializatsiia-chekhon": {
+            "title": "Чехонь",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/chehon/",
+            "queryFullUrl": "rybalstvo/vobler/search/chehon/",
+            "count": 27
+          },
+          "spetsializatsiia-shchuka": {
+            "title": "Щука",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/schuka-2/",
+            "queryFullUrl": "rybalstvo/vobler/search/schuka-2/",
+            "count": 5664
+          }
+        },
+        "selectedValues": [],
+        "showAsImage": false,
+        "useLinks": true,
+        "id": "attribute_spetsializatsiia"
+      },
+      "attribute_strana-proiskhozhdeniia": {
+        "type": "attribute",
+        "code": "strana-proiskhozhdeniia",
+        "title": "Країна походження",
+        "viewType": 0,
+        "viewMode": 0,
+        "position": 41,
+        "min": 0,
+        "max": 0,
+        "hidden": false,
+        "gender": false,
+        "values": {
+          "strana-proiskhozhdeniia-italiia": {
+            "title": "Італія",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/italiya-1/",
+            "queryFullUrl": "rybalstvo/vobler/search/italiya-1/",
+            "count": 12
+          },
+          "strana-proiskhozhdeniia-avstraliia": {
+            "title": "Австралія",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/avstraliya/",
+            "queryFullUrl": "rybalstvo/vobler/search/avstraliya/",
+            "count": 135
+          },
+          "strana-proiskhozhdeniia-daniia": {
+            "title": "Данія",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/daniya-1/",
+            "queryFullUrl": "rybalstvo/vobler/search/daniya-1/",
+            "count": 258
+          },
+          "strana-proiskhozhdeniia-latviia": {
+            "title": "Латвія",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/latviya-2/",
+            "queryFullUrl": "rybalstvo/vobler/search/latviya-2/",
+            "count": 268
+          },
+          "strana-proiskhozhdeniia-polsha": {
+            "title": "Польща",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/polsha-3bt/",
+            "queryFullUrl": "rybalstvo/vobler/search/polsha-3bt/",
+            "count": 12
+          },
+          "strana-proiskhozhdeniia-ssha": {
+            "title": "США",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/ssha-4s7/",
+            "queryFullUrl": "rybalstvo/vobler/search/ssha-4s7/",
+            "count": 63
+          },
+          "strana-proiskhozhdeniia-ukraina": {
+            "title": "Україна",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/ukraina-uay/",
+            "queryFullUrl": "rybalstvo/vobler/search/ukraina-uay/",
+            "count": 525
+          },
+          "strana-proiskhozhdeniia-finliandiia": {
+            "title": "Фінляндія",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/finlyandiya-2/",
+            "queryFullUrl": "rybalstvo/vobler/search/finlyandiya-2/",
+            "count": 709
+          },
+          "strana-proiskhozhdeniia-iaponiia": {
+            "title": "Японія",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/yaponiya-2/",
+            "queryFullUrl": "rybalstvo/vobler/search/yaponiya-2/",
+            "count": 3820
+          }
+        },
+        "selectedValues": [],
+        "showAsImage": false,
+        "useLinks": true,
+        "id": "attribute_strana-proiskhozhdeniia"
+      },
+      "city": {
+        "type": "city",
+        "code": "city",
+        "title": "Наявність по містах",
+        "viewType": 0,
+        "viewMode": 1,
+        "position": 500,
+        "min": 0,
+        "max": 0,
+        "hidden": false,
+        "gender": false,
+        "values": {
+          "city-dnipro": {
+            "title": "Дніпро",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/city-dnipro/",
+            "queryFullUrl": "rybalstvo/vobler/search/city-dnipro/",
+            "count": 1863
+          },
+          "city-kyiv": {
+            "title": "Київ",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/city-kyiv/",
+            "queryFullUrl": "rybalstvo/vobler/search/city-kyiv/",
+            "count": 2739
+          },
+          "city-lviv": {
+            "title": "Львів",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/city-lviv/",
+            "queryFullUrl": "rybalstvo/vobler/search/city-lviv/",
+            "count": 1702
+          },
+          "city-odesa": {
+            "title": "Одеса",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/city-odesa/",
+            "queryFullUrl": "rybalstvo/vobler/search/city-odesa/",
+            "count": 1044
+          },
+          "city-kharkiv": {
+            "title": "Харків",
+            "selected": false,
+            "hidden": false,
+            "image": null,
+            "queryUrl": "rybalstvo/vobler/search/city-kharkiv/",
+            "queryFullUrl": "rybalstvo/vobler/search/city-kharkiv/",
+            "count": 902
+          }
+        },
+        "selectedValues": [],
+        "showAsImage": false,
+        "useLinks": true,
+        "id": "city"
+      }
+    }
+  }
+}

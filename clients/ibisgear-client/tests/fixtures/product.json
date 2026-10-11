@@ -1,0 +1,199 @@
+{
+  "@context": "/api/v2/contexts/Product",
+  "@id": "/api/v2/shop/products/15950111",
+  "@type": "Product",
+  "totalReviews": 2,
+  "mainTaxon": {
+    "@id": "/api/v2/shop/taxons/01030100",
+    "@type": "Taxon",
+    "id": 1103,
+    "code": "01030100",
+    "parent": "/api/v2/shop/taxons/01030000",
+    "enabled": true,
+    "taxonAdult": false,
+    "name": "Воблери",
+    "slug": "vobler",
+    "children": []
+  },
+  "averageRating": 5,
+  "id": 173422,
+  "code": "15950111",
+  "brand": {
+    "@id": "/api/v2/shop/brands/504",
+    "@type": "Brand",
+    "slug": "zipbaits",
+    "code": "1304_zipbaits",
+    "name": "ZipBaits",
+    "images": [
+      {
+        "@type": "BrandImage",
+        "type": "logo",
+        "path": "https://scdn.ibis-gear.com/media/cache/original/d2/b3/dcb1c74f96fccf86573d49289e0c.jpg"
+      }
+    ]
+  },
+  "topTaxon": {
+    "@id": "/api/v2/shop/taxons/01000000",
+    "@type": "Taxon",
+    "id": 1085,
+    "code": "01000000",
+    "parent": "/api/v2/shop/taxons/ibis-fishing-root",
+    "enabled": true,
+    "taxonAdult": false,
+    "name": "Рибальство",
+    "slug": "rybalstvo",
+    "children": []
+  },
+  "name": "Воблер ZipBaits Rigge 90 SP 90mm 9.8g #050",
+  "description": "<p>Воблер ZipBaits Rigge – одна з найпопулярніших серій з асортименту японської компанії. Всі Rigge відрізняються від класичних мінноу наявністю горбинки на спині, мають чудову гру, як на рівномірній, так і на ривковій проводках. На ці приманки ловлять всіх хижих риб, та й всеїдні види не гидують цими воблерами. Як усі воблери Zip Baits, моделі серії Rigge оснащені системою Mag-Drive Super High Balanced System, яка забезпечує ідеальний баланс, а також далекий закид. Сімейство ZipBaits Rigge становлять модельні ряди приманок різних розмірів, ступеня плавучості та показників заглиблення, що дозволяє вибирати саме ту модель, яка потрібна для отримання найкращого результату в залежності від поточних умов на риболовлі.</p><br><p>Воблер ZipBaits Rigge 90 в асортименті компанії відноситься до групи модельних рядів форелевих приманок і орієнтований на лов дикої великої риби. Саме ця особливість воблерів розміром 90 мм робить їх прекрасними приманками для лову дрібної та середньої щуки, а також великого сутінкового судака. У періоди підвищеної активності у зонах великої концентрації особин зовсім не випадковими бувають атаки «горбатого» окуня. Воблери ZipBaits Rigge 90 є найбільшими в лінійці ZipBaits Rigge, і їхня наявність в арсеналі рибалки суттєво розширює шанси на здобуток бажаного трофею.</p>",
+  "options": [],
+  "isSlider": false,
+  "variants": [
+    {
+      "@context": "/api/v2/contexts/ProductVariant",
+      "@id": "/api/v2/shop/product-variants/15950111",
+      "@type": "ProductVariant",
+      "archived": false,
+      "id": 192357,
+      "code": "15950111",
+      "slug": "vobler-zipbaits-rigge-90-sp-90mm-9-8g-050",
+      "name": "Воблер ZipBaits Rigge 90 SP 90mm 9.8g #050",
+      "inStock": true,
+      "price": 92100,
+      "originalPrice": 92100,
+      "images": [
+        {
+          "@context": "/api/v2/contexts/ProductImage",
+          "@id": "/api/v2/shop/product-images/2528038",
+          "@type": "ProductImage",
+          "id": 2528038,
+          "type": "main",
+          "path": "https://scdn.ibis-gear.com/media/cache/original/4b/20/9ec31948bba469e89a4a79f02a9e.jpg"
+        }
+      ],
+      "isSpecorder": false,
+      "isOrdered": false,
+      "optionValues": [
+        {
+          "code": "model-rigge",
+          "id": 3846,
+          "displayValue": null,
+          "optionCode": "model",
+          "value": "Rigge",
+          "media": null
+        },
+        {
+          "code": "dlina-obshchaia-mm-90",
+          "id": 10921,
+          "displayValue": null,
+          "optionCode": "dlina-obshchaia-mm",
+          "value": "90",
+          "media": null
+        },
+        {
+          "code": "tsvet-tovara-050",
+          "id": 55702,
+          "displayValue": null,
+          "optionCode": "tsvet-tovara",
+          "value": "050",
+          "media": {
+            "path": "https://scdn.ibis-gear.com/media/cache/original/4b/20/9ec31948bba469e89a4a79f02a9e.jpg"
+          }
+        },
+        {
+          "code": "massa-g-9-8",
+          "id": 96168,
+          "displayValue": null,
+          "optionCode": "massa-g",
+          "value": "9,8",
+          "media": null
+        }
+      ]
+    },
+    {
+      "@context": "/api/v2/contexts/ProductVariant",
+      "@id": "/api/v2/shop/product-variants/15950112",
+      "@type": "ProductVariant",
+      "archived": false,
+      "id": 192358,
+      "code": "15950112",
+      "slug": "vobler-zipbaits-rigge-90-sp-90mm-9-8g-810",
+      "name": "Воблер ZipBaits Rigge 90 SP 90mm 9.8g #810",
+      "inStock": true,
+      "price": 92100,
+      "originalPrice": 92100,
+      "images": [
+        {
+          "@context": "/api/v2/contexts/ProductImage",
+          "@id": "/api/v2/shop/product-images/2528040",
+          "@type": "ProductImage",
+          "id": 2528040,
+          "type": "main",
+          "path": "https://scdn.ibis-gear.com/media/cache/original/2a/62/c3c11467b42a455935c254734bdd.jpg"
+        }
+      ],
+      "isSpecorder": false,
+      "isOrdered": false,
+      "optionValues": [
+        {
+          "code": "model-rigge",
+          "id": 3846,
+          "displayValue": null,
+          "optionCode": "model",
+          "value": "Rigge",
+          "media": null
+        },
+        {
+          "code": "dlina-obshchaia-mm-90",
+          "id": 10921,
+          "displayValue": null,
+          "optionCode": "dlina-obshchaia-mm",
+          "value": "90",
+          "media": null
+        },
+        {
+          "code": "massa-g-9-8",
+          "id": 96168,
+          "displayValue": null,
+          "optionCode": "massa-g",
+          "value": "9,8",
+          "media": null
+        },
+        {
+          "code": "tsvet-tovara-810h",
+          "id": 156513,
+          "displayValue": null,
+          "optionCode": "tsvet-tovara",
+          "value": "810H",
+          "media": {
+            "path": "https://scdn.ibis-gear.com/media/cache/original/2a/62/c3c11467b42a455935c254734bdd.jpg"
+          }
+        }
+      ]
+    }
+  ],
+  "defaultVariant": "/api/v2/shop/product-variants/15950079",
+  "channelHostname": "ibis-gear.com",
+  "ratingCount": 0,
+  "recentReviews": [
+    {
+      "createdAt": "2026-04-19T20:13:48",
+      "description": "Добрий вечір.\nПідскажіть чи є система дальнього закиду в 35 ріджі?",
+      "author": "Василь",
+      "reviewRating": {
+        "ratingValue": 0
+      }
+    },
+    {
+      "createdAt": "2025-09-09T20:27:43",
+      "description": "просто шикарний воблер! на першій ж рибалці розловив двома щуками по 700 грам і трьома окунями, один з них на грам 200-250 грам, всім рекомендую, проводку використовую рівномірну",
+      "author": "Максим",
+      "reviewRating": {
+        "ratingValue": 0
+      }
+    }
+  ],
+  "hasSizeChart": false,
+  "hasSummaryReview": true,
+  "showColorOptionsAsModel": true
+}
