@@ -145,8 +145,46 @@ CLI `--fetch-details/--no-fetch-details` — тристановий (default `No
 
 ---
 
+## 21. Міграція пошкоджувала FK-посилання (Critical) — ✅
+
+`PRAGMA foreign_keys=OFF` виставлявся на **іншому** з'єднанні, ніж `ALTER TABLE products
+RENAME TO products_old`, тож SQLite переписав `REFERENCES products` у дочірніх таблицях
+(`product_species`, `price_history`) на `products_old`, а потім його дропав. Будь-який
+`INSERT/DELETE` падав з `no such table: main.products_old`.
+
+Виправлено: усі DDL виконуються на одному з'єднанні з `foreign_keys=OFF` +
+`legacy_alter_table=ON`; додано ідемпотентний ремонт уже пошкоджених дочірніх таблиць
+(`_repair_dangling_fk`). Перевірено: `PRAGMA integrity_check` = ok, `foreign_key_check` = [].
+
+---
+
+## 22. Логування: SQL-спам у консолі (Medium) — ✅
+
+`intercept_level: "DEBUG"` застосовувався до «шумних» логерів (`sqlalchemy.engine`), тож
+кожен `INSERT/SELECT` друкувався на рівні INFO. Дефолт змінено на `"WARNING"`
+(`config.py`, `config/logging.yaml`).
+
+---
+
+## 23. UI: мультивибір магазинів ігнорувався (Medium) — ✅
+
+`_collect_rows` ставив `store=display[0] if len(display)==1 else None`, тож при виборі 2+
+магазинів показувались **усі** (включно з невибраними). Додано параметр `stores` у
+`query_products`; UI передає весь список. Тест: `test_filters_and_bounds` (`stores`).
+
+---
+
+## 24. UI: застарілий параметр + перебудова Excel на кожній взаємодії (Low) — ✅
+
+* `st.dataframe(..., use_container_width=True)` → `width="stretch"` (deprecation у Streamlit 1.65).
+* `build_workbook_bytes` (~2 МБ, ~5 с) викликався на кожному rerun → обгорнуто в
+  `st.cache_data` (`_workbook_bytes`).
+
+---
+
 ## Залишилось (відкриті)
 
 - ⬜ **14** Streamlit: запуск `streamlit run src/lures/ui.py` без `uv sync` (абсолютні імпорти).
 - 🟡 **3** Bereg: наявність з listing-картки неможлива (лише з detail).
 - ⏭️ **17** Версіонування/публікація клієнтів (Фаза 6 у `PLAN.md`).
+- ℹ️ `--max-pages` не обмежує flagman (його клієнт не має посторінкового API) — за дизайном.

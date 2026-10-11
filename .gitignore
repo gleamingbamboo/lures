@@ -11,6 +11,8 @@ build/
 .coverage
 data/*.db
 data/*.db-*
+**/data/*.db
+**/data/*.db-*
 *.xlsx
 
 # Генеровані артефакти та локальні дані

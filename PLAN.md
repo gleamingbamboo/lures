@@ -1,7 +1,7 @@
 # PLAN: План виправлення неузгоджень
 
 Статус: **Фази 1–5 виконано** (коміти `6eae89b`, `cc3621d`, далі tests/docs).
-Фаза 6 (версіонування) — відкладена.
+Фаза 7 (runtime smoke-тест і фікси) — виконано. Фаза 6 (версіонування) — відкладена.
 Перевірка: `uv run ruff check .` · `uv run ruff format --check .` · `uv run mypy src` · `uv run pytest -q` (19 passed).
 
 Пріоритезація: **Critical** → **High** → **Medium** → **Low** → **Info**
@@ -115,6 +115,28 @@
 - [ ] Обрати: monorepo (один тег) або незалежні релізи клієнтів
 - [ ] Налаштувати CI/CD для публікації на PyPI
 - [ ] Замінити `path` dependencies у `pyproject.toml` на `git+https://...@vX.Y.Z` або PyPI
+
+---
+
+## Фаза 7: Runtime smoke-тест і фікси — ✅
+
+Запуск реального циклу (import усіх магазинів → export → Streamlit UI + `AppTest`) виявив:
+
+### 7.1 Міграція ламала FK (Critical)
+- [x] Усі DDL на одному з'єднанні з `foreign_keys=OFF` + `legacy_alter_table=ON`
+- [x] Ремонт `products_old`-посилань (`_repair_dangling_fk`) — ідемпотентно
+- [x] Перевірка: `integrity_check` ok, `foreign_key_check` [], 3618 рядків збережено
+
+### 7.2 Логування: SQL-спам
+- [x] `intercept_level` → `WARNING` (дефолт + `logging.yaml`)
+
+### 7.3 UI: мультивибір магазинів
+- [x] `query_products(stores=...)`; UI передає весь список
+- [x] Тест у `test_filters_and_bounds`
+
+### 7.4 UI: deprecation + кеш Excel
+- [x] `width="stretch"` замість `use_container_width`
+- [x] `_workbook_bytes` під `st.cache_data`
 
 ---
 
