@@ -43,10 +43,10 @@ dev = [
 bereg = "bereg.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/Gleam/bereg-client"
-Repository = "https://github.com/Gleam/bereg-client"
-Issues = "https://github.com/Gleam/bereg-client/issues"
-Changelog = "https://github.com/Gleam/bereg-client/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/gleamingbamboo/bereg-client"
+Repository = "https://github.com/gleamingbamboo/bereg-client"
+Issues = "https://github.com/gleamingbamboo/bereg-client/issues"
+Changelog = "https://github.com/gleamingbamboo/bereg-client/blob/main/CHANGELOG.md"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/bereg"]

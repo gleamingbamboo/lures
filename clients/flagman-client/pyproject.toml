@@ -41,10 +41,10 @@ dev = [
 flagman = "flagman.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/Gleam/flagman-client"
-Repository = "https://github.com/Gleam/flagman-client"
-Issues = "https://github.com/Gleam/flagman-client/issues"
-Changelog = "https://github.com/Gleam/flagman-client/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/gleamingbamboo/flagman-client"
+Repository = "https://github.com/gleamingbamboo/flagman-client"
+Issues = "https://github.com/gleamingbamboo/flagman-client/issues"
+Changelog = "https://github.com/gleamingbamboo/flagman-client/blob/main/CHANGELOG.md"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/flagman"]

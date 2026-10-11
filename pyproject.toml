@@ -48,8 +48,8 @@ lures-export = "lures.cli:export_app"
 lures-serve = "lures.cli:serve_app"
 
 [project.urls]
-Repository = "https://github.com/Gleam/lures"
-Issues = "https://github.com/Gleam/lures/issues"
+Repository = "https://github.com/gleamingbamboo/lures"
+Issues = "https://github.com/gleamingbamboo/lures/issues"
 
 # Local path-editable sources while the client libraries live in this workspace.
 # Once the repositories are public, switch to git+https://...@v0.1.0 (or PyPI).

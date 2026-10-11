@@ -41,10 +41,10 @@ dev = [
 ibisgear = "ibisgear.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/Gleam/ibisgear-client"
-Repository = "https://github.com/Gleam/ibisgear-client"
-Issues = "https://github.com/Gleam/ibisgear-client/issues"
-Changelog = "https://github.com/Gleam/ibisgear-client/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/gleamingbamboo/ibisgear-client"
+Repository = "https://github.com/gleamingbamboo/ibisgear-client"
+Issues = "https://github.com/gleamingbamboo/ibisgear-client/issues"
+Changelog = "https://github.com/gleamingbamboo/ibisgear-client/blob/main/CHANGELOG.md"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/ibisgear"]

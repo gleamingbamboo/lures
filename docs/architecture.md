@@ -1,7 +1,7 @@
 # Архітектура агрегатора «lures»
 
-Три незалежні клієнт-бібліотеки (`clients/flagman-client`, `clients/ibisgear-client`,
-`clients/bereg-client`, кожна з власним git-репозиторієм, тег `v0.1.0`) реалізують
+Три клієнт-бібліотеки (`clients/flagman-client`, `clients/ibisgear-client`,
+`clients/bereg-client`, кожна окремим пакетом, тег `v0.1.0`) реалізують
 читання каталогів магазинів. Головний пакет `lures` не робить HTTP-запитів напряму —
 він лише зводить моделі трьох клієнтів до **єдиного канонічного контракту**, зберігає
 їх у SQLite та показує/експортує.
@@ -17,7 +17,7 @@
 | external_id     | Артикул          | str    | артикул/код товару (SKU)          |
 | name            | Назва            | str    |                                   |
 | brand           | Виробник         | str    |                                   |
-| type            | Тип воблера      | str    | Minnow, Crank, Popper, ...        |
+| lure_type       | Тип воблера      | str    | Minnow, Crank, Popper, ...        |
 | buoyancy        | Плавучість       | enum   | `F/SP/S/FS/SS/SR/SURF`            |
 | weight_g        | Вага, г          | float  |                                   |
 | length_mm       | Довжина, мм      | float  |                                   |
@@ -31,6 +31,7 @@
 | availability    | Наявність        | enum   | `available/out_of_stock/unknown`  |
 | url             | Посилання        | str    |                                   |
 | image_url       | Фото             | str    |                                   |
+| description     | Опис             | str    |                                   |
 
 `LureRecord` — pydantic-модель усіх колонок + службові `store`, `category`. Валідатор:
 (1) скидає `old_price <= price`; (2) рахує `discount_pct`, якщо його не задано;
@@ -47,7 +48,10 @@
   плавучість), ціни в **копійках** → гривні (`/100`), `inStock` → наявність.
 * **bereg** (`extract_bereg_card` / `extract_bereg_detail`) — картка з listing містить
   лише ціни/фото; детальна сторінка додає характеристики з таблиці «Характеристики».
-  `special_price` → платіжна ціна, `price` → стара.
+  `external_id` — завжди `product_id` (є і в картці, і на сторінці товару), тому
+  listing і деталі дають той самий ключ; SKU зберігається в характеристиці «Артикул».
+  Ціни Magento: `special_price` (якщо є) → платіжна ціна, інакше `price`; стара ціна —
+  звичайна `price` (або `old_price`, якщо `price` немає).
 
 Загальні текстові хелпери (`common.py`, перенесені з `build_xlsx.py`):
 `TYPE_WORDS`/`DESC_WORDS` (тип воблера), `BUOY_MAP` (слово → код плавучості),
@@ -58,24 +62,29 @@
 
 Пакет `lures.db` побудовано на **SQLAlchemy 2.0** (типізовані `DeclarativeBase`/
 `Mapped`): `models.py` — ORM-моделі, `session.py` — engine + сесії,
-`crud.py`/`queries.py` — запис/читання, `fts.py` — FTS5, `schema.py` — `init_db`.
+`crud.py`/`queries.py` — запис/читання, `fts.py` — FTS5, `migrations.py` — оновлення
+наявних баз, `schema.py` — `init_db`.
 
 ```
 stores (id, code UNIQUE, name, base_url, created_at)
 categories (id, store_id FK, code, name, url, UNIQUE(store_id, code))
-products (id, store_id FK, category_id FK, external_id, name, sku, brand,
-          type, buoyancy, weight_g, length_mm, depth_from_m, depth_to_m,
+products (id, store_id FK, category_id FK, external_id, name, brand,
+          lure_type, buoyancy, weight_g, length_mm, depth_from_m, depth_to_m,
           price, old_price, discount_pct, rating, comments, availability,
           url, image_url, description, raw_json, extra_json, updated_at,
-          UNIQUE(store_id, external_id))
+          UNIQUE(store_id, external_id),
+          CHECK(buoyancy IN ('','F','SP','S','FS','SS','SR','SURF')),
+          CHECK(availability IN ('available','out_of_stock','unknown')))
 product_species (id, product_id FK, attribute, value)
 price_history (id, product_id FK, price, old_price, created_at)
-products_fts — FTS5(name, sku, brand, type_text, species_text)
+products_fts — FTS5(name, external_id, brand, lure_type, species_text)
 ```
 
 * `raw_json` — оригінальний JSON джерела (повний), `extra_json` — характеристики.
 * `product_species` перезаписується на кожній синхронізації.
-* `price_history` — знімок на кожен UPSERT (історія цін).
+* `price_history` — знімок **лише коли ціна/стара ціна змінилися** (без дублів).
+* Індекси: `products.price`, `products.updated_at` (+ FK-колонки) для швидких фільтрів.
+* `sku` видалено: він дублював `external_id`.
 * FTS-пошук — `query_products(search=...)` шукає назву/артикул/бренд/тип/характеристики.
 
 `products` має гібридні типізовані колонки + `extra_json`; це дозволяє фільтрувати
@@ -98,4 +107,5 @@ Streamlit (`ui.py`) або Excel (`export.py`) — «Параметри»/«Ус
    `extractors/`).
 2. Для категорії: `code` (стабільний ключ), `url`/`filters` за таксономією сайту.
 3. `uv run lures-import -s <code>` → перевірте статистику.
-4. Для повніших характеристик bereg: `--fetch-details` або `fetch_details: true` у YAML.
+4. Для повніших характеристик bereg: `--fetch-details` або `fetch_details: true` у YAML
+   (без прапорця береться значення з `stores.yaml`).
