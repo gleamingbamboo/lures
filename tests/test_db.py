@@ -117,3 +117,35 @@ def test_price_history_and_species(tmp_path: Path) -> None:
 
         history = session.execute(text("SELECT price FROM price_history ORDER BY id")).all()
         assert [row[0] for row in history] == [500.0, 420.0]
+
+
+def test_same_external_id_is_scoped_per_store(tmp_path: Path) -> None:
+    with get_session(tmp_path / "lures.db") as session:
+        init_db(session)
+        first, new_first = _upsert(session, _record("flagman", "1"))
+        second, new_second = _upsert(session, _record("bereg", "1"))
+        assert new_first is True
+        assert new_second is True
+        assert first != second
+        assert len(query_products(session)) == 2
+
+
+def test_price_history_skips_unchanged_prices(tmp_path: Path) -> None:
+    with get_session(tmp_path / "lures.db") as session:
+        init_db(session)
+        _upsert(session, _record(price=500.0, old_price=600.0))
+        # Той самий стан — знімок не додається.
+        _upsert(session, _record(price=500.0, old_price=600.0))
+        # Зміна ціни — знімок додається.
+        _upsert(session, _record(price=450.0, old_price=600.0))
+        history = session.execute(text("SELECT price FROM price_history ORDER BY id")).all()
+        assert [row[0] for row in history] == [500.0, 450.0]
+
+
+def test_fts_search_cyrillic(tmp_path: Path) -> None:
+    with get_session(tmp_path / "lures.db") as session:
+        init_db(session)
+        _upsert(session, _record(name="Воблер Мінноу 90"))
+        assert len(query_products(session, search="мінноу")) == 1
+        assert len(query_products(session, search="Воблер")) == 1
+        assert len(query_products(session, search="твістер")) == 0
