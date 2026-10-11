@@ -62,9 +62,7 @@ def upsert_product(
     category_url: str = "",
 ) -> tuple[int, bool]:
     """Вставити/оновити товар; повертає ``(id, чи запис новий)``."""
-    store = _get_or_create_store(
-        session, record.store, name=store_name, base_url=store_base_url
-    )
+    store = _get_or_create_store(session, record.store, name=store_name, base_url=store_base_url)
     category = _get_or_create_category(
         session,
         store.id,
@@ -113,9 +111,18 @@ def upsert_product(
         session.add(ProductSpecies(product_id=product.id, attribute=attribute, value=value))
 
     if record.price is not None:
-        session.add(
-            PriceHistory(product_id=product.id, price=record.price, old_price=record.old_price)
-        )
+        last = session.execute(
+            select(PriceHistory)
+            .where(PriceHistory.product_id == product.id)
+            .order_by(PriceHistory.id.desc())
+            .limit(1)
+        ).scalar_one_or_none()
+        # Пишемо знімок лише коли ціна (або стара ціна) справді змінилася,
+        # інакше таблиця роздувається дублями на кожен імпорт.
+        if last is None or last.price != record.price or last.old_price != record.old_price:
+            session.add(
+                PriceHistory(product_id=product.id, price=record.price, old_price=record.old_price)
+            )
 
     species_text = " ".join(f"{key} {value}" for key, value in clean_specs.items())
     index_product(

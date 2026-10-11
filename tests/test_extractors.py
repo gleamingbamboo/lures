@@ -188,7 +188,7 @@ def _bereg_detail() -> ProductDetail:
 def test_bereg_detail_extractor() -> None:
     record = extract_bereg_detail(_bereg_detail())
     assert record.store == "bereg"
-    assert record.external_id == "FM-90"
+    assert record.external_id == "2242113"
     assert record.brand == "Bereg"
     assert record.lure_type == "Minnow"
     assert record.buoyancy == "F"
@@ -200,6 +200,13 @@ def test_bereg_detail_extractor() -> None:
     assert record.old_price == 450.0
     assert record.discount_pct == 22
     assert record.availability == "available"
+
+
+def test_bereg_external_id_is_stable() -> None:
+    """Картка з listing і детальна сторінка дають той самий ``external_id``."""
+    card = extract_bereg_card(_bereg_card())
+    detail = extract_bereg_detail(_bereg_detail())
+    assert card.external_id == detail.external_id == "2242113"
 
 
 def test_parse_depth_variants() -> None:

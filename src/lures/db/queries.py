@@ -106,9 +106,7 @@ def stats(session: Session) -> dict[str, Any]:
         or 0
     )
     surf = (
-        session.scalar(
-            select(func.count()).select_from(Product).where(Product.buoyancy == "SURF")
-        )
+        session.scalar(select(func.count()).select_from(Product).where(Product.buoyancy == "SURF"))
         or 0
     )
     store_rows = session.execute(
@@ -118,8 +116,7 @@ def stats(session: Session) -> dict[str, Any]:
         .order_by(Store.code)
     ).all()
     stores = [
-        {"code": code, "name": name, "products": products}
-        for code, name, products in store_rows
+        {"code": code, "name": name, "products": products} for code, name, products in store_rows
     ]
     return {
         "total": int(total),

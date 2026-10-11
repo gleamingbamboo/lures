@@ -5,6 +5,7 @@ from __future__ import annotations
 from flagman import Product as FlagmanProduct
 
 from ..canonical import LureRecord
+from ..constants import FLAGMAN
 from .common import (
     SURF_TYPES,
     buoyancy_code,
@@ -16,7 +17,7 @@ from .common import (
 
 __all__ = ["STORE_CODE", "extract_flagman"]
 
-STORE_CODE = "flagman"
+STORE_CODE = FLAGMAN
 
 
 def extract_flagman(
@@ -53,7 +54,6 @@ def extract_flagman(
         depth_to_m=depth_to,
         price=product.price,
         old_price=product.old_price,
-        discount_pct=product.discount_percent,
         rating=product.rating,
         comments=product.count_comments,
         availability="available" if product.is_available else "out_of_stock",

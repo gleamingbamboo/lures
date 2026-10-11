@@ -14,10 +14,9 @@ from sqlalchemy.orm import Session
 
 from .canonical import LureRecord
 from .config import CategorySpec, Config, StoreConfig
+from .constants import BEREG, FLAGMAN, IBISGEAR
 from .db import get_session, init_db, upsert_product
 from .extractors import (
-    FLAGMAN_CODE,
-    IBISGEAR_CODE,
     extract_bereg_card,
     extract_bereg_detail,
     extract_flagman,
@@ -45,18 +44,18 @@ def sync_store(
     db_path: str | Path,
     *,
     max_pages: int | None = None,
-    fetch_details: bool = True,
+    fetch_details: bool | None = None,
     fetch_variants: bool = True,
 ) -> SyncStats:
     """Синхронізувати один магазин у ``db_path``."""
     stats = SyncStats(store=store_cfg.code)
     with get_session(db_path) as session:
         init_db(session)
-        if store_cfg.client == FLAGMAN_CODE:
+        if store_cfg.client == FLAGMAN:
             _sync_flagman(session, store_cfg, stats, max_pages)
-        elif store_cfg.client == IBISGEAR_CODE:
+        elif store_cfg.client == IBISGEAR:
             _sync_ibisgear(session, store_cfg, stats, max_pages, fetch_variants)
-        else:
+        elif store_cfg.client == BEREG:
             _sync_bereg(session, store_cfg, stats, max_pages, fetch_details)
     return stats
 
@@ -67,7 +66,7 @@ def sync_all(
     *,
     stores: tuple[str, ...] = (),
     max_pages: int | None = None,
-    fetch_details: bool = True,
+    fetch_details: bool | None = None,
     fetch_variants: bool = True,
 ) -> list[SyncStats]:
     """Синхронізувати (підмножину) магазинів конфігурації."""
@@ -85,6 +84,11 @@ def sync_all(
             )
         )
     return results
+
+
+def _effective_max_pages(category: CategorySpec, max_pages: int | None) -> int | None:
+    """Ліміт сторінок для категорії: власний, інакше глобальний (``None`` = усі)."""
+    return category.max_pages if category.max_pages is not None else max_pages
 
 
 def _persist(
@@ -168,7 +172,8 @@ def _sync_ibisgear(
             continue
         stats.categories += 1
         try:
-            for product in client.iter_products(taxon, max_pages=max_pages):
+            pages = _effective_max_pages(category, max_pages)
+            for product in client.iter_products(taxon, max_pages=pages):
                 # Fetch full variants with attributes if enabled
                 variant = product.default_variant
                 if fetch_variants and variant and product.iri:
@@ -185,9 +190,15 @@ def _sync_ibisgear(
                             else:
                                 variant = full_variants[0]
                     except Exception:
-                        logger.warning("ibisgear: не вдалося завантажити варіанти для %s", product.code, exc_info=True)
-                
-                record = extract_ibisgear(product, store=store_cfg.code, category=category.code, variant=variant)
+                        logger.warning(
+                            "ibisgear: не вдалося завантажити варіанти для %s",
+                            product.code,
+                            exc_info=True,
+                        )
+
+                record = extract_ibisgear(
+                    product, store=store_cfg.code, category=category.code, variant=variant
+                )
                 _persist(
                     session,
                     record,
@@ -218,7 +229,7 @@ def _sync_bereg(
     store_cfg: StoreConfig,
     stats: SyncStats,
     max_pages: int | None,
-    fetch_details: bool,
+    fetch_details: bool | None,
 ) -> None:
     client = BeregClient()
     for category in store_cfg.categories:
@@ -227,9 +238,10 @@ def _sync_bereg(
             stats.errors.append(f"{category.code}: порожній URL категорії")
             continue
         stats.categories += 1
-        details = fetch_details or category.fetch_details
+        details = category.fetch_details if fetch_details is None else fetch_details
+        pages = _effective_max_pages(category, max_pages)
         try:
-            for card in client.iter_category_products(url, max_pages=max_pages):
+            for card in client.iter_category_products(url, max_pages=pages):
                 if details:
                     _sync_bereg_card_detail(session, card, store_cfg, stats, category, client)
                 else:
@@ -279,6 +291,8 @@ def _sync_bereg_card_detail(
         for group in detail.specification_groups
         for specification in group.specifications
     }
+    if detail.sku:
+        specs.setdefault("Артикул", detail.sku)
     _persist(
         session,
         record,

@@ -7,6 +7,7 @@ from decimal import Decimal
 from bereg import ProductCard, ProductDetail
 
 from ..canonical import LureRecord
+from ..constants import BEREG
 from .common import (
     SURF_TYPES,
     buoyancy_code,
@@ -18,7 +19,7 @@ from .common import (
 
 __all__ = ["STORE_CODE", "extract_bereg_card", "extract_bereg_detail"]
 
-STORE_CODE = "bereg"
+STORE_CODE = BEREG
 
 
 def _money(value: Decimal | None) -> float | None:
@@ -28,16 +29,30 @@ def _money(value: Decimal | None) -> float | None:
 def _price_pair(
     main: Decimal | None, special: Decimal | None, old: Decimal | None
 ) -> tuple[float | None, float | None]:
-    """Канонічні (ціна, стара ціна): спочатку платіжна, потім звичайна."""
+    """Канонічні (ціна, стара ціна) з Magento-полів товару.
+
+    Magento 1 віддає три ціни: ``price`` (звичайна), ``special_price``
+    (акційна, якщо є) та ``old_price`` (MSRP, якщо заданий). Канонічна
+    «платіжна» ціна — це ``special_price`` коли він є, інакше ``price``;
+    «стара» ціна — звичайна ``price`` (або ``old_price``, якщо ``price`` немає).
+    """
     if special is not None:
         return _money(special), _money(main) if main is not None else _money(old)
     return _money(main), _money(old)
 
 
-def _card_external_id(card: ProductCard) -> str:
-    if card.product_id is not None:
-        return str(card.product_id)
-    return card.url.rstrip("/").rsplit("/", 1)[-1]
+def _external_id(*, product_id: int | None, url: str = "", sku: str = "") -> str:
+    """Стабільний ідентифікатор товару, однаковий для картки (listing) і деталей.
+
+    Пріоритет: ``product_id`` (є і в картці, і на сторінці товару) → ``sku`` →
+    slug з URL. ``product_id`` стоїть першим саме для того, щоб картка й
+    детальна сторінка давали один і той самий ``external_id``.
+    """
+    if product_id is not None:
+        return str(product_id)
+    if sku:
+        return sku
+    return url.rstrip("/").rsplit("/", 1)[-1] if url else ""
 
 
 def extract_bereg_card(
@@ -52,7 +67,7 @@ def extract_bereg_card(
     return LureRecord(
         store=store,
         category=category,
-        external_id=_card_external_id(card),
+        external_id=_external_id(product_id=card.product_id, url=card.url),
         name=card.name,
         price=price,
         old_price=old_price,
@@ -98,7 +113,9 @@ def extract_bereg_detail(
     return LureRecord(
         store=store,
         category=category,
-        external_id=detail.sku or (str(detail.product_id) if detail.product_id else ""),
+        external_id=_external_id(
+            product_id=detail.product_id, url=detail.url, sku=detail.sku or ""
+        ),
         name=detail.name,
         brand=detail.brand or "",
         lure_type=type_name,

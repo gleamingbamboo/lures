@@ -28,10 +28,13 @@ _INDEXES: tuple[tuple[str, str], ...] = (
 
 def _table_sql(engine: Engine, name: str) -> str:
     with engine.connect() as conn:
-        return conn.execute(
-            text("SELECT sql FROM sqlite_master WHERE type = 'table' AND name = :name"),
-            {"name": name},
-        ).scalar() or ""
+        return (
+            conn.execute(
+                text("SELECT sql FROM sqlite_master WHERE type = 'table' AND name = :name"),
+                {"name": name},
+            ).scalar()
+            or ""
+        )
 
 
 def _without_foreign_keys(engine: Engine) -> None:
@@ -64,10 +67,7 @@ def _rebuild_products(engine: Engine, old_columns: set[str]) -> None:
         Base.metadata.create_all(engine)
         with engine.begin() as conn:
             conn.execute(
-                text(
-                    f"INSERT INTO products ({column_list}) "
-                    f"SELECT {column_list} FROM products_old"
-                )
+                text(f"INSERT INTO products ({column_list}) SELECT {column_list} FROM products_old")
             )
         _without_foreign_keys(engine)
         with engine.begin() as conn:

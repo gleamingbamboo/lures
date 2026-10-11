@@ -6,6 +6,7 @@ from ibisgear import Product as IbisProduct
 from ibisgear import ProductVariant
 
 from ..canonical import LureRecord
+from ..constants import IBISGEAR
 from .common import (
     SURF_TYPES,
     buoyancy_code,
@@ -17,7 +18,7 @@ from .common import (
 
 __all__ = ["STORE_CODE", "extract_ibisgear"]
 
-STORE_CODE = "ibisgear"
+STORE_CODE = IBISGEAR
 
 
 def _variant_pairs(variant: ProductVariant | None) -> list[tuple[str, str]]:
@@ -30,7 +31,11 @@ def _variant_pairs(variant: ProductVariant | None) -> list[tuple[str, str]]:
 
 
 def extract_ibisgear(
-    product: IbisProduct, *, store: str = STORE_CODE, category: str = "", variant: ProductVariant | None = None
+    product: IbisProduct,
+    *,
+    store: str = STORE_CODE,
+    category: str = "",
+    variant: ProductVariant | None = None,
 ) -> LureRecord:
     """Відобразити :class:`~ibisgear.models.Product` на канонічні колонки."""
     variant = variant or product.default_variant
@@ -69,7 +74,6 @@ def extract_ibisgear(
         depth_to_m=depth_to,
         price=product.price_uah,
         old_price=variant.original_price_uah if variant else None,
-        discount_pct=variant.discount_percent if variant else None,
         rating=product.averageRating,
         comments=product.totalReviews,
         availability=availability,

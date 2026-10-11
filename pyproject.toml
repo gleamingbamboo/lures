@@ -83,9 +83,22 @@ mypy_path = "src"
 packages = ["lures"]
 warn_unreachable = true
 
-# Клієнт-бібліотеки покладаються на не типізовані bs4/lxml (bereg-client).
+# Клієнт-бібліотеки покладаються на не типізовані bs4/lxml (bereg-client),
+# а також на бібліотеки без офіційних стабів (openpyxl/yaml/pandas).
 [[tool.mypy.overrides]]
-module = ["bs4", "bs4.*", "soupsieve", "soupsieve.*", "lxml", "lxml.*"]
+module = [
+    "bs4",
+    "bs4.*",
+    "soupsieve",
+    "soupsieve.*",
+    "lxml",
+    "lxml.*",
+    "openpyxl",
+    "openpyxl.*",
+    "yaml",
+    "pandas",
+    "pandas.*",
+]
 ignore_missing_imports = true
 
 [tool.pytest.ini_options]

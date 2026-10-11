@@ -4,10 +4,11 @@ from __future__ import annotations
 
 import os
 from pathlib import Path
-from typing import Literal
 
 import yaml
 from pydantic import BaseModel, Field
+
+from .constants import BEREG, FLAGMAN, IBISGEAR, ClientCode
 
 __all__ = [
     "CategorySpec",
@@ -22,6 +23,9 @@ __all__ = [
 DEFAULT_CONFIG_ENV = "LURES_CONFIG"
 DEFAULT_DB_ENV = "LURES_DB"
 DEFAULT_LOG_CONFIG_ENV = "LURES_LOG_CONFIG"
+DEFAULT_LOG_DIR_ENV = "LURES_LOG_DIR"
+DEFAULT_LOG_LEVEL_CONSOLE_ENV = "LURES_LOG_LEVEL_CONSOLE"
+DEFAULT_LOG_LEVEL_FILE_ENV = "LURES_LOG_LEVEL_FILE"
 
 
 class CategorySpec(BaseModel):
@@ -41,7 +45,7 @@ class StoreConfig(BaseModel):
     code: str
     name: str = ""
     base_url: str = ""
-    client: Literal["flagman", "ibisgear", "bereg"] = "flagman"
+    client: ClientCode = FLAGMAN
     categories: list[CategorySpec] = Field(default_factory=list)
 
     def category(self, code: str | None) -> CategorySpec | None:
@@ -55,9 +59,9 @@ class StoreConfig(BaseModel):
     @property
     def client_label(self) -> str:
         return {
-            "flagman": "flagman-client",
-            "ibisgear": "ibisgear-client",
-            "bereg": "bereg-client",
+            FLAGMAN: "flagman-client",
+            IBISGEAR: "ibisgear-client",
+            BEREG: "bereg-client",
         }[self.client]
 
 

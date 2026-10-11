@@ -104,9 +104,7 @@ def test_price_history_and_species(tmp_path: Path) -> None:
         _upsert(session, _record(price=500.0), specs={"Вага": "10 г"})
 
         species = (
-            session.execute(
-                text("SELECT attribute, value FROM product_species ORDER BY attribute")
-            )
+            session.execute(text("SELECT attribute, value FROM product_species ORDER BY attribute"))
             .mappings()
             .all()
         )

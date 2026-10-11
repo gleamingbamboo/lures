@@ -27,14 +27,22 @@ StoreOption = Annotated[
 ]
 ConfigPathOption = Annotated[str, typer.Option("--config", "-c", help="Шлях до stores.yaml")]
 DbPathOption = Annotated[str, typer.Option("--db", "-d", help="Шлях до lures.db")]
-MaxPagesOption = Annotated[int, typer.Option("--max-pages", help="Максимум сторінок (0 = усі)")]
+MaxPagesOption = Annotated[
+    int | None, typer.Option("--max-pages", help="Максимум сторінок (порожньо = усі)")
+]
 FetchDetailsOption = Annotated[
-    bool,
-    typer.Option("--fetch-details", help="Bereg: завантажувати сторінки товарів (за замовчуванням увімкнено)"),
+    bool | None,
+    typer.Option(
+        "--fetch-details/--no-fetch-details",
+        help="Bereg: завантажувати сторінки товарів (порожньо = значення з конфігу)",
+    ),
 ]
 FetchVariantsOption = Annotated[
     bool,
-    typer.Option("--fetch-variants", help="Ibis Gear: завантажувати повні варіанти з атрибутами (за замовчуванням увімкнено)"),
+    typer.Option(
+        "--fetch-variants",
+        help="Ibis Gear: завантажувати повні варіанти з атрибутами (за замовчуванням увімкнено)",
+    ),
 ]
 OutputOption = Annotated[str, typer.Option("--output", "-o", help="Файл Excel")]
 SearchOption = Annotated[str, typer.Option("--search", help="Пошук за назвою/артикулом")]
@@ -52,8 +60,8 @@ def import_cmd(
     store: StoreOption = None,
     config_path: ConfigPathOption = "",
     db_path: DbPathOption = "",
-    max_pages: MaxPagesOption = 0,
-    fetch_details: FetchDetailsOption = True,
+    max_pages: MaxPagesOption = None,
+    fetch_details: FetchDetailsOption = None,
     fetch_variants: FetchVariantsOption = True,
     log_level: LogLevelOption = "",
     log_dir: LogDirOption = "",
@@ -67,7 +75,7 @@ def import_cmd(
         config,
         target,
         stores=tuple(selected),
-        max_pages=max_pages or None,
+        max_pages=max_pages,
         fetch_details=fetch_details,
         fetch_variants=fetch_variants,
     )
@@ -126,7 +134,9 @@ def serve_cmd(
 
 
 # Однокомандні застосунки для консольних скриптів (lures-import/export/serve).
-import_app = typer.Typer(help="Синхронізувати магазини з конфігурації у SQLite.", no_args_is_help=True)
+import_app = typer.Typer(
+    help="Синхронізувати магазини з конфігурації у SQLite.", no_args_is_help=True
+)
 import_app.command()(import_cmd)
 
 export_app = typer.Typer(help="Експортувати базу у Excel.", no_args_is_help=True)

@@ -141,7 +141,6 @@ def main() -> None:
         logger.exception("Не вдалося завантажити конфігурацію")
         st.error(f"Не вдалося завантажити конфігурацію: {exc}")
         st.stop()
-        return
 
     st.title("Приманки (воблери)")
     with get_session(_db_path()) as session:
