@@ -45,7 +45,7 @@ CANONICAL_FIELDS: tuple[FieldDef, ...] = (
     FieldDef("external_id", "Артикул", "str"),
     FieldDef("name", "Назва", "str"),
     FieldDef("brand", "Виробник", "str"),
-    FieldDef("type", "Тип воблера", "str"),
+    FieldDef("lure_type", "Тип воблера", "str"),
     FieldDef("buoyancy", "Плавучість", "enum", enum=BUOYANCY_CODES),
     FieldDef("weight_g", "Вага, г", "float"),
     FieldDef("length_mm", "Довжина, мм", "float"),
@@ -59,6 +59,7 @@ CANONICAL_FIELDS: tuple[FieldDef, ...] = (
     FieldDef("availability", "Наявність", "enum", enum=AVAILABILITY_CODES),
     FieldDef("url", "Посилання", "str"),
     FieldDef("image_url", "Фото", "str"),
+    FieldDef("description", "Опис", "str"),
 )
 
 FIELD_BY_KEY: dict[str, FieldDef] = {field.key: field for field in CANONICAL_FIELDS}
@@ -74,7 +75,7 @@ class LureRecord(BaseModel):
     external_id: str = ""
     name: str = ""
     brand: str = ""
-    type: str = ""
+    lure_type: str = ""
     buoyancy: str = ""
     weight_g: float | None = None
     length_mm: float | None = None

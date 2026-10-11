@@ -13,7 +13,16 @@ FTS5-індекс ``products_fts`` не є ORM-моделлю — його ст�
 
 from __future__ import annotations
 
-from sqlalchemy import Float, ForeignKey, Integer, String, Text, UniqueConstraint, text
+from sqlalchemy import (
+    CheckConstraint,
+    Float,
+    ForeignKey,
+    Integer,
+    String,
+    Text,
+    UniqueConstraint,
+    text,
+)
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 
 __all__ = [
@@ -73,6 +82,14 @@ class Product(Base):
     __tablename__ = "products"
     __table_args__ = (
         UniqueConstraint("store_id", "external_id", name="uq_products_store_external"),
+        CheckConstraint(
+            "buoyancy IN ('', 'F', 'SP', 'S', 'FS', 'SS', 'SR', 'SURF')",
+            name="ck_products_buoyancy",
+        ),
+        CheckConstraint(
+            "availability IN ('available', 'out_of_stock', 'unknown')",
+            name="ck_products_availability",
+        ),
     )
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
@@ -80,15 +97,14 @@ class Product(Base):
     category_id: Mapped[int | None] = mapped_column(ForeignKey("categories.id"), index=True)
     external_id: Mapped[str] = mapped_column(String, nullable=False, default="")
     name: Mapped[str] = mapped_column(String, nullable=False, default="")
-    sku: Mapped[str] = mapped_column(String, nullable=False, default="")
     brand: Mapped[str] = mapped_column(String, nullable=False, default="")
-    type: Mapped[str] = mapped_column(String, nullable=False, default="")
+    lure_type: Mapped[str] = mapped_column(String, nullable=False, default="")
     buoyancy: Mapped[str] = mapped_column(String, nullable=False, default="")
     weight_g: Mapped[float | None] = mapped_column(Float)
     length_mm: Mapped[float | None] = mapped_column(Float)
     depth_from_m: Mapped[float | None] = mapped_column(Float)
     depth_to_m: Mapped[float | None] = mapped_column(Float)
-    price: Mapped[float | None] = mapped_column(Float)
+    price: Mapped[float | None] = mapped_column(Float, index=True)
     old_price: Mapped[float | None] = mapped_column(Float)
     discount_pct: Mapped[int | None] = mapped_column(Integer)
     rating: Mapped[float | None] = mapped_column(Float)
@@ -100,7 +116,7 @@ class Product(Base):
     raw_json: Mapped[str] = mapped_column(Text, nullable=False, default="{}")
     extra_json: Mapped[str] = mapped_column(Text, nullable=False, default="{}")
     updated_at: Mapped[str] = mapped_column(
-        Text, nullable=False, server_default=text("datetime('now')")
+        Text, nullable=False, server_default=text("datetime('now')"), index=True
     )
 
     store: Mapped[Store] = relationship(back_populates="products")

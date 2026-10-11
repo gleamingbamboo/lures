@@ -22,8 +22,8 @@ from lures.fetch import sync_store
 from lures.logging import logger
 
 _DISPLAY_FIELDS: list[tuple[str, str]] = [
-    ("store", "Магазин"),
-    ("category", "Категорія"),
+    ("store_name", "Магазин"),
+    ("category_name", "Категорія"),
     *((field.key, field.label) for field in CANONICAL_FIELDS),
 ]
 

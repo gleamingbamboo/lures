@@ -48,7 +48,7 @@ def test_flagman_extractor() -> None:
     assert record.external_id == "V-123"
     assert record.name == "Cool Minnow 90SP"
     assert record.brand == "ТзОВ Хор"
-    assert record.type == "Minnow"
+    assert record.lure_type == "Minnow"
     assert record.buoyancy == "SP"
     assert record.weight_g == 10.0
     assert record.depth_from_m == 0.5
@@ -107,7 +107,7 @@ def test_ibisgear_extractor() -> None:
     assert record.external_id == "IBIS-90-SP"
     assert record.name == "IBIS 90 SP"
     assert record.brand == "Megabass"
-    assert record.type == "Minnow"
+    assert record.lure_type == "Minnow"
     assert record.buoyancy == "SP"
     assert record.weight_g == 14.0
     assert record.length_mm == 90.0
@@ -190,7 +190,7 @@ def test_bereg_detail_extractor() -> None:
     assert record.store == "bereg"
     assert record.external_id == "FM-90"
     assert record.brand == "Bereg"
-    assert record.type == "Minnow"
+    assert record.lure_type == "Minnow"
     assert record.buoyancy == "F"
     assert record.weight_g == 14.0
     assert record.length_mm == 90.0

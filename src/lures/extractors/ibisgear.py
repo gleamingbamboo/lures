@@ -61,7 +61,7 @@ def extract_ibisgear(
         external_id=(variant.code if variant and variant.code else "") or product.code or "",
         name=name,
         brand=product.brandName or "",
-        type=type_name,
+        lure_type=type_name,
         buoyancy=buoyancy,
         weight_g=parse_float(match_value(pairs, "Вага", "Маса", exclude=("діапазон",))),
         length_mm=parse_float(match_value(pairs, "Довжина")),

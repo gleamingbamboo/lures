@@ -45,7 +45,7 @@ def extract_flagman(
         external_id=product.ext_id or product.id,
         name=product.display_title or product.name or "",
         brand=product.producer.display_name if product.producer else "",
-        type=type_name,
+        lure_type=type_name,
         buoyancy=buoyancy,
         weight_g=parse_float(match_value(pairs, "Вага", exclude=("діапазон",))),
         length_mm=parse_float(match_value(pairs, "Довжина")),

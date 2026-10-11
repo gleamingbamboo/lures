@@ -101,7 +101,7 @@ def extract_bereg_detail(
         external_id=detail.sku or (str(detail.product_id) if detail.product_id else ""),
         name=detail.name,
         brand=detail.brand or "",
-        type=type_name,
+        lure_type=type_name,
         buoyancy=buoyancy,
         weight_g=parse_float(match_value(pairs, "Вага", "Маса", exclude=("діапазон",))),
         length_mm=parse_float(match_value(pairs, "Довжина")),

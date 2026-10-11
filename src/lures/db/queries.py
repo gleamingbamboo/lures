@@ -7,6 +7,7 @@ from typing import Any
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
+from ..canonical import CANONICAL_FIELDS
 from .fts import search_product_ids
 from .models import Category, Product, Store
 
@@ -62,8 +63,10 @@ def query_products(
 
     rows: list[dict[str, Any]] = []
     for product, store_code, store_name, category_name in session.execute(stmt).all():
+        # Лише канонічні колонки (+ назви магазину/категорії) — без службових
+        # полів ``raw_json`` / ``extra_json`` / ``updated_at``.
         data: dict[str, Any] = {
-            column.name: getattr(product, column.name) for column in Product.__table__.columns
+            field.key: getattr(product, field.key) for field in CANONICAL_FIELDS
         }
         data["store_code"] = store_code
         data["store_name"] = store_name

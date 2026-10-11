@@ -86,9 +86,8 @@ def upsert_product(
 
     product.category_id = category.id
     product.name = record.name
-    product.sku = record.external_id
     product.brand = record.brand
-    product.type = record.type
+    product.lure_type = record.lure_type
     product.buoyancy = record.buoyancy
     product.weight_g = record.weight_g
     product.length_mm = record.length_mm
@@ -123,9 +122,9 @@ def upsert_product(
         session,
         product.id,
         name=record.name,
-        sku=record.external_id,
+        external_id=record.external_id,
         brand=record.brand,
-        type_text=record.type,
+        lure_type=record.lure_type,
         species_text=species_text,
     )
     return product.id, is_new

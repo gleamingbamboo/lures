@@ -33,7 +33,7 @@ def _record(
         category="voblery",
         external_id=external,
         name=name,
-        type="Minnow",
+        lure_type="Minnow",
         buoyancy=buoyancy,
         weight_g=weight,
         price=price,
