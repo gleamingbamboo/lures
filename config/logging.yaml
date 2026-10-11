@@ -22,4 +22,5 @@ file:
 
 # Перехоплення стандартного logging (sqlalchemy, uvicorn, тощо)
 intercept_standard_logging: true
-intercept_level: "DEBUG"
+# Рівень для «шумних» сторонніх логерів (щоб SQLAlchemy не друкував кожен запит)
+intercept_level: "WARNING"

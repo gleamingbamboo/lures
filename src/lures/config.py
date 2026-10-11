@@ -106,7 +106,8 @@ class LoggingConfig(BaseModel):
     console: ConsoleLogConfig = Field(default_factory=ConsoleLogConfig)
     file: FileLogConfig = Field(default_factory=FileLogConfig)
     intercept_standard_logging: bool = True
-    intercept_level: str = "DEBUG"
+    # Рівень для «шумних» сторонніх логерів (sqlalchemy.engine, httpx, ...).
+    intercept_level: str = "WARNING"
 
 
 def _default_path() -> Path:
