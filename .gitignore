@@ -12,3 +12,8 @@ build/
 data/*.db
 data/*.db-*
 *.xlsx
+
+# Генеровані артефакти та локальні дані
+graphify-out/
+logs/
+flagman_raw.json
