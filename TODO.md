@@ -2,190 +2,151 @@
 
 Цей файл документує всі знайдені неузгодження, баги та технічний борг. Використовуй його як чек-лист при фіксах.
 
----
-
-## 1. Схема БД vs Канонічні поля (Critical)
-
-| Проблема | Деталі | Файли |
-|----------|--------|-------|
-| **`sku` в БД дублює `external_id`** | `Product.sku` завжди = `external_id` (crud.py:89). Канонічні поля (`CANONICAL_FIELDS`) не мають `sku`. | `db/models.py:83`, `db/crud.py:89`, `canonical.py` |
-| **`description` в БД, але не в каноні** | `Product.description` є в моделі, але відсутній у `CANONICAL_FIELDS`. Експорт/Excel його не показує. | `db/models.py:99`, `canonical.py:44-62`, `export.py` |
-| **`raw_json` / `extra_json` / `updated_at` в БД** | Службові колонки, не частина канонічної схеми. Нормально для внутрішнього використання, але не документовано. | `db/models.py:100-104` |
-| **FTS використовує `sku` як `external_id`** | `fts.py:126` передає `sku=record.external_id` — ОК, але назва плутає. | `db/fts.py:126`, `db/crud.py:126` |
+Легенда: ✅ виправлено · 🟡 частково / за дизайном · ⬜ відкрито · ⏭️ відкладено
 
 ---
 
-## 2. Екстрактори: неузгоджену логіка знижок (High)
+## 1. Схема БД vs Канонічні поля (Critical) — ✅
 
-| Магазин | Проблема |
-|---------|----------|
-| **flagman** | Передає `discount_pct=product.discount_percent` (з моделі клієнта) |
-| **ibisgear** | Передає `discount_pct=variant.discount_percent` (з моделі клієнта) |
-| **bereg** | **Не передає** `discount_pct` — розраховується в `LureRecord` валідаторі (canonical.py:97-98) |
-| **Результат** | Різна поведінка: у bereg знижка перераховується при кожному upsert, у інших — береться з API. Можливі розбіжності. |
-
-**Файли:** `extractors/flagman.py:56`, `extractors/ibisgear.py:72`, `extractors/bereg.py`, `canonical.py:97-98`
+| Проблема | Статус | Деталі |
+|----------|--------|--------|
+| ~~`sku` в БД дублює `external_id`~~ | ✅ | Колонку видалено (`models.py`), міграція `migrations.py`, `crud.py`, FTS. |
+| ~~`description` в БД, але не в каноні~~ | ✅ | Додано `FieldDef("description", "Опис", "str")`; підхоплюється export/UI. |
+| `raw_json` / `extra_json` / `updated_at` | ✅ | Службові; `query_products` їх більше не повертає, задокументовано. |
+| ~~FTS використовує `sku`~~ | ✅ | Колонки FTS: `name, external_id, brand, lure_type, species_text`, авто-перебудова. |
 
 ---
 
-## 3. Берег: ціни та наявність (High)
+## 2. Екстрактори: неузгоджена логіка знижок (High) — ✅
 
-| Проблема | Деталі |
-|----------|--------|
-| **Логіка `_price_pair`** | `special_price` → `price` (платіжна), `price` → `old_price`. Специфчно для Magento, але не задокументовано в архітектурі. |
-| **Наявність з картки** | `extract_bereg_card` ставить `availability="unknown"`, а `extract_bereg_detail` — з варіантів. При `--fetch-details=false` всі товари = unknown. |
-| **SKU vs external_id** | `extract_bereg_detail` використовує `detail.sku` або `product_id`, а картка — `product_id` або URL. Може давати різні `external_id` для одного товару. |
-
-**Файли:** `extractors/bereg.py:28-35, 43-62, 65-116`, `fetch.py:232-246`
+`discount_pct` завжди рахує `LureRecord`-валідатор; з екстракторів (flagman/ibisgear) прибрано.
+Файли: `extractors/flagman.py`, `extractors/ibisgear.py`, `canonical.py`.
 
 ---
 
-## 4. Ibis Gear: ціни в копійках (Medium)
+## 3. Берег: ціни та наявність (High) — 🟡
 
-- У моделях клієнта (`ibisgear-client`) ціни в **копійках** (`price: int`), властивості `price_uah` / `original_price_uah` ділять на 100.
-- Екстрактор (`extractors/ibisgear.py:70-71`) використовує `product.price_uah` та `variant.original_price_uah` — **правильно**.
-- Але `product.minPrice` / `maxPrice` теж в копійках, `price_uah` property ділить на 100.
-- **Ризик**: якщо зміниться API клієнта, екстрактор поламається тихо.
-
-**Файли:** `clients/ibisgear-client/src/ibisgear/models.py:146-147, 163-168, 246-253`, `extractors/ibisgear.py:70-71`
-
----
-
-## 5. Конфігурація логування: невикористані env-перемінні (Medium)
-
-`config/logging.yaml` документує:
-- `LURES_LOG_DIR`
-- `LURES_LOG_LEVEL_CONSOLE`
-- `LURES_LOG_LEVEL_FILE`
-
-Але в коді (`config.py`, `logging.py`) використовуються лише:
-- `LURES_CONFIG` (stores.yaml)
-- `LURES_DB` (шлях до БД)
-- `LURES_LOG_CONFIG` (шлях до logging.yaml)
-
-**Файли:** `config/logging.yaml:2-5`, `config.py:22-24`, `logging.py:48-51`
+| Проблема | Статус | Деталі |
+|----------|--------|--------|
+| Логіка `_price_pair` | ✅ | Docstring з Magento-логікою + розділ в `docs/architecture.md`. |
+| SKU vs external_id | ✅ | `external_id` = `product_id` (є і в картці, і в деталях); SKU збережено як `Артикул` у спеках. |
+| Наявність з картки | 🟡 | Listing-картка не містить стоку — `unknown` за дизайном; точна наявність лише з `fetch_details`. |
 
 ---
 
-## 6. Константи магазинів: дублювання (Low)
+## 4. Ibis Gear: ціни в копійках (Medium) — ✅
 
-- `config.py:44` — `Literal["flagman", "ibisgear", "bereg"]`
-- `extractors/__init__.py:7-10` — `FLAGMAN_CODE`, `IBISGEAR_CODE`, `BEREG_CODE`
-- `fetch.py:55-60` — порівнює `store_cfg.client == FLAGMAN_CODE`
-
-**Рішення:** винести в окремий модуль `constants.py` або Enum.
+Використання `price_uah`/`original_price_uah` правильне; поведінку зафіксовано тестом
+(`test_ibisgear_extractor`: 99990 → 999.9).
 
 ---
 
-## 7. Type hints / MyPy: `type` як назва поля (Low)
+## 5. Конфігурація логування: env-перемінні (Medium) — ✅
 
-- `canonical.py:48` — `FieldDef("type", "Тип воблера", "str")`
-- `LureRecord` має поле `type: str = ""`
-- `Product` має колонку `type`
-- `type` — built-in Python. Працює, але плутає IDE/лінтери.
-
-**Рішення:** перейменувати на `lure_type` або `wobbler_type` у всьому проекті.
+`logging.py` тепер читає `LURES_LOG_DIR`, `LURES_LOG_LEVEL_CONSOLE`, `LURES_LOG_LEVEL_FILE`
+з правильним пріоритетом; константи додані в `config.py`.
 
 ---
 
-## 8. CLI: `max_pages=0` vs `None` (Low)
+## 6. Константи магазинів: дублювання (Low) — ✅
 
-- `cli.py:30` — `MaxPagesOption = Annotated[int, ...]`, default=0
-- `cli.py:70` — `max_pages=max_pages or None`
-- `fetch.py:47, 122, 160, 220` — приймає `int | None`
-- **Працює правильно** (0 → None), але неочевидно. Краще `Optional[int]` з default=None.
+Створено `src/lures/constants.py` (єдине джерело правди); використано в `config.py`,
+`extractors/*`, `fetch.py`.
 
 ---
 
-## 9. Query API: повертає зайві колонки (Low)
+## 7. `type` як назва поля (Low) — ✅
 
-`queries.py:64-71` повертає **всі** колонки `Product.__table__.columns`:
-- `sku`, `raw_json`, `extra_json`, `updated_at` — не в каноні
-- `store_code`, `store_name`, `category_name` — додаткові
-
-Експорт (`export.py`) фільтрує через `CANONICAL_FIELDS`, але UI (`ui.py:36`) показує все.
+Перейменовано `type` → `lure_type` у `canonical.py`, `models.py`, екстракторах, FTS, тестах;
+міграція перейменовує колонку.
 
 ---
 
-## 10. Legacy код в репозиторії (Low)
+## 8. CLI: `max_pages=0` vs `None` (Low) — ✅
 
-- `legacy/fetch_flagman.py` — старий скрейпер (urllib, потоки)
-- `legacy/build_xlsx.py` — старий Excel-генератор
-- `lures.xlsx`, `test.xlsx`, `flagman_raw.json` — артефакти
-- `data/lures.db*` — SQLite файли (повинні бути в `.gitignore`)
+`--max-pages` тепер `Optional[int]` (порожньо = усі), без `or None` у викликах.
 
 ---
 
-## 11. Тести: не покривають edge-cases (Medium)
+## 9. Query API: зайві колонки (Low) — ✅
 
-- Немає тестів на: конфлікт `external_id` при зміні магазину, FTS пошук з кирилицею, історія цін при зміненні `old_price`, обробка `None` в числових полях.
-
----
-
-## 12. Документація: застарілі посилання (Low)
-
-- `README.md:51` — `Repository = "https://github.com/Gleam/lures"` — перевірити чи актуально
-- `clients/*/pyproject.toml` — посилання на `github.com/Gleam/*-client` — перевірити
+`query_products` повертає лише канонічні поля + `store_code`/`store_name`/`category_name`.
+UI-ключі виправлено (`store_name`/`category_name`).
 
 ---
 
-## 13. Відсутні індекси БД (Medium)
+## 10. Legacy код / артефакти (Low) — ✅
 
-- `Product.updated_at` — немає індексу, але сортування в `query_products` по ньому (`order_by(Product.updated_at.desc())`)
-- `Product.price` — фільтр `on_sale` використовує `discount_pct`, але пошук по ціновому діапазону — по `price` без індексу
-
----
-
-## 14. Streamlit UI: жорсткі залежності (Low)
-
-- `ui.py:17` — абсолютні імпорти `from lures.canonical ...` (коментар: Streamlit виконує як скрипт)
-- Працює бо пакет встановлений (`uv sync`), але ломається при `streamlit run src/lures/ui.py` без install.
+`.gitignore` розширено (`graphify-out/`, `logs/`, `flagman_raw.json`); артефакти знято з
+відслідковування git (`git rm --cached`), файли лишаються на диску за рішенням користувача.
+`legacy/` і `skill/` збережено як довідку.
 
 ---
 
-## 15. Категорії: code vs name в записах (Low)
+## 11. Тести: edge-cases (Medium) — ✅
 
-- Екстрактори ставлять `category=category.code` (напр. `"voblery"`)
-- БД зберігає `Category.code` і `Category.name`
-- `query_products` повертає `category_name` (назву), а не код
-- UI показує назву, CLI/експорт — теж. Консистентно, але неочевидно.
+Додано: однаковий `external_id` у різних магазинах, дедуп `price_history`, FTS кирилицею,
+bereg card/detail id match, комбінації `discount_pct`, наявність `description` у каноні.
 
 ---
 
-## 16. Bereg: `fetch_details` в конфігу vs CLI (Low)
+## 12. Документація: застарілі посилання (Low) — ✅
 
-- `config.py:34` — `CategorySpec.fetch_details: bool = False`
-- `fetch.py:230` — `details = fetch_details or category.fetch_details`
-- CLI `--fetch-details` (default=True) **перекриває** конфіг. Логіка: CLI має пріоритет, але дефолт True в CLI vs False в конфігу — неузгодженість.
-
----
-
-## 17. Версіонування: всі v0.1.0 (Info)
-
-- `lures`: 0.1.0
-- `flagman-client`: 0.1.0
-- `ibisgear-client`: 0.1.0
-- `bereg-client`: 0.1.0
-- Якщо публікувати на PyPI — потрібна стратегія версіонування (monorepo vs окремі релізи).
+URL виправлено на реальний акаунт `github.com/gleamingbamboo/*` (перевірено; старий `Gleam` — 404).
+Уточнено, що `clients/` — пакети одного монорепозиторію (не окремі git-репо).
 
 ---
 
-## 18. Відсутня валідація enum в БД (Medium)
+## 13. Відсутні індекси БД (Medium) — ✅
 
-- `buoyancy` — String без CHECK constraint (допустимі: `BUOYANCY_CODES`)
-- `availability` — String без CHECK constraint (допустимі: `AVAILABILITY_CODES`)
-- Валідація лише в `LureRecord` (Pydantic), але прямий SQL може записати будь-що.
+`index=True` для `Product.price` та `Product.updated_at`; міграція створює індекси.
 
 ---
 
-## 19. PriceHistory: зберігається при кожному upsert (Info)
+## 14. Streamlit UI: абсолютні імпорти (Low) — ⬜
 
-- `crud.py:116-119` — додає запис якщо `record.price is not None`
-- Це створює запис навіть якщо ціна не змінилася. Можна оптимізувати: порівнювати з останнім.
+`ui.py` використовує `from lures....` — працює при встановленому пакеті. Залишено як є.
 
 ---
 
-## 20. Graphify / Skill артефакти (Info)
+## 15. Категорії: code vs name (Low) — ✅ (за дизайном)
 
-- `graphify-out/` — кеш аналізу коду (не в `.gitignore`)
-- `skill/ibisgear-workflow.md` — локальний воркфлоу, не документація проекту
+Екстрактори ставлять `category=code`; UI/експорт показують `name`. Консистентно.
+
+---
+
+## 16. Bereg: `fetch_details` конфіг vs CLI (Low) — ✅
+
+CLI `--fetch-details/--no-fetch-details` — тристановий (default `None` = значення з `stores.yaml`).
+
+---
+
+## 17. Версіонування: всі v0.1.0 (Info) — ⏭️
+
+Стратегія публікації (monorepo vs окремі релізи) відкладена.
+
+---
+
+## 18. Валідація enum в БД (Medium) — ✅
+
+Додано `CheckConstraint` для `buoyancy` та `availability`; міграція перебудовує стару таблицю.
+
+---
+
+## 19. PriceHistory при кожному upsert (Info) — ✅
+
+Знімок додається лише коли `price`/`old_price` змінилися.
+
+---
+
+## 20. Graphify / Skill артефакти (Info) — ✅
+
+`graphify-out/` знято з відслідковування. `skill/ibisgear-workflow.md` лишено як внутрішню довідку.
+
+---
+
+## Залишилось (відкриті)
+
+- ⬜ **14** Streamlit: запуск `streamlit run src/lures/ui.py` без `uv sync` (абсолютні імпорти).
+- 🟡 **3** Bereg: наявність з listing-картки неможлива (лише з detail).
+- ⏭️ **17** Версіонування/публікація клієнтів (Фаза 6 у `PLAN.md`).
